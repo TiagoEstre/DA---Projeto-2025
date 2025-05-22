@@ -14,6 +14,7 @@ C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj
 C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.Up2Date
 C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
 C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
+<<<<<<< HEAD
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe.config
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.pdb
@@ -31,3 +32,38 @@ C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v2\DA---Projeto-2025\i
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.Migrations.iTasksContext.resources
+=======
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe.config
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.pdb
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.dll
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\Guna.UI2.dll
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.xml
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.AssemblyReference.cache
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.LoginForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.Properties.Resources.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.GenerateResource.cache
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.CoreCompileInputs.cache
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.Up2Date
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
+C:\Users\tiago\Documents\DA - Projeto 2025\v2\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe.config
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.pdb
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.dll
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\Guna.UI2.dll
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.xml
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.AssemblyReference.cache
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.LoginForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.Properties.Resources.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.HomePageForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.GenerateResource.cache
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.CoreCompileInputs.cache
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.Up2Date
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
+C:\Users\tiago\Documents\DA - Projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
+>>>>>>> b4d509bb09dbcaab184579d0d1ce67891e39a7bb

@@ -1,12 +1,78 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v2\\DA---Projeto-2025\\iTasks\\",
   "Documents": [],
+=======
+  "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v3\\da---projeto-2025\\itasks\\itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v3\\da---projeto-2025\\itasks\\itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v3\\da---projeto-2025\\itasks\\itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+>>>>>>> b4d509bb09dbcaab184579d0d1ce67891e39a7bb
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
       "DocumentGroups": []
+=======
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePageForm.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\HomePageForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeToolTip": "iTasks\\views\\HomePageForm.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAhwBIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:27:32.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePageForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\HomePageForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\views\\HomePageForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:52:51.792Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\LoginForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\LoginForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:51:30.106Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+>>>>>>> b4d509bb09dbcaab184579d0d1ce67891e39a7bb
     }
   ]
 }
