@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\iTasks\\",
+  "WorkspaceRootPath": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\DA---Projeto-2025\\iTasks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\itasks\\itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da---projeto-2025\\itasks\\itasks\\models\\tasktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\tasktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\iTasks\\iTasks\\LoginForm.cs",
-              "RelativeDocumentMoniker": "iTasks\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\iTasks\\iTasks\\LoginForm.cs [Design]",
-              "RelativeToolTip": "iTasks\\LoginForm.cs [Design]",
+              "Title": "TaskType.cs",
+              "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\DA---Projeto-2025\\iTasks\\iTasks\\models\\TaskType.cs",
+              "RelativeDocumentMoniker": "iTasks\\models\\TaskType.cs",
+              "ToolTip": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\DA---Projeto-2025\\iTasks\\iTasks\\models\\TaskType.cs",
+              "RelativeToolTip": "iTasks\\models\\TaskType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T13:37:48.073Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-19T17:31:22.532Z",
+              "EditorCaption": ""
             }
           ]
         }

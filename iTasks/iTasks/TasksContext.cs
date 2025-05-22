@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iTasks.models
+namespace iTasks
 {
-    internal class TipoTarefa
+    public class TasksContext: DbContext
     {
-        public int Id { get; set; }
-        public string Nome { get; set; }
+      
     }
 }

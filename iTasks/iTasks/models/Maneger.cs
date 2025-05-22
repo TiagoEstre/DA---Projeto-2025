@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace iTasks.models
 {
-    internal class Gestor
-    {
-        public string Departamento { get; set; }
-        public string GereUtilizador { get; set; }
+    public class Maneger : Users
+    { 
+        public string Department { get; set; }
+        public string GenerateUser { get; set; }
+
+    
     }
 }

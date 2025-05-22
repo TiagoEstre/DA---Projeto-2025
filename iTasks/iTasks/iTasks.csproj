@@ -62,24 +62,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TasksContext.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="models\Gestor.cs" />
-    <Compile Include="models\Programador.cs" />
-    <Compile Include="models\Tarefa.cs" />
-    <Compile Include="models\TipoTarefa.cs" />
-    <Compile Include="models\Utilizador.cs" />
+    <Compile Include="models\Maneger.cs" />
+    <Compile Include="models\Programmer.cs" />
+    <Compile Include="models\Tasks.cs" />
+    <Compile Include="models\TaskType.cs" />
+    <Compile Include="models\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\completedtasksForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\completedtasksForm1.Designer.cs">
+      <DependentUpon>completedtasksForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\HomePageForm.Designer.cs">
       <DependentUpon>HomePageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ongoingtasksForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ongoingtasksForm1.Designer.cs">
+      <DependentUpon>ongoingtasksForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\taskdetailForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\taskdetailForm1.Designer.cs">
+      <DependentUpon>taskdetailForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\tasktypeForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\tasktypeForm1.Designer.cs">
+      <DependentUpon>tasktypeForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\usermanagementForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\usermanagementForm1.Designer.cs">
+      <DependentUpon>usermanagementForm1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

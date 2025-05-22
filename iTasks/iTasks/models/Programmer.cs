@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace iTasks.models
 {
-    internal class Programador
+    public class Programmer: Users
     {
-        public int NivelExperiencia { get; set; }
+        
+        public int ExperienceLevel { get; set; }
+
+        public Maneger idManeger {  get; set; }
 
     }
 }
