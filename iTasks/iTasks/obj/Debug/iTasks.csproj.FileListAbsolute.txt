@@ -1,0 +1,16 @@
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe.config
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.pdb
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.dll
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\Guna.UI2.dll
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.xml
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.AssemblyReference.cache
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.LoginForm.resources
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.Properties.Resources.resources
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.GenerateResource.cache
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.CoreCompileInputs.cache
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.Up2Date
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
+C:\Users\tiago\Documents\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
