@@ -11,6 +11,9 @@ namespace iTasks.models
         public string Department { get; set; }
         public string GenerateUser { get; set; }
 
-    
+        public Maneger()
+        {
+            
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace iTasks.models
 {
     public class Tasks
     {
+        [Key]
         public int Id { get; set; }
         public Maneger IdManeger { get; set; }
 
@@ -26,5 +28,8 @@ namespace iTasks.models
         public DateTime CreationDate { get; set;}
         public string Currentstatus {  get; set; }
 
+        public Tasks()
+        {
+        }
     }
 }

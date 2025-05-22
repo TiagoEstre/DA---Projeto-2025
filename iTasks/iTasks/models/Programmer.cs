@@ -13,5 +13,8 @@ namespace iTasks.models
 
         public Maneger idManeger {  get; set; }
 
+        public Programmer()
+        {
+        }
     }
 }

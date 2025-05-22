@@ -62,13 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TasksContext.cs" />
+    <Compile Include="iTasksContext.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202505221627338_iTasksContext.cs" />
+    <Compile Include="Migrations\202505221627338_iTasksContext.Designer.cs">
+      <DependentUpon>202505221627338_iTasksContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="models\Maneger.cs" />
     <Compile Include="models\Programmer.cs" />
     <Compile Include="models\Tasks.cs" />
@@ -114,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505221627338_iTasksContext.resx">
+      <DependentUpon>202505221627338_iTasksContext.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
