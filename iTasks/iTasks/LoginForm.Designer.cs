@@ -49,6 +49,7 @@
             this.tb_CreartePassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_CreateConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_Surname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.Pl_Login.SuspendLayout();
             this.Pl_Register.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +87,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(64, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 19);
+            this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Relembrar";
             // 
@@ -396,12 +397,30 @@
             this.tb_Surname.TabIndex = 6;
             this.tb_Surname.UseSystemPasswordChar = true;
             // 
+            // guna2CheckBox1
+            // 
+            this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.Location = new System.Drawing.Point(38, 136);
+            this.guna2CheckBox1.Name = "guna2CheckBox1";
+            this.guna2CheckBox1.Size = new System.Drawing.Size(128, 21);
+            this.guna2CheckBox1.TabIndex = 8;
+            this.guna2CheckBox1.Text = "guna2CheckBox1";
+            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(713, 511);
+            this.Controls.Add(this.guna2CheckBox1);
             this.Controls.Add(this.Pl_Register);
             this.Controls.Add(this.Pl_Login);
             this.Controls.Add(this.guna2ControlBox2);
@@ -415,6 +434,7 @@
             this.Pl_Login.PerformLayout();
             this.Pl_Register.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -440,6 +460,7 @@
         private Guna.UI2.WinForms.Guna2TextBox tb_CreartePassword;
         private Guna.UI2.WinForms.Guna2TextBox tb_CreateConfirmPassword;
         private Guna.UI2.WinForms.Guna2TextBox tb_Surname;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
     }
 }
 

@@ -54,7 +54,8 @@ namespace iTasks.views
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Menu";
-            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_home_96__1_;    
+            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_home_96__1_;
+            trocarForm(new KanbanForm());
         }
         private void b_Users_Click(object sender, EventArgs e)
         {
@@ -71,19 +72,19 @@ namespace iTasks.views
         private void b_TaskDetails_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Detalhes Tarefas";
-            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
+            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96;
         }
 
         private void b_OngoingTasks_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Tarefas Em Curso";
-            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
+            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96__1_;
         }
 
         private void b_CompletedTasks_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Tarefas Concluidas";
-            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
+            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_to_do_96;
         }
 
         
