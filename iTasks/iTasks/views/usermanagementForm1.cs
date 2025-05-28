@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iTasks.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace iTasks.views
         public usermanagementForm1()
         {
             InitializeComponent();
+            // lista de enum
+            Enum.GetValues(typeof(ExperienceLevel));
         }
+
+       
     }
 }
