@@ -39,16 +39,16 @@
             this.ControlBoxClosed = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Pl_Login = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.Pl_Register = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.bt_Register = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.ButtonViewLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.tb_Name = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_CreartePassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_CreateConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_Surname = new Guna.UI2.WinForms.Guna2TextBox();
             this.bt_ViewRegister = new Guna.UI2.WinForms.Guna2Button();
             this.tb_Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_Password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Pl_Register = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.ButtonViewLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.tb_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.bt_Register = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.tb_CreartePassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_CreateConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_Surname = new Guna.UI2.WinForms.Guna2TextBox();
             this.Pl_Login.SuspendLayout();
             this.Pl_Register.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +86,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(64, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 23);
+            this.label1.Size = new System.Drawing.Size(80, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Relembrar";
             // 
@@ -126,7 +126,7 @@
             this.ControlBoxClosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ControlBoxClosed.FillColor = System.Drawing.Color.White;
             this.ControlBoxClosed.IconColor = System.Drawing.Color.DimGray;
-            this.ControlBoxClosed.Location = new System.Drawing.Point(672, 2);
+            this.ControlBoxClosed.Location = new System.Drawing.Point(672, 3);
             this.ControlBoxClosed.Name = "ControlBoxClosed";
             this.ControlBoxClosed.Size = new System.Drawing.Size(29, 29);
             this.ControlBoxClosed.TabIndex = 5;
@@ -137,7 +137,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(637, 2);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(637, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(29, 29);
             this.guna2ControlBox2.TabIndex = 5;
@@ -160,6 +160,78 @@
             this.Pl_Login.Size = new System.Drawing.Size(286, 376);
             this.Pl_Login.TabIndex = 7;
             // 
+            // bt_ViewRegister
+            // 
+            this.bt_ViewRegister.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bt_ViewRegister.Animated = true;
+            this.bt_ViewRegister.AutoRoundedCorners = true;
+            this.bt_ViewRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_ViewRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_ViewRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_ViewRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_ViewRegister.FillColor = System.Drawing.Color.Transparent;
+            this.bt_ViewRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.bt_ViewRegister.ForeColor = System.Drawing.Color.DimGray;
+            this.bt_ViewRegister.Image = global::iTasks.Properties.Resources.icons8_arrow_right_100__1_;
+            this.bt_ViewRegister.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bt_ViewRegister.Location = new System.Drawing.Point(23, 301);
+            this.bt_ViewRegister.Name = "bt_ViewRegister";
+            this.bt_ViewRegister.Size = new System.Drawing.Size(243, 45);
+            this.bt_ViewRegister.TabIndex = 4;
+            this.bt_ViewRegister.Text = "Criar Conta";
+            this.bt_ViewRegister.Click += new System.EventHandler(this.bt_ViewRegister_Click);
+            // 
+            // tb_Username
+            // 
+            this.tb_Username.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tb_Username.Animated = true;
+            this.tb_Username.BorderRadius = 8;
+            this.tb_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_Username.DefaultText = "";
+            this.tb_Username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_Username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_Username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_Username.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.tb_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_Username.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_Username.IconLeft = global::iTasks.Properties.Resources.icons8_user_96;
+            this.tb_Username.Location = new System.Drawing.Point(23, 63);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_Username.Name = "tb_Username";
+            this.tb_Username.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tb_Username.PlaceholderText = "Utilizador";
+            this.tb_Username.SelectedText = "";
+            this.tb_Username.Size = new System.Drawing.Size(243, 36);
+            this.tb_Username.TabIndex = 0;
+            // 
+            // tb_Password
+            // 
+            this.tb_Password.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tb_Password.Animated = true;
+            this.tb_Password.BorderRadius = 8;
+            this.tb_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_Password.DefaultText = "";
+            this.tb_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_Password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_Password.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.tb_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_Password.IconLeft = global::iTasks.Properties.Resources.icons8_password_52;
+            this.tb_Password.Location = new System.Drawing.Point(23, 126);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_Password.Name = "tb_Password";
+            this.tb_Password.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tb_Password.PlaceholderText = "Senha";
+            this.tb_Password.SelectedText = "";
+            this.tb_Password.Size = new System.Drawing.Size(243, 36);
+            this.tb_Password.TabIndex = 1;
+            this.tb_Password.UseSystemPasswordChar = true;
+            // 
             // Pl_Register
             // 
             this.Pl_Register.BackColor = System.Drawing.Color.Transparent;
@@ -178,27 +250,6 @@
             this.Pl_Register.Size = new System.Drawing.Size(286, 376);
             this.Pl_Register.TabIndex = 7;
             this.Pl_Register.Visible = false;
-            // 
-            // bt_Register
-            // 
-            this.bt_Register.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bt_Register.Animated = true;
-            this.bt_Register.AutoRoundedCorners = true;
-            this.bt_Register.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt_Register.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt_Register.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_Register.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_Register.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt_Register.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(135)))));
-            this.bt_Register.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.bt_Register.ForeColor = System.Drawing.Color.White;
-            this.bt_Register.Location = new System.Drawing.Point(23, 250);
-            this.bt_Register.Name = "bt_Register";
-            this.bt_Register.PressedColor = System.Drawing.Color.Empty;
-            this.bt_Register.Size = new System.Drawing.Size(243, 45);
-            this.bt_Register.TabIndex = 9;
-            this.bt_Register.Text = "CRIAR CONTA";
-            this.bt_Register.Click += new System.EventHandler(this.bt_Register_Click);
             // 
             // ButtonViewLogin
             // 
@@ -245,6 +296,27 @@
             this.tb_Name.SelectedText = "";
             this.tb_Name.Size = new System.Drawing.Size(243, 36);
             this.tb_Name.TabIndex = 5;
+            // 
+            // bt_Register
+            // 
+            this.bt_Register.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bt_Register.Animated = true;
+            this.bt_Register.AutoRoundedCorners = true;
+            this.bt_Register.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_Register.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_Register.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_Register.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_Register.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_Register.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(135)))));
+            this.bt_Register.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.bt_Register.ForeColor = System.Drawing.Color.White;
+            this.bt_Register.Location = new System.Drawing.Point(23, 250);
+            this.bt_Register.Name = "bt_Register";
+            this.bt_Register.PressedColor = System.Drawing.Color.Empty;
+            this.bt_Register.Size = new System.Drawing.Size(243, 45);
+            this.bt_Register.TabIndex = 9;
+            this.bt_Register.Text = "CRIAR CONTA";
+            this.bt_Register.Click += new System.EventHandler(this.bt_Register_Click);
             // 
             // tb_CreartePassword
             // 
@@ -324,81 +396,9 @@
             this.tb_Surname.TabIndex = 6;
             this.tb_Surname.UseSystemPasswordChar = true;
             // 
-            // bt_ViewRegister
-            // 
-            this.bt_ViewRegister.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bt_ViewRegister.Animated = true;
-            this.bt_ViewRegister.AutoRoundedCorners = true;
-            this.bt_ViewRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt_ViewRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt_ViewRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_ViewRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt_ViewRegister.FillColor = System.Drawing.Color.Transparent;
-            this.bt_ViewRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.bt_ViewRegister.ForeColor = System.Drawing.Color.DimGray;
-            this.bt_ViewRegister.Image = global::iTasks.Properties.Resources.icons8_arrow_right_100__1_;
-            this.bt_ViewRegister.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.bt_ViewRegister.Location = new System.Drawing.Point(23, 301);
-            this.bt_ViewRegister.Name = "bt_ViewRegister";
-            this.bt_ViewRegister.Size = new System.Drawing.Size(243, 45);
-            this.bt_ViewRegister.TabIndex = 4;
-            this.bt_ViewRegister.Text = "Criar Conta";
-            this.bt_ViewRegister.Click += new System.EventHandler(this.bt_ViewRegister_Click);
-            // 
-            // tb_Username
-            // 
-            this.tb_Username.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tb_Username.Animated = true;
-            this.tb_Username.BorderRadius = 8;
-            this.tb_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_Username.DefaultText = "";
-            this.tb_Username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_Username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_Username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_Username.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.tb_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Username.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Username.IconLeft = global::iTasks.Properties.Resources.icons8_user_96;
-            this.tb_Username.Location = new System.Drawing.Point(23, 63);
-            this.tb_Username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tb_Username.Name = "tb_Username";
-            this.tb_Username.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tb_Username.PlaceholderText = "Utilizador";
-            this.tb_Username.SelectedText = "";
-            this.tb_Username.Size = new System.Drawing.Size(243, 36);
-            this.tb_Username.TabIndex = 0;
-            // 
-            // tb_Password
-            // 
-            this.tb_Password.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tb_Password.Animated = true;
-            this.tb_Password.BorderRadius = 8;
-            this.tb_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_Password.DefaultText = "";
-            this.tb_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_Password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_Password.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.tb_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Password.IconLeft = global::iTasks.Properties.Resources.icons8_password_52;
-            this.tb_Password.Location = new System.Drawing.Point(23, 126);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tb_Password.Name = "tb_Password";
-            this.tb_Password.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tb_Password.PlaceholderText = "Senha";
-            this.tb_Password.SelectedText = "";
-            this.tb_Password.Size = new System.Drawing.Size(243, 36);
-            this.tb_Password.TabIndex = 1;
-            this.tb_Password.UseSystemPasswordChar = true;
-            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(713, 511);

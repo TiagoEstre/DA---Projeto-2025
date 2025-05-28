@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iTasks.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,15 @@ using System.Windows.Forms;
 
 namespace iTasks.views
 {
-    public partial class tasktypeForm1 : Form
+    public partial class CompletedTasksForm : Form
     {
-        public tasktypeForm1()
+        public CompletedTasksForm()
         {
             InitializeComponent();
+            // lista de enum
+            Enum.GetValues(typeof(ExperienceLevel));
         }
+
+       
     }
 }

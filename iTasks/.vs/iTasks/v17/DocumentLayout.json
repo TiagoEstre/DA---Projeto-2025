@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v3\\da---projeto-2025\\itasks\\itasks\\migrations\\202505281701465_itaskscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\migrations\\202505281701465_itaskscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,6 +46,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v3\\da---projeto-2025\\itasks\\itasks\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v4\\da---projeto-2025\\itasks\\itasks\\views\\kanbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\kanbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v4\\da---projeto-2025\\itasks\\itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v4\\da---projeto-2025\\itasks\\itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 39ac34ea3a69def3c34c7bcc433c1be8ae68bcf1
     }
   ],
   "DocumentGroupContainers": [
@@ -59,6 +72,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "202505281701465_iTasksContext.cs",
               "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\Migrations\\202505281701465_iTasksContext.cs",
               "RelativeDocumentMoniker": "iTasks\\Migrations\\202505281701465_iTasksContext.cs",
@@ -67,11 +81,34 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T17:02:01.664Z",
+=======
+              "Title": "KanbanForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v4\\DA---Projeto-2025\\iTasks\\iTasks\\views\\KanbanForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\KanbanForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v4\\DA---Projeto-2025\\iTasks\\iTasks\\views\\KanbanForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\views\\KanbanForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T21:11:35.984Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomePageForm.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v4\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\HomePageForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v4\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeToolTip": "iTasks\\views\\HomePageForm.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAUwCgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T21:01:14.309Z",
+>>>>>>> 39ac34ea3a69def3c34c7bcc433c1be8ae68bcf1
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "Configuration.cs",
               "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v3\\DA---Projeto-2025\\iTasks\\iTasks\\Migrations\\Configuration.cs",
               "RelativeDocumentMoniker": "iTasks\\Migrations\\Configuration.cs",
@@ -196,6 +233,15 @@
               "RelativeToolTip": "iTasks\\views\\usermanagementForm1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T17:29:45.77Z",
+=======
+              "Title": "HomePageForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v4\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\HomePageForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v4\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\views\\HomePageForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T18:09:22.992Z",
+>>>>>>> 39ac34ea3a69def3c34c7bcc433c1be8ae68bcf1
               "EditorCaption": " [Design]"
             }
           ]

@@ -1,6 +1,6 @@
 ﻿namespace iTasks.views
 {
-    partial class usermanagementForm1
+    partial class UserManagementForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD:iTasks/iTasks/views/usermanagementForm1.Designer.cs
             this.l_Name = new System.Windows.Forms.Label();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.tb_Username = new System.Windows.Forms.TextBox();
@@ -241,6 +242,20 @@
             this.Text = "usermanagementForm1";
             this.ResumeLayout(false);
             this.PerformLayout();
+=======
+            this.SuspendLayout();
+            // 
+            // UserManagementForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.ClientSize = new System.Drawing.Size(980, 595);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "UserManagementForm";
+            this.Text = "usermanagementForm1";
+            this.ResumeLayout(false);
+>>>>>>> 39ac34ea3a69def3c34c7bcc433c1be8ae68bcf1:iTasks/iTasks/views/UserManagementForm.Designer.cs
 
         }
 

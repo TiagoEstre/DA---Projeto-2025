@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace iTasks.views
 {
-    public partial class completedtasksForm1 : Form
+    public partial class OngoingTasksForm : Form
     {
-        public completedtasksForm1()
+        public OngoingTasksForm()
         {
             InitializeComponent();
         }

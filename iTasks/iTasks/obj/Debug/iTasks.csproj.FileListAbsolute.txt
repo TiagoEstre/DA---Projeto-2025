@@ -85,6 +85,7 @@ C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\ob
 C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.Up2Date
 C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
 C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
+<<<<<<< HEAD
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe.config
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.exe
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\bin\Debug\iTasks.pdb
@@ -104,3 +105,10 @@ C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v3\DA---Projeto-2025\i
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
 C:\Users\vidal\OneDrive\Área de Trabalho\Da projeto 2025\v3\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.usermanagementForm1.resources
+=======
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.CompletedTasksForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.OngoingTasksForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.TaskDetailForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.TaskTypeForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.UserManagementForm.resources
+>>>>>>> 39ac34ea3a69def3c34c7bcc433c1be8ae68bcf1

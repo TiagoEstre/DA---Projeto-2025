@@ -84,11 +84,11 @@
     <Compile Include="models\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="views\completedtasksForm1.cs">
+    <Compile Include="views\CompletedTasksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\completedtasksForm1.Designer.cs">
-      <DependentUpon>completedtasksForm1.cs</DependentUpon>
+    <Compile Include="views\CompletedTasksForm.Designer.cs">
+      <DependentUpon>CompletedTasksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="views\HomePageForm.cs">
       <SubType>Form</SubType>
@@ -96,29 +96,35 @@
     <Compile Include="views\HomePageForm.Designer.cs">
       <DependentUpon>HomePageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\ongoingtasksForm1.cs">
+    <Compile Include="views\KanbanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\ongoingtasksForm1.Designer.cs">
-      <DependentUpon>ongoingtasksForm1.cs</DependentUpon>
+    <Compile Include="views\KanbanForm.Designer.cs">
+      <DependentUpon>KanbanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\taskdetailForm1.cs">
+    <Compile Include="views\OngoingTasksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\taskdetailForm1.Designer.cs">
-      <DependentUpon>taskdetailForm1.cs</DependentUpon>
+    <Compile Include="views\OngoingTasksForm.Designer.cs">
+      <DependentUpon>OngoingTasksForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\tasktypeForm1.cs">
+    <Compile Include="views\TaskDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\tasktypeForm1.Designer.cs">
-      <DependentUpon>tasktypeForm1.cs</DependentUpon>
+    <Compile Include="views\TaskDetailForm.Designer.cs">
+      <DependentUpon>TaskDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\usermanagementForm1.cs">
+    <Compile Include="views\TaskTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\usermanagementForm1.Designer.cs">
-      <DependentUpon>usermanagementForm1.cs</DependentUpon>
+    <Compile Include="views\TaskTypeForm.Designer.cs">
+      <DependentUpon>TaskTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UserManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UserManagementForm.Designer.cs">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -136,11 +142,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="views\CompletedTasksForm.resx">
+      <DependentUpon>CompletedTasksForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="views\usermanagementForm1.resx">
       <DependentUpon>usermanagementForm1.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="views\KanbanForm.resx">
+      <DependentUpon>KanbanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\OngoingTasksForm.resx">
+      <DependentUpon>OngoingTasksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TaskDetailForm.resx">
+      <DependentUpon>TaskDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TaskTypeForm.resx">
+      <DependentUpon>TaskTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+>>>>>>> 39ac34ea3a69def3c34c7bcc433c1be8ae68bcf1
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -170,6 +196,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-arrow-right-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-queue-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-96 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

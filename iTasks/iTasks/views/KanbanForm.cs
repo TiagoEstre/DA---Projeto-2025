@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace iTasks.views
 {
-    public partial class taskdetailForm1 : Form
+    public partial class KanbanForm : Form
     {
-        public taskdetailForm1()
+        public KanbanForm()
         {
             InitializeComponent();
         }
