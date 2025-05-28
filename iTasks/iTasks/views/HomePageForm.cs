@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iTasks.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace iTasks.views
 {
     public partial class HomePageForm : Form
     {
+        private Form formAtivo;
         public HomePageForm()
         {
             InitializeComponent();
@@ -31,16 +33,34 @@ namespace iTasks.views
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        // Codigo para Mudar de Form
+        private void trocarForm(Form novoForm)
+        {
+            if (formAtivo != null)
+            {
+                formAtivo.Close();
+                panelMessage.Controls.Remove(formAtivo);
+            }
+
+            formAtivo = novoForm;
+            novoForm.TopLevel = false;
+            novoForm.FormBorderStyle = FormBorderStyle.None;
+            novoForm.Dock = DockStyle.Fill;
+
+            panelMessage.Controls.Add(novoForm);
+            novoForm.Show();
+        }
         // Codigo dos Botoes do Menu
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Menu";
-            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_home_96__1_;
+            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_home_96__1_;    
         }
         private void b_Users_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Utilizadores";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
+            trocarForm(new UserManagementForm());
         }
 
         private void b_Tasks_Click(object sender, EventArgs e)

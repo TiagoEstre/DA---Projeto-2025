@@ -42,24 +42,24 @@
             this.b_Tasks = new Guna.UI2.WinForms.Guna2Button();
             this.b_Users = new Guna.UI2.WinForms.Guna2Button();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.pb_Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.p_Bar = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cb_Minimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cb_Maximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cb_close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.l_NameForm = new System.Windows.Forms.Label();
             this.pb_CurrentChildForm = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pb_Logo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelMessage = new Guna.UI2.WinForms.Guna2Panel();
             this.p_Menu.SuspendLayout();
             this.p_Tasks.SuspendLayout();
             this.panelLogin.SuspendLayout();
-            this.p_Bar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_CurrentChildForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
+            this.p_Bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_CurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // ElipseHomePage
@@ -89,8 +89,9 @@
             this.p_Menu.Controls.Add(this.panelLogin);
             this.p_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.p_Menu.Location = new System.Drawing.Point(0, 0);
+            this.p_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.p_Menu.Name = "p_Menu";
-            this.p_Menu.Size = new System.Drawing.Size(220, 670);
+            this.p_Menu.Size = new System.Drawing.Size(293, 825);
             this.p_Menu.TabIndex = 0;
             // 
             // p_Tasks
@@ -99,9 +100,10 @@
             this.p_Tasks.Controls.Add(this.b_OngoingTasks);
             this.p_Tasks.Controls.Add(this.b_TaskDetails);
             this.p_Tasks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p_Tasks.Location = new System.Drawing.Point(0, 260);
+            this.p_Tasks.Location = new System.Drawing.Point(0, 320);
+            this.p_Tasks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.p_Tasks.Name = "p_Tasks";
-            this.p_Tasks.Size = new System.Drawing.Size(220, 180);
+            this.p_Tasks.Size = new System.Drawing.Size(293, 222);
             this.p_Tasks.TabIndex = 3;
             this.p_Tasks.Visible = false;
             // 
@@ -118,9 +120,10 @@
             this.b_CompletedTasks.Image = global::iTasks.Properties.Resources.icons8_queue_96;
             this.b_CompletedTasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_CompletedTasks.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_CompletedTasks.Location = new System.Drawing.Point(0, 120);
+            this.b_CompletedTasks.Location = new System.Drawing.Point(0, 148);
+            this.b_CompletedTasks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_CompletedTasks.Name = "b_CompletedTasks";
-            this.b_CompletedTasks.Size = new System.Drawing.Size(220, 60);
+            this.b_CompletedTasks.Size = new System.Drawing.Size(293, 74);
             this.b_CompletedTasks.TabIndex = 11;
             this.b_CompletedTasks.Text = "Tarefas Concluidas";
             this.b_CompletedTasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -140,9 +143,10 @@
             this.b_OngoingTasks.Image = global::iTasks.Properties.Resources.icons8_queue_96;
             this.b_OngoingTasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_OngoingTasks.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_OngoingTasks.Location = new System.Drawing.Point(0, 60);
+            this.b_OngoingTasks.Location = new System.Drawing.Point(0, 74);
+            this.b_OngoingTasks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_OngoingTasks.Name = "b_OngoingTasks";
-            this.b_OngoingTasks.Size = new System.Drawing.Size(220, 60);
+            this.b_OngoingTasks.Size = new System.Drawing.Size(293, 74);
             this.b_OngoingTasks.TabIndex = 10;
             this.b_OngoingTasks.Text = "Tarefas Em Curso";
             this.b_OngoingTasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -163,8 +167,9 @@
             this.b_TaskDetails.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_TaskDetails.ImageOffset = new System.Drawing.Point(2, 0);
             this.b_TaskDetails.Location = new System.Drawing.Point(0, 0);
+            this.b_TaskDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_TaskDetails.Name = "b_TaskDetails";
-            this.b_TaskDetails.Size = new System.Drawing.Size(220, 60);
+            this.b_TaskDetails.Size = new System.Drawing.Size(293, 74);
             this.b_TaskDetails.TabIndex = 9;
             this.b_TaskDetails.Text = "Detalhes Tarefas";
             this.b_TaskDetails.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -184,9 +189,10 @@
             this.b_Tasks.Image = global::iTasks.Properties.Resources.icons8_queue_96;
             this.b_Tasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_Tasks.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_Tasks.Location = new System.Drawing.Point(0, 200);
+            this.b_Tasks.Location = new System.Drawing.Point(0, 246);
+            this.b_Tasks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_Tasks.Name = "b_Tasks";
-            this.b_Tasks.Size = new System.Drawing.Size(220, 60);
+            this.b_Tasks.Size = new System.Drawing.Size(293, 74);
             this.b_Tasks.TabIndex = 2;
             this.b_Tasks.Text = "Tarefas";
             this.b_Tasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -206,9 +212,10 @@
             this.b_Users.Image = global::iTasks.Properties.Resources.icons8_queue_96;
             this.b_Users.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_Users.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_Users.Location = new System.Drawing.Point(0, 140);
+            this.b_Users.Location = new System.Drawing.Point(0, 172);
+            this.b_Users.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_Users.Name = "b_Users";
-            this.b_Users.Size = new System.Drawing.Size(220, 60);
+            this.b_Users.Size = new System.Drawing.Size(293, 74);
             this.b_Users.TabIndex = 1;
             this.b_Users.Text = "Utilizadores";
             this.b_Users.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -220,9 +227,25 @@
             this.panelLogin.Controls.Add(this.pb_Logo);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogin.Location = new System.Drawing.Point(0, 0);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(220, 140);
+            this.panelLogin.Size = new System.Drawing.Size(293, 172);
             this.panelLogin.TabIndex = 0;
+            // 
+            // pb_Logo
+            // 
+            this.pb_Logo.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pb_Logo.ErrorImage")));
+            this.pb_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_Logo.Image")));
+            this.pb_Logo.ImageRotate = 0F;
+            this.pb_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_Logo.InitialImage")));
+            this.pb_Logo.Location = new System.Drawing.Point(0, 39);
+            this.pb_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_Logo.Name = "pb_Logo";
+            this.pb_Logo.Size = new System.Drawing.Size(293, 92);
+            this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Logo.TabIndex = 0;
+            this.pb_Logo.TabStop = false;
+            this.pb_Logo.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // p_Bar
             // 
@@ -235,88 +258,26 @@
             this.p_Bar.Controls.Add(this.l_NameForm);
             this.p_Bar.Controls.Add(this.pb_CurrentChildForm);
             this.p_Bar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p_Bar.Location = new System.Drawing.Point(220, 0);
+            this.p_Bar.Location = new System.Drawing.Point(293, 0);
+            this.p_Bar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.p_Bar.Name = "p_Bar";
-            this.p_Bar.Size = new System.Drawing.Size(980, 75);
+            this.p_Bar.Size = new System.Drawing.Size(1307, 92);
             this.p_Bar.TabIndex = 1;
             this.p_Bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.p_Bar_MouseDown);
             // 
-            // cb_Minimize
+            // label1
             // 
-            this.cb_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_Minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.cb_Minimize.FillColor = System.Drawing.Color.Transparent;
-            this.cb_Minimize.IconColor = System.Drawing.Color.White;
-            this.cb_Minimize.Location = new System.Drawing.Point(873, 3);
-            this.cb_Minimize.Name = "cb_Minimize";
-            this.cb_Minimize.Size = new System.Drawing.Size(25, 25);
-            this.cb_Minimize.TabIndex = 2;
-            // 
-            // cb_Maximize
-            // 
-            this.cb_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_Maximize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.cb_Maximize.FillColor = System.Drawing.Color.Transparent;
-            this.cb_Maximize.IconColor = System.Drawing.Color.White;
-            this.cb_Maximize.Location = new System.Drawing.Point(908, 3);
-            this.cb_Maximize.Name = "cb_Maximize";
-            this.cb_Maximize.Size = new System.Drawing.Size(25, 25);
-            this.cb_Maximize.TabIndex = 2;
-            // 
-            // cb_close
-            // 
-            this.cb_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_close.FillColor = System.Drawing.Color.Transparent;
-            this.cb_close.IconColor = System.Drawing.Color.White;
-            this.cb_close.Location = new System.Drawing.Point(943, 3);
-            this.cb_close.Name = "cb_close";
-            this.cb_close.Size = new System.Drawing.Size(25, 25);
-            this.cb_close.TabIndex = 2;
-            // 
-            // l_NameForm
-            // 
-            this.l_NameForm.AutoSize = true;
-            this.l_NameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_NameForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.l_NameForm.Location = new System.Drawing.Point(60, 41);
-            this.l_NameForm.Name = "l_NameForm";
-            this.l_NameForm.Size = new System.Drawing.Size(45, 15);
-            this.l_NameForm.TabIndex = 1;
-            this.l_NameForm.Text = "Home";
-            // 
-            // pb_CurrentChildForm
-            // 
-            this.pb_CurrentChildForm.Image = global::iTasks.Properties.Resources.icons8_home_96__1_;
-            this.pb_CurrentChildForm.ImageRotate = 0F;
-            this.pb_CurrentChildForm.Location = new System.Drawing.Point(15, 30);
-            this.pb_CurrentChildForm.Name = "pb_CurrentChildForm";
-            this.pb_CurrentChildForm.Size = new System.Drawing.Size(32, 32);
-            this.pb_CurrentChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_CurrentChildForm.TabIndex = 0;
-            this.pb_CurrentChildForm.TabStop = false;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(220, 75);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(980, 595);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // pb_Logo
-            // 
-            this.pb_Logo.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pb_Logo.ErrorImage")));
-            this.pb_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_Logo.Image")));
-            this.pb_Logo.ImageRotate = 0F;
-            this.pb_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_Logo.InitialImage")));
-            this.pb_Logo.Location = new System.Drawing.Point(0, 32);
-            this.pb_Logo.Name = "pb_Logo";
-            this.pb_Logo.Size = new System.Drawing.Size(220, 75);
-            this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_Logo.TabIndex = 0;
-            this.pb_Logo.TabStop = false;
-            this.pb_Logo.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(1131, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(80, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Utilizador";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2PictureBox1
             // 
@@ -325,47 +286,104 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.BorderRadius = 16;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(936, 30);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1248, 37);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(43, 39);
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // label1
+            // cb_Minimize
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(848, 41);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(69, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Utilizador";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cb_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_Minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.cb_Minimize.FillColor = System.Drawing.Color.Transparent;
+            this.cb_Minimize.IconColor = System.Drawing.Color.White;
+            this.cb_Minimize.Location = new System.Drawing.Point(1164, 4);
+            this.cb_Minimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Minimize.Name = "cb_Minimize";
+            this.cb_Minimize.Size = new System.Drawing.Size(33, 31);
+            this.cb_Minimize.TabIndex = 2;
+            // 
+            // cb_Maximize
+            // 
+            this.cb_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_Maximize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.cb_Maximize.FillColor = System.Drawing.Color.Transparent;
+            this.cb_Maximize.IconColor = System.Drawing.Color.White;
+            this.cb_Maximize.Location = new System.Drawing.Point(1211, 4);
+            this.cb_Maximize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Maximize.Name = "cb_Maximize";
+            this.cb_Maximize.Size = new System.Drawing.Size(33, 31);
+            this.cb_Maximize.TabIndex = 2;
+            // 
+            // cb_close
+            // 
+            this.cb_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_close.FillColor = System.Drawing.Color.Transparent;
+            this.cb_close.IconColor = System.Drawing.Color.White;
+            this.cb_close.Location = new System.Drawing.Point(1257, 4);
+            this.cb_close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_close.Name = "cb_close";
+            this.cb_close.Size = new System.Drawing.Size(33, 31);
+            this.cb_close.TabIndex = 2;
+            // 
+            // l_NameForm
+            // 
+            this.l_NameForm.AutoSize = true;
+            this.l_NameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_NameForm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.l_NameForm.Location = new System.Drawing.Point(80, 50);
+            this.l_NameForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.l_NameForm.Name = "l_NameForm";
+            this.l_NameForm.Size = new System.Drawing.Size(53, 18);
+            this.l_NameForm.TabIndex = 1;
+            this.l_NameForm.Text = "Home";
+            // 
+            // pb_CurrentChildForm
+            // 
+            this.pb_CurrentChildForm.Image = global::iTasks.Properties.Resources.icons8_home_96__1_;
+            this.pb_CurrentChildForm.ImageRotate = 0F;
+            this.pb_CurrentChildForm.Location = new System.Drawing.Point(20, 37);
+            this.pb_CurrentChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_CurrentChildForm.Name = "pb_CurrentChildForm";
+            this.pb_CurrentChildForm.Size = new System.Drawing.Size(43, 39);
+            this.pb_CurrentChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_CurrentChildForm.TabIndex = 0;
+            this.pb_CurrentChildForm.TabStop = false;
+            // 
+            // panelMessage
+            // 
+            this.panelMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMessage.Location = new System.Drawing.Point(293, 92);
+            this.panelMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMessage.Name = "panelMessage";
+            this.panelMessage.Size = new System.Drawing.Size(1307, 733);
+            this.panelMessage.TabIndex = 2;
             // 
             // HomePageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 670);
-            this.Controls.Add(this.guna2Panel1);
+            this.ClientSize = new System.Drawing.Size(1600, 825);
+            this.Controls.Add(this.panelMessage);
             this.Controls.Add(this.p_Bar);
             this.Controls.Add(this.p_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomePageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePageForm";
             this.p_Menu.ResumeLayout(false);
             this.p_Tasks.ResumeLayout(false);
             this.panelLogin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.p_Bar.ResumeLayout(false);
             this.p_Bar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_CurrentChildForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_CurrentChildForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,7 +406,7 @@
         private System.Windows.Forms.Panel p_Bar;
         private Guna.UI2.WinForms.Guna2PictureBox pb_CurrentChildForm;
         private System.Windows.Forms.Label l_NameForm;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel panelMessage;
         private Guna.UI2.WinForms.Guna2ControlBox cb_close;
         private Guna.UI2.WinForms.Guna2ControlBox cb_Minimize;
         private Guna.UI2.WinForms.Guna2ControlBox cb_Maximize;

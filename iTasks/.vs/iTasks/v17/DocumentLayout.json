@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v5\\da---projeto-2025\\itasks\\itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v5\\da---projeto-2025\\itasks\\itasks\\views\\kanbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\itasks\\views\\kanbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\kanbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v5\\da---projeto-2025\\itasks\\itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\itasks\\views\\homepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,6 +30,31 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManagementForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\UserManagementForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\views\\UserManagementForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T18:08:15.118Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePageForm.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\HomePageForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
+              "RelativeToolTip": "iTasks\\views\\HomePageForm.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAjwEUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T18:00:31.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "KanbanForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\KanbanForm.cs",
@@ -38,20 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomePageForm.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
-              "RelativeDocumentMoniker": "iTasks\\views\\HomePageForm.cs",
-              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
-              "RelativeToolTip": "iTasks\\views\\HomePageForm.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAUwCgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T21:01:14.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HomePageForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v5\\DA---Projeto-2025\\iTasks\\iTasks\\views\\HomePageForm.cs",
               "RelativeDocumentMoniker": "iTasks\\views\\HomePageForm.cs",
