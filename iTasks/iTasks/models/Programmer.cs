@@ -9,7 +9,7 @@ namespace iTasks.models
     public class Programmer: Users
     {
         
-        public int ExperienceLevel { get; set; }
+        public ExperienceLevel ExperienceLevel { get; set; }
 
         public Maneger idManeger {  get; set; }
 
