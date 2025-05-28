@@ -69,11 +69,14 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202505221703009_iTasksContext.cs" />
-    <Compile Include="Migrations\202505221703009_iTasksContext.Designer.cs">
-      <DependentUpon>202505221703009_iTasksContext.cs</DependentUpon>
+    <Compile Include="Migrations\202505281806416_iTasksContext.cs" />
+    <Compile Include="Migrations\202505281806416_iTasksContext.Designer.cs">
+      <DependentUpon>202505281806416_iTasksContext.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="models\CurrentStatus.cs" />
+    <Compile Include="models\Department.cs" />
+    <Compile Include="models\ExperienceLevel.cs" />
     <Compile Include="models\Maneger.cs" />
     <Compile Include="models\Programmer.cs" />
     <Compile Include="models\Tasks.cs" />
@@ -126,8 +129,8 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202505221703009_iTasksContext.resx">
-      <DependentUpon>202505221703009_iTasksContext.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202505281806416_iTasksContext.resx">
+      <DependentUpon>202505281806416_iTasksContext.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -26,7 +26,7 @@ namespace iTasks.models
         public DateTime ActualStartDate { get; set; }
         public DateTime ActualEndDate { get; set; }
         public DateTime CreationDate { get; set;}
-        public string Currentstatus {  get; set; }
+        public CurrentStatus CurrentStatus {  get; set; }
 
         public Tasks()
         {

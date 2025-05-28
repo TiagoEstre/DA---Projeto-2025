@@ -8,7 +8,7 @@ namespace iTasks.models
 {
     public class Maneger : Users
     { 
-        public string Department { get; set; }
+        public Department Department { get; set; }
         public string GenerateUser { get; set; }
 
         public Maneger()
