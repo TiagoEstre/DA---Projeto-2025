@@ -85,3 +85,8 @@ C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\ob
 C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.csproj.Up2Date
 C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.exe
 C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.pdb
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.CompletedTasksForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.OngoingTasksForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.TaskDetailForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.TaskTypeForm.resources
+C:\Users\tiago\Documents\DA - Projeto 2025\v4\DA---Projeto-2025\iTasks\iTasks\obj\Debug\iTasks.views.UserManagementForm.resources

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace iTasks.views
 {
-    public partial class usermanagementForm1 : Form
+    public partial class UserManagementForm : Form
     {
-        public usermanagementForm1()
+        public UserManagementForm()
         {
             InitializeComponent();
         }

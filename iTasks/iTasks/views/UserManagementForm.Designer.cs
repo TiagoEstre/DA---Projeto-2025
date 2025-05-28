@@ -1,6 +1,6 @@
 ﻿namespace iTasks.views
 {
-    partial class completedtasksForm1
+    partial class UserManagementForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // UserManagementForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "completedtasksForm1";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.ClientSize = new System.Drawing.Size(980, 595);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "UserManagementForm";
+            this.Text = "usermanagementForm1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

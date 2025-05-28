@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace iTasks.views
 {
-    public partial class tasktypeForm1 : Form
+    public partial class TaskDetailForm : Form
     {
-        public tasktypeForm1()
+        public TaskDetailForm()
         {
             InitializeComponent();
         }
