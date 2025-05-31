@@ -18,6 +18,7 @@ namespace iTasks.views
         public HomePageForm()
         {
             InitializeComponent();
+            trocarForm(new KanbanForm());
         }
 
         // Codigo Para Mover Form
@@ -73,12 +74,14 @@ namespace iTasks.views
         {
             l_NameForm.Text = "Detalhes Tarefas";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96;
+            trocarForm(new TaskDetailForm());
         }
 
         private void b_OngoingTasks_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Tarefas Em Curso";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96__1_;
+         
         }
 
         private void b_CompletedTasks_Click(object sender, EventArgs e)

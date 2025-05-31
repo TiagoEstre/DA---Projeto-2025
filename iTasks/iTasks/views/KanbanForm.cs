@@ -16,5 +16,10 @@ namespace iTasks.views
         {
             InitializeComponent();
         }
+
+        private void KanbanForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
