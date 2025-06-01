@@ -35,7 +35,7 @@ namespace iTasks.views
         }
 
         // Codigo para Mudar de Form
-        private void trocarForm(Form novoForm)
+        public void trocarForm(Form novoForm)
         {
             if (formAtivo != null)
             {
@@ -78,7 +78,7 @@ namespace iTasks.views
         {
             l_NameForm.Text = "Tipo de Tarefas";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
-            trocarForm(new TaskTypeForm());
+            trocarForm(new TaskTypeForm(trocarForm));
         }
 
         // Tasks
@@ -88,12 +88,6 @@ namespace iTasks.views
 
             p_ManagerApp.Visible = false;
             p_Tasks.Visible = !isVisible;
-        }
-        private void b_TaskDetails_Click(object sender, EventArgs e)
-        {
-            l_NameForm.Text = "Detalhes Tarefas";
-            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96;
-            trocarForm(new TaskDetailForm());
         }
         private void b_OngoingTasks_Click(object sender, EventArgs e)
         {

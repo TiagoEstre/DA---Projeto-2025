@@ -44,7 +44,7 @@
             // 
             this.lb_TaskTipe.FormattingEnabled = true;
             this.lb_TaskTipe.Location = new System.Drawing.Point(79, 54);
-            this.lb_TaskTipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_TaskTipe.Margin = new System.Windows.Forms.Padding(2);
             this.lb_TaskTipe.Name = "lb_TaskTipe";
             this.lb_TaskTipe.Size = new System.Drawing.Size(406, 472);
             this.lb_TaskTipe.TabIndex = 0;
@@ -154,6 +154,7 @@
             this.b_read.Size = new System.Drawing.Size(164, 36);
             this.b_read.TabIndex = 11;
             this.b_read.Text = "CONSULTAR";
+            this.b_read.Click += new System.EventHandler(this.b_read_Click);
             // 
             // b_Update
             // 

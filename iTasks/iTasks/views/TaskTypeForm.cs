@@ -12,9 +12,16 @@ namespace iTasks.views
 {
     public partial class TaskTypeForm : Form
     {
-        public TaskTypeForm()
+        private readonly Action<Form> _trocarForm;
+        public TaskTypeForm(Action<Form> trocarForm)
         {
             InitializeComponent();
+            _trocarForm = trocarForm;
+        }
+
+        private void b_read_Click(object sender, EventArgs e)
+        {
+            _trocarForm(new TaskDetailForm());
         }
     }
 }

@@ -38,7 +38,6 @@
             this.p_Tasks = new Guna.UI2.WinForms.Guna2Panel();
             this.b_CompletedTasks = new Guna.UI2.WinForms.Guna2Button();
             this.b_OngoingTasks = new Guna.UI2.WinForms.Guna2Button();
-            this.b_TaskDetails = new Guna.UI2.WinForms.Guna2Button();
             this.b_Tasks = new Guna.UI2.WinForms.Guna2Button();
             this.p_ManagerApp = new Guna.UI2.WinForms.Guna2Panel();
             this.b_TaskType = new Guna.UI2.WinForms.Guna2Button();
@@ -101,11 +100,10 @@
             // 
             this.p_Tasks.Controls.Add(this.b_CompletedTasks);
             this.p_Tasks.Controls.Add(this.b_OngoingTasks);
-            this.p_Tasks.Controls.Add(this.b_TaskDetails);
             this.p_Tasks.Dock = System.Windows.Forms.DockStyle.Top;
             this.p_Tasks.Location = new System.Drawing.Point(0, 384);
             this.p_Tasks.Name = "p_Tasks";
-            this.p_Tasks.Size = new System.Drawing.Size(220, 180);
+            this.p_Tasks.Size = new System.Drawing.Size(220, 125);
             this.p_Tasks.TabIndex = 8;
             this.p_Tasks.Visible = false;
             // 
@@ -122,7 +120,7 @@
             this.b_CompletedTasks.Image = global::iTasks.Properties.Resources.icons8_to_do_96__1_1;
             this.b_CompletedTasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_CompletedTasks.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_CompletedTasks.Location = new System.Drawing.Point(0, 120);
+            this.b_CompletedTasks.Location = new System.Drawing.Point(0, 60);
             this.b_CompletedTasks.Name = "b_CompletedTasks";
             this.b_CompletedTasks.Size = new System.Drawing.Size(220, 60);
             this.b_CompletedTasks.TabIndex = 11;
@@ -144,7 +142,7 @@
             this.b_OngoingTasks.Image = global::iTasks.Properties.Resources.icons8_tasks_96__3_1;
             this.b_OngoingTasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_OngoingTasks.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_OngoingTasks.Location = new System.Drawing.Point(0, 60);
+            this.b_OngoingTasks.Location = new System.Drawing.Point(0, 0);
             this.b_OngoingTasks.Name = "b_OngoingTasks";
             this.b_OngoingTasks.Size = new System.Drawing.Size(220, 60);
             this.b_OngoingTasks.TabIndex = 10;
@@ -152,28 +150,6 @@
             this.b_OngoingTasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_OngoingTasks.TextOffset = new System.Drawing.Point(8, 0);
             this.b_OngoingTasks.Click += new System.EventHandler(this.b_OngoingTasks_Click);
-            // 
-            // b_TaskDetails
-            // 
-            this.b_TaskDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.b_TaskDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.b_TaskDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.b_TaskDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.b_TaskDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.b_TaskDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
-            this.b_TaskDetails.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.b_TaskDetails.ForeColor = System.Drawing.Color.White;
-            this.b_TaskDetails.Image = global::iTasks.Properties.Resources.icons8_tasks_96__2_1;
-            this.b_TaskDetails.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.b_TaskDetails.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_TaskDetails.Location = new System.Drawing.Point(0, 0);
-            this.b_TaskDetails.Name = "b_TaskDetails";
-            this.b_TaskDetails.Size = new System.Drawing.Size(220, 60);
-            this.b_TaskDetails.TabIndex = 9;
-            this.b_TaskDetails.Text = "Detalhes Tarefas";
-            this.b_TaskDetails.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.b_TaskDetails.TextOffset = new System.Drawing.Point(8, 0);
-            this.b_TaskDetails.Click += new System.EventHandler(this.b_TaskDetails_Click);
             // 
             // b_Tasks
             // 
@@ -454,7 +430,6 @@
         private Guna.UI2.WinForms.Guna2Panel p_Tasks;
         private Guna.UI2.WinForms.Guna2Button b_CompletedTasks;
         private Guna.UI2.WinForms.Guna2Button b_OngoingTasks;
-        private Guna.UI2.WinForms.Guna2Button b_TaskDetails;
         private Guna.UI2.WinForms.Guna2Button b_Tasks;
     }
 }
