@@ -49,6 +49,7 @@
             this.p_Manager = new System.Windows.Forms.Panel();
             this.p_Programmer = new System.Windows.Forms.Panel();
             this.lb_Programmer = new System.Windows.Forms.ListBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.p_Manager.SuspendLayout();
             this.p_Programmer.SuspendLayout();
             this.SuspendLayout();
@@ -58,8 +59,8 @@
             this.cb_Programmer.AutoSize = true;
             this.cb_Programmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Programmer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cb_Programmer.Location = new System.Drawing.Point(107, 260);
-            this.cb_Programmer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Programmer.Location = new System.Drawing.Point(183, 80);
+            this.cb_Programmer.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Programmer.Name = "cb_Programmer";
             this.cb_Programmer.Size = new System.Drawing.Size(110, 21);
             this.cb_Programmer.TabIndex = 6;
@@ -72,8 +73,8 @@
             this.cb_Manager.AutoSize = true;
             this.cb_Manager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Manager.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cb_Manager.Location = new System.Drawing.Point(292, 260);
-            this.cb_Manager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Manager.Location = new System.Drawing.Point(349, 80);
+            this.cb_Manager.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Manager.Name = "cb_Manager";
             this.cb_Manager.Size = new System.Drawing.Size(70, 21);
             this.cb_Manager.TabIndex = 7;
@@ -120,7 +121,7 @@
             this.lb_Manager.FormattingEnabled = true;
             this.lb_Manager.ItemHeight = 20;
             this.lb_Manager.Location = new System.Drawing.Point(533, 71);
-            this.lb_Manager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_Manager.Margin = new System.Windows.Forms.Padding(2);
             this.lb_Manager.Name = "lb_Manager";
             this.lb_Manager.Size = new System.Drawing.Size(364, 364);
             this.lb_Manager.TabIndex = 21;
@@ -138,7 +139,7 @@
             this.tb_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Name.Location = new System.Drawing.Point(60, 70);
+            this.tb_Name.Location = new System.Drawing.Point(60, 131);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.PlaceholderText = "";
             this.tb_Name.SelectedText = "";
@@ -157,7 +158,7 @@
             this.tb_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Username.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Username.Location = new System.Drawing.Point(60, 135);
+            this.tb_Username.Location = new System.Drawing.Point(60, 196);
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.PlaceholderText = "";
             this.tb_Username.SelectedText = "";
@@ -176,7 +177,7 @@
             this.tb_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Password.Location = new System.Drawing.Point(60, 200);
+            this.tb_Password.Location = new System.Drawing.Point(60, 261);
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PlaceholderText = "";
             this.tb_Password.SelectedText = "";
@@ -264,8 +265,8 @@
             this.b_Create.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.b_Create.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.b_Create.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.b_Create.FillColor = System.Drawing.Color.White;
-            this.b_Create.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.b_Create.FillColor = System.Drawing.Color.LightGray;
+            this.b_Create.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Create.ForeColor = System.Drawing.Color.Black;
             this.b_Create.Location = new System.Drawing.Point(60, 485);
             this.b_Create.Name = "b_Create";
@@ -280,8 +281,8 @@
             this.b_Consult.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.b_Consult.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.b_Consult.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.b_Consult.FillColor = System.Drawing.Color.White;
-            this.b_Consult.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.b_Consult.FillColor = System.Drawing.Color.LightGray;
+            this.b_Consult.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Consult.ForeColor = System.Drawing.Color.Black;
             this.b_Consult.Location = new System.Drawing.Point(305, 485);
             this.b_Consult.Name = "b_Consult";
@@ -296,8 +297,8 @@
             this.b_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.b_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.b_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.b_Edit.FillColor = System.Drawing.Color.White;
-            this.b_Edit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.b_Edit.FillColor = System.Drawing.Color.LightGray;
+            this.b_Edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Edit.ForeColor = System.Drawing.Color.Black;
             this.b_Edit.Location = new System.Drawing.Point(533, 485);
             this.b_Edit.Name = "b_Edit";
@@ -312,8 +313,8 @@
             this.b_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.b_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.b_Delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.b_Delete.FillColor = System.Drawing.Color.White;
-            this.b_Delete.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.b_Delete.FillColor = System.Drawing.Color.LightGray;
+            this.b_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Delete.ForeColor = System.Drawing.Color.Black;
             this.b_Delete.Location = new System.Drawing.Point(778, 485);
             this.b_Delete.Name = "b_Delete";
@@ -357,6 +358,26 @@
             this.lb_Programmer.TabIndex = 21;
             this.lb_Programmer.Visible = false;
             // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.AutoRoundedCorners = true;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "ID";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Enabled = false;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(60, 71);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(80, 36);
+            this.guna2TextBox1.TabIndex = 22;
+            // 
             // UserManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +392,7 @@
             this.Controls.Add(this.b_Create);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.tb_Username);
+            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.tb_Name);
             this.Controls.Add(this.lb_Programmer);
             this.Controls.Add(this.lb_Manager);
@@ -410,5 +432,6 @@
         private System.Windows.Forms.Panel p_Manager;
         private System.Windows.Forms.Panel p_Programmer;
         private System.Windows.Forms.ListBox lb_Programmer;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

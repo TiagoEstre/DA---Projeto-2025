@@ -34,11 +34,11 @@
             this.gb_ToDo = new System.Windows.Forms.GroupBox();
             this.gb_Doing = new System.Windows.Forms.GroupBox();
             this.gb_Done = new System.Windows.Forms.GroupBox();
-            this.b_NewTask = new System.Windows.Forms.Button();
-            this.b_ExecuteTask = new System.Windows.Forms.Button();
-            this.b_RestartTask = new System.Windows.Forms.Button();
-            this.b_FinishTask = new System.Windows.Forms.Button();
-            this.b_seeCompletionForecast = new System.Windows.Forms.Button();
+            this.b_seeCompletionForecast = new Guna.UI2.WinForms.Guna2Button();
+            this.b_NewTask = new Guna.UI2.WinForms.Guna2Button();
+            this.b_FinishTask = new Guna.UI2.WinForms.Guna2Button();
+            this.b_RestartTask = new Guna.UI2.WinForms.Guna2Button();
+            this.b_ExecuteTask = new Guna.UI2.WinForms.Guna2Button();
             this.gb_ToDo.SuspendLayout();
             this.gb_Doing.SuspendLayout();
             this.gb_Done.SuspendLayout();
@@ -47,37 +47,39 @@
             // lb_ToDo
             // 
             this.lb_ToDo.FormattingEnabled = true;
-            this.lb_ToDo.ItemHeight = 16;
-            this.lb_ToDo.Location = new System.Drawing.Point(29, 46);
+            this.lb_ToDo.Location = new System.Drawing.Point(19, 23);
+            this.lb_ToDo.Margin = new System.Windows.Forms.Padding(2);
             this.lb_ToDo.Name = "lb_ToDo";
-            this.lb_ToDo.Size = new System.Drawing.Size(336, 468);
+            this.lb_ToDo.Size = new System.Drawing.Size(269, 420);
             this.lb_ToDo.TabIndex = 0;
             // 
             // lb_Doing
             // 
             this.lb_Doing.FormattingEnabled = true;
-            this.lb_Doing.ItemHeight = 16;
-            this.lb_Doing.Location = new System.Drawing.Point(24, 46);
+            this.lb_Doing.Location = new System.Drawing.Point(19, 23);
+            this.lb_Doing.Margin = new System.Windows.Forms.Padding(2);
             this.lb_Doing.Name = "lb_Doing";
-            this.lb_Doing.Size = new System.Drawing.Size(316, 468);
+            this.lb_Doing.Size = new System.Drawing.Size(269, 420);
             this.lb_Doing.TabIndex = 1;
             // 
             // lb_Done
             // 
             this.lb_Done.FormattingEnabled = true;
-            this.lb_Done.ItemHeight = 16;
-            this.lb_Done.Location = new System.Drawing.Point(27, 36);
+            this.lb_Done.Location = new System.Drawing.Point(19, 23);
+            this.lb_Done.Margin = new System.Windows.Forms.Padding(2);
             this.lb_Done.Name = "lb_Done";
-            this.lb_Done.Size = new System.Drawing.Size(324, 468);
+            this.lb_Done.Size = new System.Drawing.Size(269, 420);
             this.lb_Done.TabIndex = 2;
             // 
             // gb_ToDo
             // 
             this.gb_ToDo.Controls.Add(this.lb_ToDo);
             this.gb_ToDo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gb_ToDo.Location = new System.Drawing.Point(72, 98);
+            this.gb_ToDo.Location = new System.Drawing.Point(21, 60);
+            this.gb_ToDo.Margin = new System.Windows.Forms.Padding(2);
             this.gb_ToDo.Name = "gb_ToDo";
-            this.gb_ToDo.Size = new System.Drawing.Size(385, 545);
+            this.gb_ToDo.Padding = new System.Windows.Forms.Padding(2);
+            this.gb_ToDo.Size = new System.Drawing.Size(307, 463);
             this.gb_ToDo.TabIndex = 3;
             this.gb_ToDo.TabStop = false;
             this.gb_ToDo.Text = "ToDo";
@@ -86,9 +88,11 @@
             // 
             this.gb_Doing.Controls.Add(this.lb_Doing);
             this.gb_Doing.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gb_Doing.Location = new System.Drawing.Point(499, 98);
+            this.gb_Doing.Location = new System.Drawing.Point(337, 60);
+            this.gb_Doing.Margin = new System.Windows.Forms.Padding(2);
             this.gb_Doing.Name = "gb_Doing";
-            this.gb_Doing.Size = new System.Drawing.Size(351, 545);
+            this.gb_Doing.Padding = new System.Windows.Forms.Padding(2);
+            this.gb_Doing.Size = new System.Drawing.Size(307, 463);
             this.gb_Doing.TabIndex = 4;
             this.gb_Doing.TabStop = false;
             this.gb_Doing.Text = "Doing";
@@ -97,74 +101,116 @@
             // 
             this.gb_Done.Controls.Add(this.lb_Done);
             this.gb_Done.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gb_Done.Location = new System.Drawing.Point(889, 98);
+            this.gb_Done.Location = new System.Drawing.Point(652, 60);
+            this.gb_Done.Margin = new System.Windows.Forms.Padding(2);
             this.gb_Done.Name = "gb_Done";
-            this.gb_Done.Size = new System.Drawing.Size(368, 544);
+            this.gb_Done.Padding = new System.Windows.Forms.Padding(2);
+            this.gb_Done.Size = new System.Drawing.Size(307, 463);
             this.gb_Done.TabIndex = 5;
             this.gb_Done.TabStop = false;
             this.gb_Done.Text = "Done";
             // 
+            // b_seeCompletionForecast
+            // 
+            this.b_seeCompletionForecast.AutoRoundedCorners = true;
+            this.b_seeCompletionForecast.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.b_seeCompletionForecast.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.b_seeCompletionForecast.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.b_seeCompletionForecast.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.b_seeCompletionForecast.FillColor = System.Drawing.Color.LightGray;
+            this.b_seeCompletionForecast.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.b_seeCompletionForecast.ForeColor = System.Drawing.Color.Black;
+            this.b_seeCompletionForecast.Location = new System.Drawing.Point(732, 12);
+            this.b_seeCompletionForecast.Name = "b_seeCompletionForecast";
+            this.b_seeCompletionForecast.Size = new System.Drawing.Size(227, 36);
+            this.b_seeCompletionForecast.TabIndex = 11;
+            this.b_seeCompletionForecast.Text = "VER PREVISÃO DE CONCLUSÃO";
+            // 
             // b_NewTask
             // 
-            this.b_NewTask.Location = new System.Drawing.Point(99, 659);
+            this.b_NewTask.AutoRoundedCorners = true;
+            this.b_NewTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.b_NewTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.b_NewTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.b_NewTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.b_NewTask.FillColor = System.Drawing.Color.LightGray;
+            this.b_NewTask.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.b_NewTask.ForeColor = System.Drawing.Color.Black;
+            this.b_NewTask.Location = new System.Drawing.Point(21, 538);
             this.b_NewTask.Name = "b_NewTask";
-            this.b_NewTask.Size = new System.Drawing.Size(210, 31);
-            this.b_NewTask.TabIndex = 6;
-            this.b_NewTask.Text = "Nova Tarefa";
-            this.b_NewTask.UseVisualStyleBackColor = true;
-            // 
-            // b_ExecuteTask
-            // 
-            this.b_ExecuteTask.Location = new System.Drawing.Point(366, 657);
-            this.b_ExecuteTask.Name = "b_ExecuteTask";
-            this.b_ExecuteTask.Size = new System.Drawing.Size(191, 32);
-            this.b_ExecuteTask.TabIndex = 7;
-            this.b_ExecuteTask.Text = "Executar Tarefa >>";
-            this.b_ExecuteTask.UseVisualStyleBackColor = true;
-            // 
-            // b_RestartTask
-            // 
-            this.b_RestartTask.Location = new System.Drawing.Point(604, 658);
-            this.b_RestartTask.Name = "b_RestartTask";
-            this.b_RestartTask.Size = new System.Drawing.Size(164, 31);
-            this.b_RestartTask.TabIndex = 8;
-            this.b_RestartTask.Text = "<< Reiniciar Tarefa";
-            this.b_RestartTask.UseVisualStyleBackColor = true;
+            this.b_NewTask.Size = new System.Drawing.Size(148, 36);
+            this.b_NewTask.TabIndex = 11;
+            this.b_NewTask.Text = "NOVA TAREFA";
             // 
             // b_FinishTask
             // 
-            this.b_FinishTask.Location = new System.Drawing.Point(828, 658);
+            this.b_FinishTask.AutoRoundedCorners = true;
+            this.b_FinishTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.b_FinishTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.b_FinishTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.b_FinishTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.b_FinishTask.FillColor = System.Drawing.Color.LightGray;
+            this.b_FinishTask.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.b_FinishTask.ForeColor = System.Drawing.Color.Black;
+            this.b_FinishTask.Location = new System.Drawing.Point(811, 538);
             this.b_FinishTask.Name = "b_FinishTask";
-            this.b_FinishTask.Size = new System.Drawing.Size(173, 31);
-            this.b_FinishTask.TabIndex = 9;
-            this.b_FinishTask.Text = "Terminar Tarefa";
-            this.b_FinishTask.UseVisualStyleBackColor = true;
+            this.b_FinishTask.Size = new System.Drawing.Size(148, 36);
+            this.b_FinishTask.TabIndex = 11;
+            this.b_FinishTask.Text = "TERMINAR TAREFA";
             // 
-            // b_seeCompletionForecast
+            // b_RestartTask
             // 
-            this.b_seeCompletionForecast.Location = new System.Drawing.Point(90, 47);
-            this.b_seeCompletionForecast.Name = "b_seeCompletionForecast";
-            this.b_seeCompletionForecast.Size = new System.Drawing.Size(195, 32);
-            this.b_seeCompletionForecast.TabIndex = 10;
-            this.b_seeCompletionForecast.Text = "Ver Previsão da Conclusão";
-            this.b_seeCompletionForecast.UseVisualStyleBackColor = true;
+            this.b_RestartTask.AutoRoundedCorners = true;
+            this.b_RestartTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.b_RestartTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.b_RestartTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.b_RestartTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.b_RestartTask.FillColor = System.Drawing.Color.LightGray;
+            this.b_RestartTask.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.b_RestartTask.ForeColor = System.Drawing.Color.Black;
+            this.b_RestartTask.Image = global::iTasks.Properties.Resources.icons8_arrow_96__1_;
+            this.b_RestartTask.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.b_RestartTask.Location = new System.Drawing.Point(496, 538);
+            this.b_RestartTask.Name = "b_RestartTask";
+            this.b_RestartTask.Size = new System.Drawing.Size(148, 36);
+            this.b_RestartTask.TabIndex = 11;
+            this.b_RestartTask.Text = "REINICIAR TAREFA";
+            this.b_RestartTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // b_ExecuteTask
+            // 
+            this.b_ExecuteTask.AutoRoundedCorners = true;
+            this.b_ExecuteTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.b_ExecuteTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.b_ExecuteTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.b_ExecuteTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.b_ExecuteTask.FillColor = System.Drawing.Color.LightGray;
+            this.b_ExecuteTask.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.b_ExecuteTask.ForeColor = System.Drawing.Color.Black;
+            this.b_ExecuteTask.Image = global::iTasks.Properties.Resources.icons8_arrow_96;
+            this.b_ExecuteTask.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.b_ExecuteTask.Location = new System.Drawing.Point(180, 538);
+            this.b_ExecuteTask.Name = "b_ExecuteTask";
+            this.b_ExecuteTask.Size = new System.Drawing.Size(148, 36);
+            this.b_ExecuteTask.TabIndex = 11;
+            this.b_ExecuteTask.Text = "EXECUTAR TAREFA";
+            this.b_ExecuteTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // KanbanForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1307, 732);
-            this.Controls.Add(this.b_seeCompletionForecast);
+            this.ClientSize = new System.Drawing.Size(980, 595);
             this.Controls.Add(this.b_FinishTask);
             this.Controls.Add(this.b_RestartTask);
             this.Controls.Add(this.b_ExecuteTask);
             this.Controls.Add(this.b_NewTask);
+            this.Controls.Add(this.b_seeCompletionForecast);
             this.Controls.Add(this.gb_Done);
             this.Controls.Add(this.gb_Doing);
             this.Controls.Add(this.gb_ToDo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KanbanForm";
             this.Text = "KanbanForm";
             this.Load += new System.EventHandler(this.KanbanForm_Load);
@@ -183,10 +229,10 @@
         private System.Windows.Forms.GroupBox gb_ToDo;
         private System.Windows.Forms.GroupBox gb_Doing;
         private System.Windows.Forms.GroupBox gb_Done;
-        private System.Windows.Forms.Button b_NewTask;
-        private System.Windows.Forms.Button b_ExecuteTask;
-        private System.Windows.Forms.Button b_RestartTask;
-        private System.Windows.Forms.Button b_FinishTask;
-        private System.Windows.Forms.Button b_seeCompletionForecast;
+        private Guna.UI2.WinForms.Guna2Button b_seeCompletionForecast;
+        private Guna.UI2.WinForms.Guna2Button b_NewTask;
+        private Guna.UI2.WinForms.Guna2Button b_ExecuteTask;
+        private Guna.UI2.WinForms.Guna2Button b_RestartTask;
+        private Guna.UI2.WinForms.Guna2Button b_FinishTask;
     }
 }

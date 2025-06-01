@@ -51,12 +51,22 @@ namespace iTasks.views
             panelMessage.Controls.Add(novoForm);
             novoForm.Show();
         }
+
         // Codigo dos Botoes do Menu
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void pb_Logo_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Menu";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_home_96__1_;
             trocarForm(new KanbanForm());
+        }
+
+        // Gestao
+        private void b_ManagerApp_Click(object sender, EventArgs e)
+        {
+            bool isVisible = p_ManagerApp.Visible;
+
+            p_Tasks.Visible = false;
+            p_ManagerApp.Visible = !isVisible;
         }
         private void b_Users_Click(object sender, EventArgs e)
         {
@@ -64,26 +74,33 @@ namespace iTasks.views
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
             trocarForm(new UserManagementForm());
         }
-
-        private void b_Tasks_Click(object sender, EventArgs e)
+        private void b_TaskType_Click(object sender, EventArgs e)
         {
-            p_Tasks.Visible = true;
+            l_NameForm.Text = "Tipo de Tarefas";
+            pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
+            trocarForm(new TaskTypeForm());
         }
 
+        // Tasks
+        private void b_Tasks_Click(object sender, EventArgs e)
+        {
+            bool isVisible = p_Tasks.Visible;
+
+            p_ManagerApp.Visible = false;
+            p_Tasks.Visible = !isVisible;
+        }
         private void b_TaskDetails_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Detalhes Tarefas";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96;
             trocarForm(new TaskDetailForm());
         }
-
         private void b_OngoingTasks_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Tarefas Em Curso";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96__1_;
          
         }
-
         private void b_CompletedTasks_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Tarefas Concluidas";
