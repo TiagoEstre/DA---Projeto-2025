@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iTasks.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,11 @@ namespace iTasks.views
         public UserManagementForm()
         {
             InitializeComponent();
+
+            Enum.GetValues(typeof(ExperienceLevel));
+            Enum.GetValues(typeof(Department));
+            cb_ExperienceLevel.DataSource = Enum.GetValues(typeof(ExperienceLevel));
+            cb_Department.DataSource = Enum.GetValues(typeof(Department));
         }
 
         private void cb_Programmer_CheckedChanged(object sender, EventArgs e)
@@ -54,6 +60,41 @@ namespace iTasks.views
 
                 lb_Manager.Visible = false;
             }
+        }
+        public class ListManager
+        {
+            public Maneger Maneger { get; set; }
+        }
+
+        public class ListProgrmmer
+        {
+            public Programmer Programmer { get; set; }
+        }
+
+        // Funções
+        // Função para Salvar novo Usuário
+        private void SaveManager(Maneger Maneger)
+        {
+            using (var db = new iTasksContext())
+            {
+                db.Users.Add(Maneger);
+                db.SaveChanges();
+            }
+        }
+        private void SaveProgrammer(Programmer Programmer)
+        {
+            using (var db = new iTasksContext())
+            {
+                db.Users.Add(Programmer);
+                db.SaveChanges();
+            }
+        }
+
+        private void b_Create_Click(object sender, EventArgs e)
+        {
+            string Name = tb_Name.Text;
+            string Users = tb_Username.Text;
+            string Password = tb_Password.Text;
         }
     }
 }

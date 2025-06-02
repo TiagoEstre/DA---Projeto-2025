@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iTasks.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace iTasks.views
         public TaskDetailForm()
         {
             InitializeComponent();
+            Enum.GetValues(typeof(CurrentStatus));
         }
     }
 }
