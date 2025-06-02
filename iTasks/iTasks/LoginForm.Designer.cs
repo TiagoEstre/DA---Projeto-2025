@@ -143,7 +143,6 @@
             // Pl_Login
             // 
             this.Pl_Login.BackColor = System.Drawing.Color.Transparent;
-            this.Pl_Login.Controls.Add(this.Pl_Register);
             this.Pl_Login.Controls.Add(this.tb_Username);
             this.Pl_Login.Controls.Add(this.bt_Login);
             this.Pl_Login.Controls.Add(this.tb_Password);
@@ -224,7 +223,7 @@
             this.Pl_Register.Controls.Add(this.tb_CreateConfirmPassword);
             this.Pl_Register.Controls.Add(this.tb_CrearteUsername);
             this.Pl_Register.FillColor = System.Drawing.Color.White;
-            this.Pl_Register.Location = new System.Drawing.Point(0, 0);
+            this.Pl_Register.Location = new System.Drawing.Point(375, 81);
             this.Pl_Register.Name = "Pl_Register";
             this.Pl_Register.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.Pl_Register.ShadowDepth = 70;
@@ -364,6 +363,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(713, 511);
+            this.Controls.Add(this.Pl_Register);
             this.Controls.Add(this.Pl_Login);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.ControlBoxClosed);

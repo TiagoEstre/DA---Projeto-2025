@@ -42,19 +42,18 @@ namespace iTasks
         }
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            
             if (ExistemUtilizadores())
             {
                 Pl_Login.Visible = true;
                 Pl_Register.Visible = false;
-
             }
             else
             {
-                Pl_Register.Visible = true;
                 Pl_Login.Visible = false;
-
+                Pl_Register.Visible = true;
             }
+                
         }
 
         private void Closed_FormClosed(object sender, FormClosedEventArgs e)
