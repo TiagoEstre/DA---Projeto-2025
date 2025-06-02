@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class iTasksContext : DbMigration
+    public partial class iTasksConstext : DbMigration
     {
         public override void Up()
         {
@@ -46,13 +46,10 @@
                         ExperienceLevel = c.Int(),
                         Discriminator = c.String(nullable: false, maxLength: 128),
                         idManeger_Id = c.Int(),
-                        Maneger_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Users", t => t.idManeger_Id)
-                .ForeignKey("dbo.Users", t => t.Maneger_Id)
-                .Index(t => t.idManeger_Id)
-                .Index(t => t.Maneger_Id);
+                .Index(t => t.idManeger_Id);
             
             CreateTable(
                 "dbo.TaskTypes",
@@ -67,12 +64,10 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Users", "Maneger_Id", "dbo.Users");
             DropForeignKey("dbo.Tasks", "idTaskType_Id", "dbo.TaskTypes");
             DropForeignKey("dbo.Tasks", "IdProgrammer_Id", "dbo.Users");
             DropForeignKey("dbo.Users", "idManeger_Id", "dbo.Users");
             DropForeignKey("dbo.Tasks", "IdManeger_Id", "dbo.Users");
-            DropIndex("dbo.Users", new[] { "Maneger_Id" });
             DropIndex("dbo.Users", new[] { "idManeger_Id" });
             DropIndex("dbo.Tasks", new[] { "idTaskType_Id" });
             DropIndex("dbo.Tasks", new[] { "IdProgrammer_Id" });
