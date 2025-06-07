@@ -13,11 +13,14 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
 using System.Data.Entity;
+using System.Diagnostics.Eventing.Reader;
 
 namespace iTasks.views
 {
     public partial class UserManagementForm : Form
     {
+        private Maneger SelectedManeger;
+        private Programmer SelectedProgrammer;
         public UserManagementForm()
         {
             InitializeComponent();
@@ -171,18 +174,6 @@ namespace iTasks.views
             }
         }
         
-
-        //
-        public class ListManager
-        {
-            public Maneger Maneger { get; set; }
-        }
-
-        public class ListProgrmmer
-        {
-            public Programmer Programmer { get; set; }
-        }
-
 
         // Funções
 
@@ -407,6 +398,7 @@ namespace iTasks.views
             if (selectedProgrammer == null)
                 return;
 
+            SelectedProgrammer = selectedProgrammer;
             tb_Id.Text = selectedProgrammer.Id.ToString();
             tb_Name.Text = selectedProgrammer.Name;
             tb_Username.Text = selectedProgrammer.Username;
@@ -438,6 +430,7 @@ namespace iTasks.views
                 return;
             }
 
+            SelectedManeger = selectedManager;
             tb_Id.Text = selectedManager.Id.ToString();
             tb_Name.Text = selectedManager.Name;
             tb_Username.Text = selectedManager.Username;
@@ -447,5 +440,60 @@ namespace iTasks.views
             cb_Department.SelectedItem = selectedManager.Department;
             ts_ManegerUsername.Checked = selectedManager.GenerateUser == "True" || selectedManager.GenerateUser == "true";
         }
+
+        private void b_Edit_Click(object sender, EventArgs e)
+        {
+                     
+            //Se um Gestor estiver selecionado
+            if (SelectedManeger != null)
+            {
+                Department departmentSelec = (Department)cb_Department.SelectedItem;
+                string ManegerUsers = ts_ManegerUsername.Checked ? "True" : "False";
+
+                SelectedManeger.Name = tb_Name.Text;
+                SelectedManeger.Username = tb_Username.Text;
+                SelectedManeger.Password = tb_Password.Text;
+                SelectedManeger.Department = departmentSelec;
+                SelectedManeger.GenerateUser = ManegerUsers;
+
+                //Atualizar na base de dados
+                using (var db = new iTasksContext())
+                {
+                    db.Entry(SelectedManeger).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+            }
+
+             // Se o programador estiver selecionado
+            else if(SelectedProgrammer != null)
+            {
+                ExperienceLevel experienceLevelSelec = (ExperienceLevel)cb_ExperienceLevel.SelectedItem;
+                Maneger manegerSelec = cb_Maneger.SelectedItem as Maneger;
+
+                SelectedProgrammer.Name = tb_Name.Text;
+                SelectedProgrammer.Username = tb_Username.Text;
+                SelectedProgrammer.Password = tb_Password.Text;
+                SelectedProgrammer.ExperienceLevel = experienceLevelSelec;
+                SelectedProgrammer.idManeger = manegerSelec;
+
+                //Atualizar base de dados
+                using (var db = new iTasksContext())
+                {
+                    db.Entry(SelectedProgrammer).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente da lista para editar.");
+                return;
+            }
+
+        MessageBox.Show("Dados do cliente atualizados com sucesso.");
+
+
+
+        }
+        
     }
 }
