@@ -1,4 +1,5 @@
-﻿using iTasks.Migrations;
+﻿using iTasks.controller;
+using iTasks.Migrations;
 using iTasks.models;
 using iTasks.views;
 using System;
@@ -264,11 +265,17 @@ namespace iTasks
 
                 if (utilizador != null && utilizador.Password == password)
                 {
+                    sessionManager.Login(utilizador);
+
                     HomePageForm homePage = new HomePageForm();
 
                     Hide();
                     homePage.FormClosed += Closed_FormClosed;
                     homePage.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Username ou Password incorretos.");
                 }
             } 
         }

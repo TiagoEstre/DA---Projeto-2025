@@ -47,7 +47,7 @@
             this.pb_Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.p_Bar = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.b_User = new Guna.UI2.WinForms.Guna2Button();
             this.cb_Minimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cb_Maximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cb_close = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -276,7 +276,7 @@
             // p_Bar
             // 
             this.p_Bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.p_Bar.Controls.Add(this.guna2Button1);
+            this.p_Bar.Controls.Add(this.b_User);
             this.p_Bar.Controls.Add(this.cb_Minimize);
             this.p_Bar.Controls.Add(this.cb_Maximize);
             this.p_Bar.Controls.Add(this.cb_close);
@@ -289,31 +289,31 @@
             this.p_Bar.TabIndex = 1;
             this.p_Bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.p_Bar_MouseDown);
             // 
-            // guna2Button1
+            // b_User
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.b_User.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Button1.BorderRadius = 19;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(169)))));
-            this.guna2Button1.Image = global::iTasks.Properties.Resources.icons8_user_961;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button1.Location = new System.Drawing.Point(795, 28);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(176, 41);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Nome do Utilizador";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(2, 0);
+            this.b_User.AutoRoundedCorners = true;
+            this.b_User.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.b_User.BorderRadius = 19;
+            this.b_User.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.b_User.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.b_User.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.b_User.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.b_User.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.b_User.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.b_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(169)))));
+            this.b_User.Image = global::iTasks.Properties.Resources.icons8_user_961;
+            this.b_User.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.b_User.ImageSize = new System.Drawing.Size(32, 32);
+            this.b_User.Location = new System.Drawing.Point(795, 28);
+            this.b_User.Margin = new System.Windows.Forms.Padding(2);
+            this.b_User.Name = "b_User";
+            this.b_User.Size = new System.Drawing.Size(176, 41);
+            this.b_User.TabIndex = 6;
+            this.b_User.Text = "Nome do Utilizador";
+            this.b_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.b_User.TextOffset = new System.Drawing.Point(2, 0);
             // 
             // cb_Minimize
             // 
@@ -354,7 +354,7 @@
             this.l_NameForm.ForeColor = System.Drawing.Color.Gainsboro;
             this.l_NameForm.Location = new System.Drawing.Point(60, 41);
             this.l_NameForm.Name = "l_NameForm";
-            this.l_NameForm.Size = new System.Drawing.Size(45, 15);
+            this.l_NameForm.Size = new System.Drawing.Size(53, 18);
             this.l_NameForm.TabIndex = 1;
             this.l_NameForm.Text = "Home";
             // 
@@ -422,7 +422,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox cb_Minimize;
         private Guna.UI2.WinForms.Guna2ControlBox cb_Maximize;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button b_User;
         private Guna.UI2.WinForms.Guna2Panel p_ManagerApp;
         private Guna.UI2.WinForms.Guna2Button b_ManagerApp;
         private Guna.UI2.WinForms.Guna2PictureBox pb_Logo;

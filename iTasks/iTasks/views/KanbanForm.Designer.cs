@@ -141,6 +141,7 @@
             this.b_NewTask.Size = new System.Drawing.Size(148, 36);
             this.b_NewTask.TabIndex = 11;
             this.b_NewTask.Text = "NOVA TAREFA";
+            this.b_NewTask.Click += new System.EventHandler(this.b_NewTask_Click);
             // 
             // b_FinishTask
             // 
@@ -213,7 +214,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KanbanForm";
             this.Text = "KanbanForm";
-            this.Load += new System.EventHandler(this.KanbanForm_Load);
             this.gb_ToDo.ResumeLayout(false);
             this.gb_Doing.ResumeLayout(false);
             this.gb_Done.ResumeLayout(false);

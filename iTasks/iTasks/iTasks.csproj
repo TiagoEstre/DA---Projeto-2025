@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\sessionManager.cs" />
     <Compile Include="iTasksContext.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

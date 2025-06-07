@@ -17,7 +17,7 @@ namespace iTasks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomePageForm());
+            Application.Run(new LoginForm());
         }
     }
 }

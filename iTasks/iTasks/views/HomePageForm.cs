@@ -1,4 +1,6 @@
-﻿using iTasks.Properties;
+﻿using iTasks.controller;
+using iTasks.models;
+using iTasks.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +20,53 @@ namespace iTasks.views
         public HomePageForm()
         {
             InitializeComponent();
-            trocarForm(new KanbanForm());
+            LoadCurrentUser();
+            trocarForm(new KanbanForm(trocarForm));
+            VerifyUsers();
+
         }
+
+        private void LoadCurrentUser()
+        {
+            if (sessionManager.IsLoggedIn())
+            {
+                var currentUser = sessionManager.CurrentUser;
+
+                b_User.Text = currentUser.Name;
+            }
+        }
+        private void VerifyUsers()
+        {
+            var currentUser = sessionManager.CurrentUser;
+
+            string name = currentUser.Name;
+
+
+            using (var db = new iTasksContext())
+            {
+                try
+                {
+                    var Managers = db.Users
+                        .OfType<Maneger>()
+                        .Where(m =>
+                                (string.IsNullOrEmpty(name) || m.Name.Contains(name)))
+                        .ToList();
+
+                    if (Managers.Count == 0)
+                    {
+                        b_Users.Visible = false;
+                        p_ManagerApp.Size = new System.Drawing.Size(220, 60);
+                    }
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao consultar gestores");
+                }
+            }
+        }
+        
 
         // Codigo Para Mover Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -57,7 +104,7 @@ namespace iTasks.views
         {
             l_NameForm.Text = "Menu";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_home_96__1_;
-            trocarForm(new KanbanForm());
+            trocarForm(new KanbanForm(trocarForm));
         }
 
         // Gestao
