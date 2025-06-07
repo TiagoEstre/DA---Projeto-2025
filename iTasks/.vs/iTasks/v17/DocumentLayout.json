@@ -1,12 +1,171 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v14\\DA---Projeto-2025\\iTasks\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\models\\maneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\maneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\models\\programmer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\programmer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\models\\tasktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\tasktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v15\\da---projeto-2025\\itasks\\itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Users.cs",
+              "RelativeDocumentMoniker": "iTasks\\models\\Users.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Users.cs",
+              "RelativeToolTip": "iTasks\\models\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:36:13.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Maneger.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Maneger.cs",
+              "RelativeDocumentMoniker": "iTasks\\models\\Maneger.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Maneger.cs",
+              "RelativeToolTip": "iTasks\\models\\Maneger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:35:00.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Programmer.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Programmer.cs",
+              "RelativeDocumentMoniker": "iTasks\\models\\Programmer.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Programmer.cs",
+              "RelativeToolTip": "iTasks\\models\\Programmer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:34:48.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskType.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\TaskType.cs",
+              "RelativeDocumentMoniker": "iTasks\\models\\TaskType.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\TaskType.cs",
+              "RelativeToolTip": "iTasks\\models\\TaskType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:33:13.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tasks.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Tasks.cs",
+              "RelativeDocumentMoniker": "iTasks\\models\\Tasks.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Tasks.cs",
+              "RelativeToolTip": "iTasks\\models\\Tasks.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwCEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:32:24.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\LoginForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\LoginForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:30:54.051Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskDetailForm.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\TaskDetailForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs",
+              "RelativeToolTip": "iTasks\\views\\TaskDetailForm.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAYwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:22:49.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskDetailForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\TaskDetailForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\views\\TaskDetailForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:20:34.731Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\LoginForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v15\\DA---Projeto-2025\\iTasks\\iTasks\\LoginForm.cs",
+              "RelativeToolTip": "iTasks\\LoginForm.cs",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAiwLEAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T16:30:55.34Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
