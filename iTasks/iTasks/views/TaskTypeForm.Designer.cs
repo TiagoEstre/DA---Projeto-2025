@@ -43,10 +43,11 @@
             // lb_TaskTipe
             // 
             this.lb_TaskTipe.FormattingEnabled = true;
-            this.lb_TaskTipe.Location = new System.Drawing.Point(79, 54);
-            this.lb_TaskTipe.Margin = new System.Windows.Forms.Padding(2);
+            this.lb_TaskTipe.ItemHeight = 16;
+            this.lb_TaskTipe.Location = new System.Drawing.Point(105, 66);
+            this.lb_TaskTipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_TaskTipe.Name = "lb_TaskTipe";
-            this.lb_TaskTipe.Size = new System.Drawing.Size(406, 472);
+            this.lb_TaskTipe.Size = new System.Drawing.Size(540, 580);
             this.lb_TaskTipe.TabIndex = 0;
             // 
             // l_TaskType
@@ -54,10 +55,9 @@
             this.l_TaskType.AutoSize = true;
             this.l_TaskType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_TaskType.ForeColor = System.Drawing.Color.White;
-            this.l_TaskType.Location = new System.Drawing.Point(76, 35);
-            this.l_TaskType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.l_TaskType.Location = new System.Drawing.Point(101, 43);
             this.l_TaskType.Name = "l_TaskType";
-            this.l_TaskType.Size = new System.Drawing.Size(92, 15);
+            this.l_TaskType.Size = new System.Drawing.Size(111, 18);
             this.l_TaskType.TabIndex = 1;
             this.l_TaskType.Text = "Tipo de Tarefas";
             // 
@@ -66,10 +66,9 @@
             this.l_id.AutoSize = true;
             this.l_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_id.ForeColor = System.Drawing.Color.White;
-            this.l_id.Location = new System.Drawing.Point(861, 54);
-            this.l_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.l_id.Location = new System.Drawing.Point(1148, 66);
             this.l_id.Name = "l_id";
-            this.l_id.Size = new System.Drawing.Size(19, 15);
+            this.l_id.Size = new System.Drawing.Size(22, 18);
             this.l_id.TabIndex = 3;
             this.l_id.Text = "ID";
             // 
@@ -78,10 +77,9 @@
             this.l_Description.AutoSize = true;
             this.l_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_Description.ForeColor = System.Drawing.Color.White;
-            this.l_Description.Location = new System.Drawing.Point(818, 125);
-            this.l_Description.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.l_Description.Location = new System.Drawing.Point(1091, 154);
             this.l_Description.Name = "l_Description";
-            this.l_Description.Size = new System.Drawing.Size(62, 15);
+            this.l_Description.Size = new System.Drawing.Size(76, 18);
             this.l_Description.TabIndex = 4;
             this.l_Description.Text = "Descrição";
             // 
@@ -97,11 +95,12 @@
             this.tb_Id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Id.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Id.Location = new System.Drawing.Point(753, 75);
+            this.tb_Id.Location = new System.Drawing.Point(1004, 92);
+            this.tb_Id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_Id.Name = "tb_Id";
             this.tb_Id.PlaceholderText = "";
             this.tb_Id.SelectedText = "";
-            this.tb_Id.Size = new System.Drawing.Size(127, 36);
+            this.tb_Id.Size = new System.Drawing.Size(169, 44);
             this.tb_Id.TabIndex = 10;
             // 
             // tb_Description
@@ -116,12 +115,16 @@
             this.tb_Description.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Description.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Description.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Description.Location = new System.Drawing.Point(532, 146);
+            this.tb_Description.Location = new System.Drawing.Point(709, 180);
+            this.tb_Description.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_Description.Name = "tb_Description";
             this.tb_Description.PlaceholderText = "";
             this.tb_Description.SelectedText = "";
-            this.tb_Description.Size = new System.Drawing.Size(348, 36);
+            this.tb_Description.Size = new System.Drawing.Size(464, 44);
             this.tb_Description.TabIndex = 10;
+            this.tb_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_Description.TextOffset = new System.Drawing.Point(10, 0);
+            this.tb_Description.TextChanged += new System.EventHandler(this.tb_Description_TextChanged);
             // 
             // b_Create
             // 
@@ -133,9 +136,10 @@
             this.b_Create.FillColor = System.Drawing.Color.LightGray;
             this.b_Create.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Create.ForeColor = System.Drawing.Color.Black;
-            this.b_Create.Location = new System.Drawing.Point(532, 242);
+            this.b_Create.Location = new System.Drawing.Point(709, 298);
+            this.b_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_Create.Name = "b_Create";
-            this.b_Create.Size = new System.Drawing.Size(164, 36);
+            this.b_Create.Size = new System.Drawing.Size(219, 44);
             this.b_Create.TabIndex = 11;
             this.b_Create.Text = "GRAVAR";
             // 
@@ -149,9 +153,10 @@
             this.b_read.FillColor = System.Drawing.Color.LightGray;
             this.b_read.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_read.ForeColor = System.Drawing.Color.Black;
-            this.b_read.Location = new System.Drawing.Point(716, 242);
+            this.b_read.Location = new System.Drawing.Point(955, 298);
+            this.b_read.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_read.Name = "b_read";
-            this.b_read.Size = new System.Drawing.Size(164, 36);
+            this.b_read.Size = new System.Drawing.Size(219, 44);
             this.b_read.TabIndex = 11;
             this.b_read.Text = "CONSULTAR";
             this.b_read.Click += new System.EventHandler(this.b_read_Click);
@@ -166,9 +171,10 @@
             this.b_Update.FillColor = System.Drawing.Color.LightGray;
             this.b_Update.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Update.ForeColor = System.Drawing.Color.Black;
-            this.b_Update.Location = new System.Drawing.Point(532, 314);
+            this.b_Update.Location = new System.Drawing.Point(709, 386);
+            this.b_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_Update.Name = "b_Update";
-            this.b_Update.Size = new System.Drawing.Size(164, 36);
+            this.b_Update.Size = new System.Drawing.Size(219, 44);
             this.b_Update.TabIndex = 11;
             this.b_Update.Text = "EDITAR";
             // 
@@ -182,18 +188,19 @@
             this.b_Delete.FillColor = System.Drawing.Color.LightGray;
             this.b_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Delete.ForeColor = System.Drawing.Color.Black;
-            this.b_Delete.Location = new System.Drawing.Point(716, 314);
+            this.b_Delete.Location = new System.Drawing.Point(955, 386);
+            this.b_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b_Delete.Name = "b_Delete";
-            this.b_Delete.Size = new System.Drawing.Size(164, 36);
+            this.b_Delete.Size = new System.Drawing.Size(219, 44);
             this.b_Delete.TabIndex = 11;
             this.b_Delete.Text = "APAGAR";
             // 
             // TaskTypeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(980, 595);
+            this.ClientSize = new System.Drawing.Size(1307, 732);
             this.Controls.Add(this.b_Delete);
             this.Controls.Add(this.b_Update);
             this.Controls.Add(this.b_read);
@@ -205,6 +212,7 @@
             this.Controls.Add(this.l_TaskType);
             this.Controls.Add(this.lb_TaskTipe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TaskTypeForm";
             this.Text = "tasktypeForm1";
             this.ResumeLayout(false);
