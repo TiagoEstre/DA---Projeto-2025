@@ -23,6 +23,7 @@ namespace iTasks
             Load += LoginForm_Load;
         }
 
+        // Funcoes para confirmar se ja ixiste um ultizador
         private bool ExistemUtilizadores()
         {
 
@@ -56,16 +57,113 @@ namespace iTasks
                 
         }
 
+
+        // funcao para fechar o form
         private void Closed_FormClosed(object sender, FormClosedEventArgs e)
         {
             Close();
         }
 
+
+        // Register
+        private void tb_CreateName_Enter(object sender, EventArgs e)
+        {
+            tb_CreateName.Text = "Nome";
+
+            if (tb_CreateName.Text == "Nome")
+            {
+                tb_CreateName.Text = "";
+
+                tb_CreateName.ForeColor = Color.Black;
+            }
+        }
+        private void tb_CreateName_Leave(object sender, EventArgs e)
+        {
+            if (tb_CreateName.Text == "")
+            {
+                tb_CreateName.Text = "Nome";
+
+                tb_CreateName.ForeColor = Color.Silver;
+            }
+        }
+
+        private void tb_CreateUsername_Enter(object sender, EventArgs e)
+        {
+            tb_CreateUsername.Text = "Utilizador";
+
+            if (tb_CreateUsername.Text == "Utilizador")
+            {
+                tb_CreateUsername.Text = "";
+
+                tb_CreateUsername.ForeColor = Color.Black;
+            }
+        }
+        private void tb_CreateUsername_Leave(object sender, EventArgs e)
+        {
+            if (tb_CreateUsername.Text == "")
+            {
+                tb_CreateUsername.Text = "Utilizador";
+
+                tb_CreateUsername.ForeColor = Color.Silver;
+            }
+        }
+
+        private void tb_CreatePassword_Enter(object sender, EventArgs e)
+        {
+            tb_CreatePassword.Text = "Senha";
+
+            if (tb_CreatePassword.Text == "Senha")
+            {
+                tb_CreatePassword.Text = "";
+
+                tb_CreatePassword.UseSystemPasswordChar = true;
+
+                tb_CreatePassword.ForeColor = Color.Black;
+            }
+        }
+        private void tb_CreatePassword_Leave(object sender, EventArgs e)
+        {
+            if (tb_CreatePassword.Text == "")
+            {
+                tb_CreatePassword.Text = "Senha";
+
+                tb_CreatePassword.UseSystemPasswordChar = false;
+
+                tb_CreatePassword.ForeColor = Color.Silver;
+            }
+        }
+
+        private void tb_CreateConfirmPassword_Enter(object sender, EventArgs e)
+        {
+            tb_CreateConfirmPassword.Text = "Confirmar Senha";
+
+            if (tb_CreateConfirmPassword.Text == "Confirmar Senha")
+            {
+                tb_CreateConfirmPassword.Text = "";
+
+                tb_CreateConfirmPassword.UseSystemPasswordChar = true;
+
+                tb_CreateConfirmPassword.ForeColor = Color.Black;
+            }
+        }
+        private void tb_CreateConfirmPassword_Leave(object sender, EventArgs e)
+        {
+            if (tb_CreateConfirmPassword.Text == "")
+            {
+                tb_CreateConfirmPassword.Text = "Confirmar Senha";
+
+                tb_CreateConfirmPassword.UseSystemPasswordChar = false;
+
+                tb_CreateConfirmPassword.ForeColor = Color.Silver;
+            }
+        }
+
+
         private void bt_Register_Click(object sender, EventArgs e)
         {
-            string Name = tb_CrearteName.Text;
-            string Username = tb_CrearteUsername.Text;
-            string Password = tb_CreartePassword.Text;
+            string Name = tb_CreateName.Text;
+            string Username = tb_CreateUsername.Text;
+            string Password = tb_CreatePassword.Text;
             string ConfirmPassword = tb_CreateConfirmPassword.Text;
 
             if(Password != ConfirmPassword)
@@ -104,9 +202,9 @@ namespace iTasks
         // Login
         private void tb_Username_Enter(object sender, EventArgs e)
         {
-            tb_Username.Text = "Utilizadores";
+            tb_Username.Text = "Utilizador";
 
-            if (tb_Username.Text == "Utilizadores")
+            if (tb_Username.Text == "Utilizador")
             {
                 tb_Username.Text = "";
 
@@ -117,7 +215,7 @@ namespace iTasks
         {
             if (tb_Username.Text == "")
             {
-                tb_Username.Text = "Utilizadores";
+                tb_Username.Text = "Utilizador";
 
                 tb_Username.ForeColor = Color.Silver;
             }
@@ -174,5 +272,7 @@ namespace iTasks
                 }
             } 
         }
+
+        
     }
 }
