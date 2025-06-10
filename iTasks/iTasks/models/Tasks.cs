@@ -23,9 +23,9 @@ namespace iTasks.models
         public TaskType idTaskType { get; set; }
 
         public string StoryPoints { get; set; }
-        public DateTime ActualStartDate { get; set; }
-        public DateTime ActualEndDate { get; set; }
-        public DateTime CreationDate { get; set;}
+        public DateTime? ActualStartDate { get; set; }
+        public DateTime? ActualEndDate { get; set; }
+        public DateTime CreationDate { get; set;} = DateTime.Now;
         public CurrentStatus CurrentStatus {  get; set; }
 
         public Tasks()

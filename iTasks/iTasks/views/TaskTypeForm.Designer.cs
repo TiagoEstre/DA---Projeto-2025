@@ -33,7 +33,7 @@
             this.l_id = new System.Windows.Forms.Label();
             this.l_Description = new System.Windows.Forms.Label();
             this.tb_Id = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_Description = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.b_Create = new Guna.UI2.WinForms.Guna2Button();
             this.b_read = new Guna.UI2.WinForms.Guna2Button();
             this.b_Update = new Guna.UI2.WinForms.Guna2Button();
@@ -49,6 +49,7 @@
             this.lb_TaskTipe.Name = "lb_TaskTipe";
             this.lb_TaskTipe.Size = new System.Drawing.Size(540, 580);
             this.lb_TaskTipe.TabIndex = 0;
+            this.lb_TaskTipe.SelectedIndexChanged += new System.EventHandler(this.lb_TaskTipe_SelectedIndexChanged);
             // 
             // l_TaskType
             // 
@@ -79,9 +80,9 @@
             this.l_Description.ForeColor = System.Drawing.Color.White;
             this.l_Description.Location = new System.Drawing.Point(1091, 154);
             this.l_Description.Name = "l_Description";
-            this.l_Description.Size = new System.Drawing.Size(76, 18);
+            this.l_Description.Size = new System.Drawing.Size(49, 18);
             this.l_Description.TabIndex = 4;
-            this.l_Description.Text = "Descrição";
+            this.l_Description.Text = "Nome";
             // 
             // tb_Id
             // 
@@ -102,29 +103,29 @@
             this.tb_Id.SelectedText = "";
             this.tb_Id.Size = new System.Drawing.Size(169, 44);
             this.tb_Id.TabIndex = 10;
+            this.tb_Id.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tb_Description
+            // tb_Name
             // 
-            this.tb_Description.AutoRoundedCorners = true;
-            this.tb_Description.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_Description.DefaultText = "";
-            this.tb_Description.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_Description.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_Description.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_Description.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_Description.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Description.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_Description.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Description.Location = new System.Drawing.Point(709, 180);
-            this.tb_Description.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tb_Description.Name = "tb_Description";
-            this.tb_Description.PlaceholderText = "";
-            this.tb_Description.SelectedText = "";
-            this.tb_Description.Size = new System.Drawing.Size(464, 44);
-            this.tb_Description.TabIndex = 10;
-            this.tb_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tb_Description.TextOffset = new System.Drawing.Point(10, 0);
-            this.tb_Description.TextChanged += new System.EventHandler(this.tb_Description_TextChanged);
+            this.tb_Name.AutoRoundedCorners = true;
+            this.tb_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_Name.DefaultText = "";
+            this.tb_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_Name.Location = new System.Drawing.Point(709, 180);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.PlaceholderText = "";
+            this.tb_Name.SelectedText = "";
+            this.tb_Name.Size = new System.Drawing.Size(464, 44);
+            this.tb_Name.TabIndex = 10;
+            this.tb_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_Name.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // b_Create
             // 
@@ -137,11 +138,12 @@
             this.b_Create.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Create.ForeColor = System.Drawing.Color.Black;
             this.b_Create.Location = new System.Drawing.Point(709, 298);
-            this.b_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Create.Margin = new System.Windows.Forms.Padding(4);
             this.b_Create.Name = "b_Create";
             this.b_Create.Size = new System.Drawing.Size(219, 44);
             this.b_Create.TabIndex = 11;
             this.b_Create.Text = "GRAVAR";
+            this.b_Create.Click += new System.EventHandler(this.b_Create_Click);
             // 
             // b_read
             // 
@@ -154,7 +156,7 @@
             this.b_read.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_read.ForeColor = System.Drawing.Color.Black;
             this.b_read.Location = new System.Drawing.Point(955, 298);
-            this.b_read.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_read.Margin = new System.Windows.Forms.Padding(4);
             this.b_read.Name = "b_read";
             this.b_read.Size = new System.Drawing.Size(219, 44);
             this.b_read.TabIndex = 11;
@@ -172,11 +174,12 @@
             this.b_Update.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Update.ForeColor = System.Drawing.Color.Black;
             this.b_Update.Location = new System.Drawing.Point(709, 386);
-            this.b_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Update.Margin = new System.Windows.Forms.Padding(4);
             this.b_Update.Name = "b_Update";
             this.b_Update.Size = new System.Drawing.Size(219, 44);
             this.b_Update.TabIndex = 11;
             this.b_Update.Text = "EDITAR";
+            this.b_Update.Click += new System.EventHandler(this.b_Update_Click);
             // 
             // b_Delete
             // 
@@ -189,11 +192,12 @@
             this.b_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Delete.ForeColor = System.Drawing.Color.Black;
             this.b_Delete.Location = new System.Drawing.Point(955, 386);
-            this.b_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.b_Delete.Name = "b_Delete";
             this.b_Delete.Size = new System.Drawing.Size(219, 44);
             this.b_Delete.TabIndex = 11;
             this.b_Delete.Text = "APAGAR";
+            this.b_Delete.Click += new System.EventHandler(this.b_Delete_Click);
             // 
             // TaskTypeForm
             // 
@@ -205,14 +209,14 @@
             this.Controls.Add(this.b_Update);
             this.Controls.Add(this.b_read);
             this.Controls.Add(this.b_Create);
-            this.Controls.Add(this.tb_Description);
+            this.Controls.Add(this.tb_Name);
             this.Controls.Add(this.tb_Id);
             this.Controls.Add(this.l_Description);
             this.Controls.Add(this.l_id);
             this.Controls.Add(this.l_TaskType);
             this.Controls.Add(this.lb_TaskTipe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaskTypeForm";
             this.Text = "tasktypeForm1";
             this.ResumeLayout(false);
@@ -227,7 +231,7 @@
         private System.Windows.Forms.Label l_id;
         private System.Windows.Forms.Label l_Description;
         private Guna.UI2.WinForms.Guna2TextBox tb_Id;
-        private Guna.UI2.WinForms.Guna2TextBox tb_Description;
+        private Guna.UI2.WinForms.Guna2TextBox tb_Name;
         private Guna.UI2.WinForms.Guna2Button b_Create;
         private Guna.UI2.WinForms.Guna2Button b_read;
         private Guna.UI2.WinForms.Guna2Button b_Update;

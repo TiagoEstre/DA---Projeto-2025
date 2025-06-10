@@ -46,9 +46,9 @@
             this.b_Read = new Guna.UI2.WinForms.Guna2Button();
             this.b_create = new Guna.UI2.WinForms.Guna2Button();
             this.cb_Programmer = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.stp_EndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.stp_StartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.cb_TaskTipe = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtp_EndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtp_StartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.cb_TaskType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tb_StoryPoints = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_Order = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_Description = new Guna.UI2.WinForms.Guna2TextBox();
@@ -207,6 +207,7 @@
             this.cb_CurrentStatus.Name = "cb_CurrentStatus";
             this.cb_CurrentStatus.Size = new System.Drawing.Size(231, 36);
             this.cb_CurrentStatus.TabIndex = 30;
+            this.cb_CurrentStatus.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // dtp_CreationDate
             // 
@@ -244,9 +245,9 @@
             this.panel2.Controls.Add(this.b_Read);
             this.panel2.Controls.Add(this.b_create);
             this.panel2.Controls.Add(this.cb_Programmer);
-            this.panel2.Controls.Add(this.stp_EndDate);
-            this.panel2.Controls.Add(this.stp_StartDate);
-            this.panel2.Controls.Add(this.cb_TaskTipe);
+            this.panel2.Controls.Add(this.dtp_EndDate);
+            this.panel2.Controls.Add(this.dtp_StartDate);
+            this.panel2.Controls.Add(this.cb_TaskType);
             this.panel2.Controls.Add(this.tb_StoryPoints);
             this.panel2.Controls.Add(this.tb_Order);
             this.panel2.Controls.Add(this.tb_Description);
@@ -276,7 +277,7 @@
             this.b_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Delete.ForeColor = System.Drawing.Color.Black;
             this.b_Delete.Location = new System.Drawing.Point(708, 535);
-            this.b_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.b_Delete.Name = "b_Delete";
             this.b_Delete.Size = new System.Drawing.Size(164, 44);
             this.b_Delete.TabIndex = 30;
@@ -294,7 +295,7 @@
             this.b_Update.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Update.ForeColor = System.Drawing.Color.Black;
             this.b_Update.Location = new System.Drawing.Point(496, 535);
-            this.b_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Update.Margin = new System.Windows.Forms.Padding(4);
             this.b_Update.Name = "b_Update";
             this.b_Update.Size = new System.Drawing.Size(164, 44);
             this.b_Update.TabIndex = 30;
@@ -312,7 +313,7 @@
             this.b_Read.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Read.ForeColor = System.Drawing.Color.Black;
             this.b_Read.Location = new System.Drawing.Point(304, 535);
-            this.b_Read.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Read.Margin = new System.Windows.Forms.Padding(4);
             this.b_Read.Name = "b_Read";
             this.b_Read.Size = new System.Drawing.Size(164, 44);
             this.b_Read.TabIndex = 30;
@@ -330,7 +331,7 @@
             this.b_create.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_create.ForeColor = System.Drawing.Color.Black;
             this.b_create.Location = new System.Drawing.Point(92, 535);
-            this.b_create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_create.Margin = new System.Windows.Forms.Padding(4);
             this.b_create.Name = "b_create";
             this.b_create.Size = new System.Drawing.Size(164, 44);
             this.b_create.TabIndex = 30;
@@ -349,61 +350,63 @@
             this.cb_Programmer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_Programmer.ItemHeight = 30;
             this.cb_Programmer.Location = new System.Drawing.Point(496, 236);
-            this.cb_Programmer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Programmer.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Programmer.Name = "cb_Programmer";
             this.cb_Programmer.Size = new System.Drawing.Size(375, 36);
             this.cb_Programmer.TabIndex = 29;
+            this.cb_Programmer.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // stp_EndDate
+            // dtp_EndDate
             // 
-            this.stp_EndDate.AutoRoundedCorners = true;
-            this.stp_EndDate.BorderColor = System.Drawing.Color.Transparent;
-            this.stp_EndDate.Checked = true;
-            this.stp_EndDate.FillColor = System.Drawing.Color.White;
-            this.stp_EndDate.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.stp_EndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.stp_EndDate.Location = new System.Drawing.Point(496, 410);
-            this.stp_EndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stp_EndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.stp_EndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.stp_EndDate.Name = "stp_EndDate";
-            this.stp_EndDate.Size = new System.Drawing.Size(376, 44);
-            this.stp_EndDate.TabIndex = 29;
-            this.stp_EndDate.Value = new System.DateTime(2025, 5, 31, 16, 22, 43, 794);
+            this.dtp_EndDate.AutoRoundedCorners = true;
+            this.dtp_EndDate.BorderColor = System.Drawing.Color.Transparent;
+            this.dtp_EndDate.Checked = true;
+            this.dtp_EndDate.FillColor = System.Drawing.Color.White;
+            this.dtp_EndDate.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dtp_EndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_EndDate.Location = new System.Drawing.Point(496, 410);
+            this.dtp_EndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_EndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_EndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_EndDate.Name = "dtp_EndDate";
+            this.dtp_EndDate.Size = new System.Drawing.Size(376, 44);
+            this.dtp_EndDate.TabIndex = 29;
+            this.dtp_EndDate.Value = new System.DateTime(2025, 5, 31, 16, 22, 43, 794);
             // 
-            // stp_StartDate
+            // dtp_StartDate
             // 
-            this.stp_StartDate.AutoRoundedCorners = true;
-            this.stp_StartDate.BorderColor = System.Drawing.Color.Transparent;
-            this.stp_StartDate.Checked = true;
-            this.stp_StartDate.FillColor = System.Drawing.Color.White;
-            this.stp_StartDate.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.stp_StartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.stp_StartDate.Location = new System.Drawing.Point(92, 410);
-            this.stp_StartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stp_StartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.stp_StartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.stp_StartDate.Name = "stp_StartDate";
-            this.stp_StartDate.Size = new System.Drawing.Size(376, 44);
-            this.stp_StartDate.TabIndex = 29;
-            this.stp_StartDate.Value = new System.DateTime(2025, 5, 31, 16, 22, 43, 794);
+            this.dtp_StartDate.AutoRoundedCorners = true;
+            this.dtp_StartDate.BorderColor = System.Drawing.Color.Transparent;
+            this.dtp_StartDate.Checked = true;
+            this.dtp_StartDate.FillColor = System.Drawing.Color.White;
+            this.dtp_StartDate.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dtp_StartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_StartDate.Location = new System.Drawing.Point(92, 410);
+            this.dtp_StartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_StartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_StartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_StartDate.Name = "dtp_StartDate";
+            this.dtp_StartDate.Size = new System.Drawing.Size(376, 44);
+            this.dtp_StartDate.TabIndex = 29;
+            this.dtp_StartDate.Value = new System.DateTime(2025, 5, 31, 16, 22, 43, 794);
             // 
-            // cb_TaskTipe
+            // cb_TaskType
             // 
-            this.cb_TaskTipe.AutoRoundedCorners = true;
-            this.cb_TaskTipe.BackColor = System.Drawing.Color.Transparent;
-            this.cb_TaskTipe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_TaskTipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_TaskTipe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_TaskTipe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_TaskTipe.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cb_TaskTipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cb_TaskTipe.ItemHeight = 30;
-            this.cb_TaskTipe.Location = new System.Drawing.Point(92, 236);
-            this.cb_TaskTipe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cb_TaskTipe.Name = "cb_TaskTipe";
-            this.cb_TaskTipe.Size = new System.Drawing.Size(375, 36);
-            this.cb_TaskTipe.TabIndex = 29;
+            this.cb_TaskType.AutoRoundedCorners = true;
+            this.cb_TaskType.BackColor = System.Drawing.Color.Transparent;
+            this.cb_TaskType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_TaskType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_TaskType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_TaskType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_TaskType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_TaskType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_TaskType.ItemHeight = 30;
+            this.cb_TaskType.Location = new System.Drawing.Point(92, 236);
+            this.cb_TaskType.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_TaskType.Name = "cb_TaskType";
+            this.cb_TaskType.Size = new System.Drawing.Size(375, 36);
+            this.cb_TaskType.TabIndex = 29;
+            this.cb_TaskType.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // tb_StoryPoints
             // 
@@ -557,7 +560,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaskDetailForm";
             this.Text = "taskdetailForm1";
             this.panel1.ResumeLayout(false);
@@ -593,12 +596,12 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_CreationDate;
         private Guna.UI2.WinForms.Guna2ComboBox cb_CurrentStatus;
         private Guna.UI2.WinForms.Guna2TextBox tb_Description;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_TaskTipe;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_TaskType;
         private Guna.UI2.WinForms.Guna2ComboBox cb_Programmer;
         private Guna.UI2.WinForms.Guna2TextBox tb_StoryPoints;
         private Guna.UI2.WinForms.Guna2TextBox tb_Order;
-        private Guna.UI2.WinForms.Guna2DateTimePicker stp_EndDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker stp_StartDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_EndDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_StartDate;
         private Guna.UI2.WinForms.Guna2Button b_create;
         private Guna.UI2.WinForms.Guna2Button b_Delete;
         private Guna.UI2.WinForms.Guna2Button b_Update;

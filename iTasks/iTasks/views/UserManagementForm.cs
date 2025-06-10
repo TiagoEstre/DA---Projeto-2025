@@ -27,6 +27,7 @@ namespace iTasks.views
             EnumValues();
         }
 
+
         // funcao para inserir os dados nas comboBox
         private void EnumValues()
         {
@@ -214,6 +215,14 @@ namespace iTasks.views
                 {
                     db.Users.Attach(manegerSelec);
 
+                    var nameUsers = db.Users.Any(n => n.Name == name || n.Username == username);
+
+                    if (nameUsers)
+                    {
+                        MessageBox.Show("Já existe um usuário na base de dados.");
+                        return;
+                    }
+
                     var newProgrammer = new Programmer()
                     {
                         Name = name,
@@ -261,6 +270,13 @@ namespace iTasks.views
             {
                 try
                 {
+                    var nameUsers = db.Users.Any(n => n.Name == name || n.Username == username);
+                    if (nameUsers)
+                    {
+                        MessageBox.Show("Já existe um usuário na base de dados.");
+                        return;
+                    }
+
                     var newManeger = new Maneger()
                     {
                         Name = name,
@@ -325,9 +341,14 @@ namespace iTasks.views
                         return;
                     }
 
+                    lb_Programmer.SelectedIndexChanged -= lb_Programmer_SelectedIndexChanged;
+
                     lb_Programmer.DataSource = Programmers;
                     lb_Programmer.DisplayMember = "Name";
                     lb_Programmer.ValueMember = "Id";
+                    lb_Programmer.ClearSelected();
+
+                    lb_Programmer.SelectedIndexChanged += lb_Programmer_SelectedIndexChanged;
                 }
                 catch
                 {
@@ -362,9 +383,14 @@ namespace iTasks.views
                         return;
                     }
 
+                    lb_Manager.SelectedIndexChanged -= lb_Manager_SelectedIndexChanged;
+
                     lb_Manager.DataSource = Managers;
                     lb_Manager.DisplayMember = "Name";
                     lb_Manager.ValueMember = "Id";
+                    lb_Manager.ClearSelected();
+
+                    lb_Manager.SelectedIndexChanged += lb_Manager_SelectedIndexChanged;
                 }
                 catch
                 {
@@ -441,6 +467,12 @@ namespace iTasks.views
             ts_ManegerUsername.Checked = selectedManager.GenerateUser == "True" || selectedManager.GenerateUser == "true";
         }
 
+        private void DadosClients()
+        {
+            SelectedManeger.Name = tb_Name.Text;
+            SelectedManeger.Username = tb_Username.Text;
+            SelectedManeger.Password = tb_Password.Text;
+        }
         private void b_Edit_Click(object sender, EventArgs e)
         {
                      
@@ -450,9 +482,7 @@ namespace iTasks.views
                 Department departmentSelec = (Department)cb_Department.SelectedItem;
                 string ManegerUsers = ts_ManegerUsername.Checked ? "True" : "False";
 
-                SelectedManeger.Name = tb_Name.Text;
-                SelectedManeger.Username = tb_Username.Text;
-                SelectedManeger.Password = tb_Password.Text;
+                DadosClients();
                 SelectedManeger.Department = departmentSelec;
                 SelectedManeger.GenerateUser = ManegerUsers;
 
@@ -470,9 +500,7 @@ namespace iTasks.views
                 ExperienceLevel experienceLevelSelec = (ExperienceLevel)cb_ExperienceLevel.SelectedItem;
                 Maneger manegerSelec = cb_Maneger.SelectedItem as Maneger;
 
-                SelectedProgrammer.Name = tb_Name.Text;
-                SelectedProgrammer.Username = tb_Username.Text;
-                SelectedProgrammer.Password = tb_Password.Text;
+                DadosClients();
                 SelectedProgrammer.ExperienceLevel = experienceLevelSelec;
                 SelectedProgrammer.idManeger = manegerSelec;
 
