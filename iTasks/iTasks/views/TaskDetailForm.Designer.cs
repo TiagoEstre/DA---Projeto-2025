@@ -282,6 +282,7 @@
             this.b_Delete.Size = new System.Drawing.Size(164, 44);
             this.b_Delete.TabIndex = 30;
             this.b_Delete.Text = "APAGAR";
+            this.b_Delete.Click += new System.EventHandler(this.b_Delete_Click);
             // 
             // b_Update
             // 
