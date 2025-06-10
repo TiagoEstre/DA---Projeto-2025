@@ -17,7 +17,9 @@ namespace iTasks.views
     public partial class TaskTypeForm : Form
     {
         private TaskType SelectedTaskType;
+
         private readonly Action<Form> _trocarForm;
+
         public TaskTypeForm(Action<Form> trocarForm)
         {
             InitializeComponent();
@@ -53,7 +55,7 @@ namespace iTasks.views
                     if (Managers.Count == 0)
                     {
                         b_Create.Visible = false;
-                        b_read.Visible = false;
+                        b_read.Visible = true;
                         b_Update.Visible = false;
                         b_Delete.Visible = false;
                     }
@@ -106,6 +108,7 @@ namespace iTasks.views
 
                     if (tasksType.Count == 0)
                     {
+                        lb_TaskTipe.Text = "Não Existe tarefa escolhida.";
                         lb_TaskTipe.DataSource = null;
                         return;
                     }
@@ -127,8 +130,47 @@ namespace iTasks.views
             }
         }
 
+        // Função para fazer refres a listBox
+        private void resetList()
+        {
+            string name = tb_Name.Text;
 
-        // Botão Iditar
+            if (name == "Nome") name = "";
+
+            using (var db = new iTasksContext())
+            {
+                try
+                {
+                    var tasksType = db.TaskTypes
+                        .OfType<TaskType>()
+                        .Where(m =>
+                                (string.IsNullOrEmpty(name) || m.Name.Contains(name)))
+                        .ToList();
+
+                    if (tasksType.Count == 0)
+                    {
+                        lb_TaskTipe.DataSource = null;
+                        return;
+                    }
+
+
+                    lb_TaskTipe.SelectedIndexChanged -= lb_TaskTipe_SelectedIndexChanged;
+
+                    lb_TaskTipe.DataSource = tasksType;
+                    lb_TaskTipe.DisplayMember = "Name";
+                    lb_TaskTipe.ValueMember = "Id";
+                    lb_TaskTipe.ClearSelected();
+
+                    lb_TaskTipe.SelectedIndexChanged += lb_TaskTipe_SelectedIndexChanged;
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao consultar Tipo de Tarefa");
+                }
+            }
+        }
+
+        // Selecionar na listBox
         private void lb_TaskTipe_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lb_TaskTipe.SelectedItem == null)
@@ -143,6 +185,7 @@ namespace iTasks.views
             tb_Name.Text = selectedTaskType.Name;
         }
 
+        // Botão Iditar
         private void b_Update_Click(object sender, EventArgs e)
         {
             if (SelectedTaskType != null)
@@ -157,14 +200,13 @@ namespace iTasks.views
                     db.Entry(SelectedTaskType).State = EntityState.Modified;
                     db.SaveChanges();
 
-                    b_read_Click(null, null);
+                    resetList();
                 }
             }
         }
 
 
         // Botão Eliminar
-
         private void b_Delete_Click(object sender, EventArgs e)
         {
             if (SelectedTaskType != null)
@@ -191,7 +233,7 @@ namespace iTasks.views
                         tb_Id.Text = "";
                         tb_Name.Text = "";
 
-                        b_read_Click(null, null);
+                        resetList();
 
                         MessageBox.Show("Tarefa removida com sucesso.");
                     }

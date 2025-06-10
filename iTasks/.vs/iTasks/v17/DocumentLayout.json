@@ -1,70 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\V16\\DA---Projeto-2025\\iTasks\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v16\\da---projeto-2025\\itasks\\itasks\\views\\tasktypeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\tasktypeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v16\\da---projeto-2025\\itasks\\itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v16\\da---projeto-2025\\itasks\\itasks\\views\\tasktypeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\tasktypeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v17\\DA---Projeto-2025\\iTasks\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserManagementForm.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\V16\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs",
-              "RelativeDocumentMoniker": "iTasks\\views\\UserManagementForm.cs",
-              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\V16\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs",
-              "RelativeToolTip": "iTasks\\views\\UserManagementForm.cs",
-              "ViewState": "AQIAAO0BAAAAAAAAAAAkwOQBAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T21:40:53.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskTypeForm.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\V16\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskTypeForm.cs",
-              "RelativeDocumentMoniker": "iTasks\\views\\TaskTypeForm.cs",
-              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\V16\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskTypeForm.cs",
-              "RelativeToolTip": "iTasks\\views\\TaskTypeForm.cs",
-              "ViewState": "AQIAAIUAAAAAAAAAAAAcwJ8AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T20:43:48.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaskTypeForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\V16\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskTypeForm.cs",
-              "RelativeDocumentMoniker": "iTasks\\views\\TaskTypeForm.cs",
-              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\V16\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskTypeForm.cs [Design]",
-              "RelativeToolTip": "iTasks\\views\\TaskTypeForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T20:00:09.181Z",
-              "EditorCaption": " [Design]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

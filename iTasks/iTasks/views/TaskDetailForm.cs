@@ -3,12 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Xml.Linq;
 
 namespace iTasks.views
 {
@@ -94,6 +97,7 @@ namespace iTasks.views
             {
                 try
                 {
+                    db.Users.Attach(programmer);
                     var newTasks = new Tasks()
                     {
                         IdManeger = programmer.idManeger,
@@ -120,5 +124,66 @@ namespace iTasks.views
                 
             }
         }
+
+        // Botão Procurar
+        private void b_Read_Click(object sender, EventArgs e)
+        {
+            string descricao = tb_Description.Text;
+
+            if (string.IsNullOrEmpty(descricao))
+            {
+                MessageBox.Show("Preenchimento obrigatorio no campo da descrição");
+                return;
+            }
+
+            using (var db = new iTasksContext())
+            {
+                try
+                {
+                    var tasks = db.Tasks
+                        .Include(t => t.idTaskType)
+                        .Include(t => t.IdProgrammer)
+                        .FirstOrDefault(t => t.Description.Contains(descricao));
+
+
+                    if (tasks == null)
+                    {
+                        MessageBox.Show("Tarefa não encontrada.");
+                        return;
+                    }
+
+                    tb_Id.Text = tasks.Id.ToString();
+                    dtp_StartRealDate.Value = tasks.ActualStartDate ?? DateTime.Today;
+                    dtp_EndRealDate.Value = tasks.ActualEndDate ?? DateTime.Today;
+
+                    cb_CurrentStatus.SelectedItem = tasks.CurrentStatus;
+                    dtp_CreationDate.Value = tasks.CreationDate;
+
+                    tb_Description.Text = tasks.Description;
+
+                    if (tasks.idTaskType != null)
+                        { cb_TaskType.SelectedValue = tasks.idTaskType.Id; }
+
+                    if (tasks.IdProgrammer != null)
+                        { cb_Programmer.SelectedValue = tasks.IdProgrammer.Id; }
+                    
+                    tb_Order.Text = tasks.ExecutionOrder.ToString();
+                    tb_StoryPoints.Text = tasks.StoryPoints;
+                    dtp_StartDate.Value = tasks.EstimatedStartDate;
+                    dtp_EndDate.Value = tasks.ExpectedEndDate;
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao consultar programadores");
+                }
+            }
+        }
+
+        // Botão Editar
+        private void b_Update_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

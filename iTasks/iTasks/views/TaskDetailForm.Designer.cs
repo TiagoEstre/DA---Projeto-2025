@@ -300,6 +300,7 @@
             this.b_Update.Size = new System.Drawing.Size(164, 44);
             this.b_Update.TabIndex = 30;
             this.b_Update.Text = "EDITAR";
+            this.b_Update.Click += new System.EventHandler(this.b_Update_Click);
             // 
             // b_Read
             // 
@@ -318,6 +319,7 @@
             this.b_Read.Size = new System.Drawing.Size(164, 44);
             this.b_Read.TabIndex = 30;
             this.b_Read.Text = "CONSULTAR";
+            this.b_Read.Click += new System.EventHandler(this.b_Read_Click);
             // 
             // b_create
             // 
