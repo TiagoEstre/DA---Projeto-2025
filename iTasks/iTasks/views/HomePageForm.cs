@@ -140,12 +140,14 @@ namespace iTasks.views
         {
             l_NameForm.Text = "Tarefas Em Curso";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96__1_;
+            trocarForm(new OngoingTasksForm());
          
         }
         private void b_CompletedTasks_Click(object sender, EventArgs e)
         {
             l_NameForm.Text = "Tarefas Concluidas";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_to_do_96;
+            trocarForm(new CompletedTasksForm());
         }
 
         
