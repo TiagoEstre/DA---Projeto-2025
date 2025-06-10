@@ -1,12 +1,120 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v17\\DA---Projeto-2025\\iTasks\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v12\\da---projeto-2025\\itasks\\itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v12\\da---projeto-2025\\itasks\\itasks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v12\\da---projeto-2025\\itasks\\itasks\\migrations\\202506101430129_itaskscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\migrations\\202506101430129_itaskscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v12\\da---projeto-2025\\itasks\\itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v12\\da---projeto-2025\\itasks\\itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\taskdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\vidal\\onedrive\\\u00E1rea de trabalho\\da projeto 2025\\v12\\da---projeto-2025\\itasks\\itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserManagementForm.cs",
+              "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\UserManagementForm.cs",
+              "ToolTip": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs",
+              "RelativeToolTip": "iTasks\\views\\UserManagementForm.cs",
+              "ViewState": "AQIAACICAAAAAAAAAAAuwA4CAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T14:33:18.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskDetailForm.cs",
+              "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\TaskDetailForm.cs",
+              "ToolTip": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs",
+              "RelativeToolTip": "iTasks\\views\\TaskDetailForm.cs",
+              "ViewState": "AQIAABABAAAAAAAAAAAAACMBAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T14:32:07.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskDetailForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\TaskDetailForm.cs",
+              "ToolTip": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\TaskDetailForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\views\\TaskDetailForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T14:31:50.323Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "202506101430129_iTasksContext.cs",
+              "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\Migrations\\202506101430129_iTasksContext.cs",
+              "RelativeDocumentMoniker": "iTasks\\Migrations\\202506101430129_iTasksContext.cs",
+              "ToolTip": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\Migrations\\202506101430129_iTasksContext.cs",
+              "RelativeToolTip": "iTasks\\Migrations\\202506101430129_iTasksContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T14:30:28.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\Program.cs",
+              "RelativeDocumentMoniker": "iTasks\\Program.cs",
+              "ToolTip": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\Program.cs",
+              "RelativeToolTip": "iTasks\\Program.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T14:43:53.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserManagementForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs",
+              "RelativeDocumentMoniker": "iTasks\\views\\UserManagementForm.cs",
+              "ToolTip": "C:\\Users\\vidal\\OneDrive\\\u00C1rea de Trabalho\\Da projeto 2025\\v12\\DA---Projeto-2025\\iTasks\\iTasks\\views\\UserManagementForm.cs [Design]",
+              "RelativeToolTip": "iTasks\\views\\UserManagementForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T14:33:15.299Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

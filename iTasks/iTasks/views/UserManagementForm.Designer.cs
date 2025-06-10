@@ -165,7 +165,7 @@
             this.b_Create.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Create.ForeColor = System.Drawing.Color.Black;
             this.b_Create.Location = new System.Drawing.Point(80, 597);
-            this.b_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Create.Margin = new System.Windows.Forms.Padding(4);
             this.b_Create.Name = "b_Create";
             this.b_Create.Size = new System.Drawing.Size(159, 44);
             this.b_Create.TabIndex = 25;
@@ -183,7 +183,7 @@
             this.b_Search.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Search.ForeColor = System.Drawing.Color.Black;
             this.b_Search.Location = new System.Drawing.Point(407, 597);
-            this.b_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Search.Margin = new System.Windows.Forms.Padding(4);
             this.b_Search.Name = "b_Search";
             this.b_Search.Size = new System.Drawing.Size(159, 44);
             this.b_Search.TabIndex = 25;
@@ -201,7 +201,7 @@
             this.b_Edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Edit.ForeColor = System.Drawing.Color.Black;
             this.b_Edit.Location = new System.Drawing.Point(711, 597);
-            this.b_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.b_Edit.Name = "b_Edit";
             this.b_Edit.Size = new System.Drawing.Size(159, 44);
             this.b_Edit.TabIndex = 25;
@@ -219,11 +219,12 @@
             this.b_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Delete.ForeColor = System.Drawing.Color.Black;
             this.b_Delete.Location = new System.Drawing.Point(1037, 597);
-            this.b_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.b_Delete.Name = "b_Delete";
             this.b_Delete.Size = new System.Drawing.Size(159, 44);
             this.b_Delete.TabIndex = 25;
             this.b_Delete.Text = "Apagar";
+            this.b_Delete.Click += new System.EventHandler(this.b_Delete_Click);
             // 
             // lb_Programmer
             // 
@@ -293,7 +294,7 @@
             this.cb_Department.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_Department.ItemHeight = 30;
             this.cb_Department.Location = new System.Drawing.Point(0, 38);
-            this.cb_Department.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Department.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Department.Name = "cb_Department";
             this.cb_Department.Size = new System.Drawing.Size(484, 36);
             this.cb_Department.TabIndex = 8;
@@ -306,7 +307,7 @@
             this.p_Programmer.Controls.Add(this.l_Manager);
             this.p_Programmer.Controls.Add(this.cb_Maneger);
             this.p_Programmer.Location = new System.Drawing.Point(80, 366);
-            this.p_Programmer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_Programmer.Margin = new System.Windows.Forms.Padding(4);
             this.p_Programmer.Name = "p_Programmer";
             this.p_Programmer.Size = new System.Drawing.Size(485, 186);
             this.p_Programmer.TabIndex = 26;
@@ -324,7 +325,7 @@
             this.cb_ExperienceLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_ExperienceLevel.ItemHeight = 30;
             this.cb_ExperienceLevel.Location = new System.Drawing.Point(0, 38);
-            this.cb_ExperienceLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_ExperienceLevel.Margin = new System.Windows.Forms.Padding(4);
             this.cb_ExperienceLevel.Name = "cb_ExperienceLevel";
             this.cb_ExperienceLevel.Size = new System.Drawing.Size(484, 36);
             this.cb_ExperienceLevel.TabIndex = 6;
@@ -362,7 +363,7 @@
             this.cb_Maneger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_Maneger.ItemHeight = 30;
             this.cb_Maneger.Location = new System.Drawing.Point(0, 124);
-            this.cb_Maneger.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Maneger.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Maneger.Name = "cb_Maneger";
             this.cb_Maneger.Size = new System.Drawing.Size(484, 36);
             this.cb_Maneger.TabIndex = 7;
@@ -375,7 +376,7 @@
             this.p_Manager.Controls.Add(this.l_ManegerUsername);
             this.p_Manager.Controls.Add(this.ts_ManegerUsername);
             this.p_Manager.Location = new System.Drawing.Point(80, 366);
-            this.p_Manager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_Manager.Margin = new System.Windows.Forms.Padding(4);
             this.p_Manager.Name = "p_Manager";
             this.p_Manager.Size = new System.Drawing.Size(485, 186);
             this.p_Manager.TabIndex = 26;
@@ -388,7 +389,7 @@
             this.ts_ManegerUsername.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.ts_ManegerUsername.CheckedState.InnerColor = System.Drawing.Color.White;
             this.ts_ManegerUsername.Location = new System.Drawing.Point(12, 134);
-            this.ts_ManegerUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ts_ManegerUsername.Margin = new System.Windows.Forms.Padding(4);
             this.ts_ManegerUsername.Name = "ts_ManegerUsername";
             this.ts_ManegerUsername.Size = new System.Drawing.Size(47, 25);
             this.ts_ManegerUsername.TabIndex = 9;
@@ -431,7 +432,7 @@
             this.Controls.Add(this.cb_SelecManeger);
             this.Controls.Add(this.cb_SelecProgrammer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserManagementForm";
             this.Text = "usermanagementForm1";
             this.p_Programmer.ResumeLayout(false);

@@ -32,7 +32,7 @@ namespace iTasks.views
         private void EnumValues()
         {
             // Inserir dados na ComboBox do Livel de Experiencia
-            Enum.GetValues(typeof(ExperienceLevel));            
+            Enum.GetValues(typeof(ExperienceLevel));
             cb_ExperienceLevel.DataSource = Enum.GetValues(typeof(ExperienceLevel)).Cast<ExperienceLevel>().ToList();
             cb_ExperienceLevel.SelectedIndex = -1;
 
@@ -64,7 +64,7 @@ namespace iTasks.views
             {
                 cb_Maneger.Text = "Erro ao carregar Gestor!";
             }
-            
+
         }
 
 
@@ -174,7 +174,7 @@ namespace iTasks.views
                 tb_Password.ForeColor = Color.Silver;
             }
         }
-        
+
 
         // Funções
 
@@ -254,9 +254,9 @@ namespace iTasks.views
             if (username == "Utilizador") username = "";
             if (password == "Senha") password = "";
 
-            if (string.IsNullOrEmpty(name) || 
-               string.IsNullOrEmpty(username) || 
-               string.IsNullOrEmpty(password) || 
+            if (string.IsNullOrEmpty(name) ||
+               string.IsNullOrEmpty(username) ||
+               string.IsNullOrEmpty(password) ||
                cb_Department.SelectedIndex == -1)
             {
                 MessageBox.Show("Por favor, preencha todos os campos obrigatorios.");
@@ -371,7 +371,7 @@ namespace iTasks.views
                 {
                     var Managers = db.Users
                         .OfType<Maneger>()
-                        .Where(m => 
+                        .Where(m =>
                                 (string.IsNullOrEmpty(name) || m.Name.Contains(name)) &&
                                 (string.IsNullOrEmpty(username) || m.Username.Contains(username)))
                         .ToList();
@@ -397,9 +397,9 @@ namespace iTasks.views
                     MessageBox.Show("Erro ao consultar gestores");
                 }
             }
-            
+
         }
-               
+
         // botao para procurar os usuários
         private void b_Search_Click(object sender, EventArgs e)
         {
@@ -410,7 +410,7 @@ namespace iTasks.views
             else if (cb_SelecManeger.Checked)
             {
                 SearchManager();
-            }    
+            }
         }
 
 
@@ -467,22 +467,19 @@ namespace iTasks.views
             ts_ManegerUsername.Checked = selectedManager.GenerateUser == "True" || selectedManager.GenerateUser == "true";
         }
 
-        private void DadosClients()
-        {
-            SelectedManeger.Name = tb_Name.Text;
-            SelectedManeger.Username = tb_Username.Text;
-            SelectedManeger.Password = tb_Password.Text;
-        }
+        
         private void b_Edit_Click(object sender, EventArgs e)
         {
-                     
+
             //Se um Gestor estiver selecionado
             if (SelectedManeger != null)
             {
                 Department departmentSelec = (Department)cb_Department.SelectedItem;
                 string ManegerUsers = ts_ManegerUsername.Checked ? "True" : "False";
 
-                DadosClients();
+                SelectedManeger.Name = tb_Name.Text;
+                SelectedManeger.Username = tb_Username.Text;
+                SelectedManeger.Password = tb_Password.Text;
                 SelectedManeger.Department = departmentSelec;
                 SelectedManeger.GenerateUser = ManegerUsers;
 
@@ -494,13 +491,15 @@ namespace iTasks.views
                 }
             }
 
-             // Se o programador estiver selecionado
-            else if(SelectedProgrammer != null)
+            // Se o programador estiver selecionado
+            else if (SelectedProgrammer != null)
             {
                 ExperienceLevel experienceLevelSelec = (ExperienceLevel)cb_ExperienceLevel.SelectedItem;
                 Maneger manegerSelec = cb_Maneger.SelectedItem as Maneger;
 
-                DadosClients();
+                SelectedProgrammer.Name = tb_Name.Text;
+                SelectedProgrammer.Username = tb_Username.Text;
+                SelectedProgrammer.Password = tb_Password.Text;
                 SelectedProgrammer.ExperienceLevel = experienceLevelSelec;
                 SelectedProgrammer.idManeger = manegerSelec;
 
@@ -517,11 +516,94 @@ namespace iTasks.views
                 return;
             }
 
-        MessageBox.Show("Dados do cliente atualizados com sucesso.");
+            MessageBox.Show("Dados do cliente atualizados com sucesso.");
 
 
 
         }
-        
+
+        private void b_Delete_Click(object sender, EventArgs e)
+        {
+            if (SelectedProgrammer != null)
+            {
+                DialogResult dialogResult = MessageBox.Show(
+                    $"Tem a certeza que quer apagar o programador '{SelectedProgrammer.Name}'?",
+                    "Confirmar Eliminação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (var db = new iTasksContext())
+                    {
+                        try
+                        {
+                            db.Users.Attach(SelectedProgrammer);
+                            db.Users.Remove(SelectedProgrammer);
+                            db.SaveChanges();
+                            MessageBox.Show("Programador eliminado com sucesso!");
+                            ClearFormFields();
+                            SearchProgrammer();
+                        }
+                        catch
+                        {
+                            MessageBox.Show($"Erro ao eliminar programador.");
+                        }
+                    }
+                }
+            }
+            else if (SelectedManeger != null)
+            {
+                DialogResult dialogResult = MessageBox.Show(
+                    $"Tem a certeza que quer apagar o gestor '{SelectedManeger.Name}'?",
+                    "Confirmar Eliminação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (var db = new iTasksContext())
+                    {
+                        try
+                        {
+                            db.Users.Attach(SelectedManeger);
+                            db.Users.Remove(SelectedManeger);
+                            db.SaveChanges();
+                            MessageBox.Show("Gestor eliminado com sucesso!");
+                            ClearFormFields();
+                            ListGestor();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Erro ao eliminar gestor.");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione um utilizador (Programador ou Gestor) na lista para apagar.");
+            }
+        }
+
+        private void ClearFormFields()
+        {
+            tb_Id.Text = "";
+            tb_Name.Text = "Nome";
+            tb_Username.Text = "Utilizador";
+            tb_Password.Text = "Senha";
+            tb_Password.UseSystemPasswordChar = false;
+            tb_Name.ForeColor = Color.Silver;
+            tb_Username.ForeColor = Color.Silver;
+            tb_Password.ForeColor = Color.Silver;
+            cb_ExperienceLevel.SelectedIndex = -1;
+            cb_Maneger.SelectedIndex = -1;
+            cb_Department.SelectedIndex = -1;
+            ts_ManegerUsername.Checked = false;
+            SelectedManeger = null;
+            SelectedProgrammer = null;
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace iTasks.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202506092027221_iTasksContext"; }
+            get { return "202506101430129_iTasksContext"; }
         }
         
         string IMigrationMetadata.Source
