@@ -467,7 +467,7 @@ namespace iTasks.views
             ts_ManegerUsername.Checked = selectedManager.GenerateUser == "True" || selectedManager.GenerateUser == "true";
         }
 
-        
+
         // Botão Editar
         private void b_Edit_Click(object sender, EventArgs e)
         {
@@ -555,16 +555,28 @@ namespace iTasks.views
                     {
                         try
                         {
+                            // Desassociar tarefas ligadas ao programador
+                            var tarefas = db.Tasks
+                                .Where(t => t.IdProgrammer.Id == SelectedProgrammer.Id)
+                                .ToList();
+
+                            foreach (var tarefa in tarefas)
+                            {
+                                tarefa.IdProgrammer = null;
+                            }
+
                             db.Users.Attach(SelectedProgrammer);
                             db.Users.Remove(SelectedProgrammer);
+
                             db.SaveChanges();
+
                             MessageBox.Show("Programador eliminado com sucesso!");
                             ClearFormFields();
                             SearchProgrammer();
                         }
-                        catch
+                        catch (Exception ex)
                         {
-                            MessageBox.Show($"Erro ao eliminar programador.");
+                            MessageBox.Show($"Erro ao eliminar programador.\n{ex.Message}");
                         }
                     }
                 }
@@ -587,13 +599,14 @@ namespace iTasks.views
                             db.Users.Attach(SelectedManeger);
                             db.Users.Remove(SelectedManeger);
                             db.SaveChanges();
+
                             MessageBox.Show("Gestor eliminado com sucesso!");
                             ClearFormFields();
                             ListGestor();
                         }
-                        catch
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Erro ao eliminar gestor.");
+                            MessageBox.Show("Erro ao eliminar gestor.\n" + ex.Message);
                         }
                     }
                 }
@@ -602,7 +615,7 @@ namespace iTasks.views
             {
                 MessageBox.Show("Por favor, selecione um utilizador (Programador ou Gestor) na lista para apagar.");
             }
-        }
 
+        } 
     }
 }
