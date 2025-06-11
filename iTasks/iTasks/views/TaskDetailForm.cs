@@ -99,16 +99,19 @@ namespace iTasks.views
             TaskType taskType = cb_TaskType.SelectedItem as TaskType;
             Programmer programmer = cb_Programmer.SelectedItem as Programmer;
 
+            Maneger maneger = currentManeger;
+
             using (var db = new iTasksContext())
             {
                 try
                 {
                     db.Users.Attach(programmer);
+                    db.Users.Attach(maneger);
                     db.TaskTypes.Attach(taskType);
 
                     var newTasks = new Tasks()
                     {
-                        IdManeger = currentManeger,
+                        IdManeger = maneger,
                         IdProgrammer = programmer,
                         ExecutionOrder = order,
                         Description = descricao,
