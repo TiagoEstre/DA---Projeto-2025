@@ -105,6 +105,16 @@ namespace iTasks.views
             {
                 try
                 {
+                    bool orderExists = db.Tasks.Any(t => t.IdProgrammer.Id == programmer.Id
+                                    && t.ExecutionOrder == order
+                                    && t.IdManeger.Id == currentManeger.Id);
+
+                    if (orderExists)
+                    {
+                        MessageBox.Show("Já existe uma tarefa com essa ordem para este programador sob sua gestão.");
+                        return;
+                    }
+
                     db.Users.Attach(programmer);
                     db.Users.Attach(maneger);
                     db.TaskTypes.Attach(taskType);
