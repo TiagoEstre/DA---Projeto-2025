@@ -127,12 +127,10 @@ namespace iTasks.views
             listBox.DrawMode = DrawMode.OwnerDrawFixed;
             listBox.Items.Clear();
 
-            foreach (var task in tasks)
+            foreach (var task in tasks.OrderBy(t => t.ExecutionOrder))
             {
                 listBox.Items.Add(task);
             }
-
-            listBox.DisplayMember = "Description";
 
             listBox.DrawItem -= ListBox_DrawItem;
             listBox.DrawItem += ListBox_DrawItem;
@@ -150,7 +148,7 @@ namespace iTasks.views
             e.DrawBackground();
             using (Brush brush = new SolidBrush(isMine ? Color.Green : Color.Red))
             {
-                e.Graphics.DrawString(item.Description, e.Font, brush, e.Bounds);
+                e.Graphics.DrawString(item.ToString(), e.Font, brush, e.Bounds);
             }
             e.DrawFocusRectangle();
         }
@@ -196,6 +194,25 @@ namespace iTasks.views
                         {
                             MessageBox.Show("Não pode mover tarefas que não lhe estão atribuídas.");
                             lb_ToDo.SelectedItem = null;
+                            return;
+                        }
+
+                        int doingCount = db.Tasks.Count(t => t.IdProgrammer.Id == prog.Id && t.CurrentStatus == CurrentStatus.Doing);
+
+                        if (doingCount >= 2)
+                        {
+                            MessageBox.Show("Já possui duas tarefas em execução (Doing). Termine uma antes de iniciar outra.");
+                            return;
+                        }
+
+                        var nextTask = db.Tasks
+                                .Where(t => t.IdProgrammer.Id == prog.Id && t.CurrentStatus == CurrentStatus.ToDo)
+                                .OrderBy(t => t.ExecutionOrder)
+                                .FirstOrDefault();
+
+                        if (nextTask != null && nextTask.Id != taskInDb.Id)
+                        {
+                            MessageBox.Show("Deve executar as tarefas pela ordem definida (ex: 1, 2, 3...).");
                             return;
                         }
                     }
@@ -324,26 +341,16 @@ namespace iTasks.views
                         case CurrentStatus.Doing:
                             taskInDb.CurrentStatus = CurrentStatus.ToDo;
                             taskInDb.ActualStartDate = null;
-                            lb_ToDo.SelectedItem = null;
-                            lb_Doing.SelectedItem = null;
-                            lb_Done.SelectedItem = null;
                             break;
                         case CurrentStatus.ToDo:
                             MessageBox.Show("A tarefa já está no estado 'To Do' e não pode ser retrocedida mais.");
-                            lb_ToDo.SelectedItem = null;
-                            lb_Doing.SelectedItem = null;
-                            lb_Done.SelectedItem = null;
                             return;
                         default:
                             MessageBox.Show("Estado da tarefa não reconhecido para retrocesso.");
-                            lb_ToDo.SelectedItem = null;
-                            lb_Doing.SelectedItem = null;
-                            lb_Done.SelectedItem = null;
                             return;
                     }
 
                     db.SaveChanges();
-
                     VerifyUsers();
                 }
                 catch
@@ -356,11 +363,10 @@ namespace iTasks.views
         private void UpdateListBox(ListBox listBox, List<Tasks> tasks)
         {
             listBox.Items.Clear();
-            foreach (var task in tasks)
+            foreach (var task in tasks.OrderBy(t => t.ExecutionOrder))
             {
                 listBox.Items.Add(task);
             }
-            listBox.DisplayMember = "Description";
         }
     }
 }

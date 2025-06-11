@@ -124,7 +124,7 @@
             this.b_seeCompletionForecast.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_seeCompletionForecast.ForeColor = System.Drawing.Color.Black;
             this.b_seeCompletionForecast.Location = new System.Drawing.Point(976, 15);
-            this.b_seeCompletionForecast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_seeCompletionForecast.Margin = new System.Windows.Forms.Padding(4);
             this.b_seeCompletionForecast.Name = "b_seeCompletionForecast";
             this.b_seeCompletionForecast.Size = new System.Drawing.Size(303, 44);
             this.b_seeCompletionForecast.TabIndex = 11;
@@ -141,7 +141,7 @@
             this.b_NewTask.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_NewTask.ForeColor = System.Drawing.Color.Black;
             this.b_NewTask.Location = new System.Drawing.Point(28, 662);
-            this.b_NewTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_NewTask.Margin = new System.Windows.Forms.Padding(4);
             this.b_NewTask.Name = "b_NewTask";
             this.b_NewTask.Size = new System.Drawing.Size(197, 44);
             this.b_NewTask.TabIndex = 11;
@@ -158,8 +158,8 @@
             this.b_FinishTask.FillColor = System.Drawing.Color.LightGray;
             this.b_FinishTask.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_FinishTask.ForeColor = System.Drawing.Color.Black;
-            this.b_FinishTask.Location = new System.Drawing.Point(661, 662);
-            this.b_FinishTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_FinishTask.Location = new System.Drawing.Point(869, 662);
+            this.b_FinishTask.Margin = new System.Windows.Forms.Padding(4);
             this.b_FinishTask.Name = "b_FinishTask";
             this.b_FinishTask.Size = new System.Drawing.Size(197, 44);
             this.b_FinishTask.TabIndex = 11;
@@ -178,8 +178,8 @@
             this.b_RestartTask.ForeColor = System.Drawing.Color.Black;
             this.b_RestartTask.Image = global::iTasks.Properties.Resources.icons8_arrow_96__1_;
             this.b_RestartTask.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.b_RestartTask.Location = new System.Drawing.Point(449, 662);
-            this.b_RestartTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_RestartTask.Location = new System.Drawing.Point(661, 662);
+            this.b_RestartTask.Margin = new System.Windows.Forms.Padding(4);
             this.b_RestartTask.Name = "b_RestartTask";
             this.b_RestartTask.Size = new System.Drawing.Size(197, 44);
             this.b_RestartTask.TabIndex = 11;
@@ -200,7 +200,7 @@
             this.b_ExecuteTask.Image = global::iTasks.Properties.Resources.icons8_arrow_96;
             this.b_ExecuteTask.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.b_ExecuteTask.Location = new System.Drawing.Point(240, 662);
-            this.b_ExecuteTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_ExecuteTask.Margin = new System.Windows.Forms.Padding(4);
             this.b_ExecuteTask.Name = "b_ExecuteTask";
             this.b_ExecuteTask.Size = new System.Drawing.Size(197, 44);
             this.b_ExecuteTask.TabIndex = 11;
@@ -223,7 +223,7 @@
             this.Controls.Add(this.gb_Doing);
             this.Controls.Add(this.gb_ToDo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KanbanForm";
             this.Text = "KanbanForm";
             this.gb_ToDo.ResumeLayout(false);

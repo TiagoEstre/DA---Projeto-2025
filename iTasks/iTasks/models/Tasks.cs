@@ -31,5 +31,11 @@ namespace iTasks.models
         public Tasks()
         {
         }
+
+        public override string ToString()
+        {
+            return $" Ordem: [{ ExecutionOrder   }]  Descrição: { Description }" ;
+        }
+
     }
 }
