@@ -215,7 +215,7 @@ namespace iTasks.views
                 {
                     db.Users.Attach(manegerSelec);
 
-                    var nameUsers = db.Users.Any(n => n.Name == name || n.Username == username);
+                    var nameUsers = db.Users.Any(n => n.Username == username);
 
                     if (nameUsers)
                     {
@@ -270,7 +270,7 @@ namespace iTasks.views
             {
                 try
                 {
-                    var nameUsers = db.Users.Any(n => n.Name == name || n.Username == username);
+                    var nameUsers = db.Users.Any(n => n.Username == username);
                     if (nameUsers)
                     {
                         MessageBox.Show("Já existe um usuário na base de dados.");
@@ -468,6 +468,7 @@ namespace iTasks.views
         }
 
         
+        // Botão Editar
         private void b_Edit_Click(object sender, EventArgs e)
         {
 
@@ -517,11 +518,26 @@ namespace iTasks.views
             }
 
             MessageBox.Show("Dados do cliente atualizados com sucesso.");
-
-
-
         }
 
+        // Botão Eliminar
+        private void ClearFormFields()
+        {
+            tb_Id.Text = "";
+            tb_Name.Text = "Nome";
+            tb_Username.Text = "Utilizador";
+            tb_Password.Text = "Senha";
+            tb_Password.UseSystemPasswordChar = false;
+            tb_Name.ForeColor = Color.Silver;
+            tb_Username.ForeColor = Color.Silver;
+            tb_Password.ForeColor = Color.Silver;
+            cb_ExperienceLevel.SelectedIndex = -1;
+            cb_Maneger.SelectedIndex = -1;
+            cb_Department.SelectedIndex = -1;
+            ts_ManegerUsername.Checked = false;
+            SelectedManeger = null;
+            SelectedProgrammer = null;
+        }
         private void b_Delete_Click(object sender, EventArgs e)
         {
             if (SelectedProgrammer != null)
@@ -588,22 +604,5 @@ namespace iTasks.views
             }
         }
 
-        private void ClearFormFields()
-        {
-            tb_Id.Text = "";
-            tb_Name.Text = "Nome";
-            tb_Username.Text = "Utilizador";
-            tb_Password.Text = "Senha";
-            tb_Password.UseSystemPasswordChar = false;
-            tb_Name.ForeColor = Color.Silver;
-            tb_Username.ForeColor = Color.Silver;
-            tb_Password.ForeColor = Color.Silver;
-            cb_ExperienceLevel.SelectedIndex = -1;
-            cb_Maneger.SelectedIndex = -1;
-            cb_Department.SelectedIndex = -1;
-            ts_ManegerUsername.Checked = false;
-            SelectedManeger = null;
-            SelectedProgrammer = null;
-        }
     }
 }
