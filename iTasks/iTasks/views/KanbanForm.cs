@@ -16,6 +16,7 @@ namespace iTasks.views
     public partial class KanbanForm : Form
     {
         private readonly Action<Form> _trocarForm;
+
         public KanbanForm(Action<Form> trocarForm)
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace iTasks.views
                 var currentUser = sessionManager.CurrentUser;
             }
         }
+
         private void VerifyUsers()
         {
             if (sessionManager.CurrentUser == null)
@@ -51,29 +53,28 @@ namespace iTasks.views
                         tasksToDisplay = db.Tasks
                                            .Include(t => t.IdProgrammer)
                                            .Include(t => t.idTaskType)
-                                           .Where(t => t.IdProgrammer.Id == programmer.Id)
                                            .ToList();
 
                         b_NewTask.Visible = false;
 
-                        var tasksToDo = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.ToDo).ToList();
-                        var tasksDoing = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Doing).ToList();
-                        var tasksDone = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Done).ToList();
+                        var tasksToDo = tasksToDisplay
+                            .Where(t => t.CurrentStatus == CurrentStatus.ToDo)
+                            .OrderByDescending(t => t.IdProgrammer != null && t.IdProgrammer.Id == programmer.Id)
+                            .ToList();
 
-                        lb_ToDo.DataSource = null;
-                        lb_ToDo.Items.Clear();
-                        lb_ToDo.DataSource = tasksToDo;
-                        lb_ToDo.DisplayMember = "Description";
+                        var tasksDoing = tasksToDisplay
+                            .Where(t => t.CurrentStatus == CurrentStatus.Doing)
+                            .OrderByDescending(t => t.IdProgrammer != null && t.IdProgrammer.Id == programmer.Id)
+                            .ToList();
 
-                        lb_Doing.DataSource = null;
-                        lb_Doing.Items.Clear();
-                        lb_Doing.DataSource = tasksDoing;
-                        lb_Doing.DisplayMember = "Description";
+                        var tasksDone = tasksToDisplay
+                            .Where(t => t.CurrentStatus == CurrentStatus.Done)
+                            .OrderByDescending(t => t.IdProgrammer != null && t.IdProgrammer.Id == programmer.Id)
+                            .ToList();
 
-                        lb_Done.DataSource = null;
-                        lb_Done.Items.Clear();
-                        lb_Done.DataSource = tasksDone;
-                        lb_Done.DisplayMember = "Description";
+                        UpdateListBoxWithColor(lb_ToDo, tasksToDo, programmer.Id);
+                        UpdateListBoxWithColor(lb_Doing, tasksDoing, programmer.Id);
+                        UpdateListBoxWithColor(lb_Done, tasksDone, programmer.Id);
                     }
                     else if (currentUser is Maneger manager)
                     {
@@ -88,7 +89,7 @@ namespace iTasks.views
                         tasksToDisplay = db.Tasks
                                            .Include(t => t.IdProgrammer)
                                            .Include(t => t.idTaskType)
-                                           .Where(t => programmerIds.Contains(t.IdProgrammer.Id))
+                                           .Where(t => t.IdProgrammer != null && programmerIds.Contains(t.IdProgrammer.Id))
                                            .ToList();
 
                         b_NewTask.Visible = true;
@@ -97,33 +98,20 @@ namespace iTasks.views
                         var tasksDoing = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Doing).ToList();
                         var tasksDone = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Done).ToList();
 
-                        lb_ToDo.DataSource = null;
-                        lb_ToDo.Items.Clear();
-                        lb_ToDo.DataSource = tasksToDo;
-                        lb_ToDo.DisplayMember = "Description";
-                        lb_ToDo.ClearSelected();
-
-                        lb_Doing.DataSource = null;
-                        lb_Doing.Items.Clear();
-                        lb_Doing.DataSource = tasksDoing;
-                        lb_Doing.DisplayMember = "Description";
-                        lb_Doing.ClearSelected();
-
-                        lb_Done.DataSource = null;
-                        lb_Done.Items.Clear();
-                        lb_Done.DataSource = tasksDone;
-                        lb_Done.DisplayMember = "Description";
-                        lb_Done.ClearSelected();
+                        UpdateListBox(lb_ToDo, tasksToDo);
+                        UpdateListBox(lb_Doing, tasksDoing);
+                        UpdateListBox(lb_Done, tasksDone);
                     }
                     else
                     {
                         MessageBox.Show("Tipo de utilizador não reconhecido ou sem permissões para visualizar tarefas.");
                         b_NewTask.Visible = false;
+
                         lb_ToDo.DataSource = null;
                         lb_ToDo.Items.Clear();
-                        lb_Doing.DataSource = null; // Limpa também outras listas
+                        lb_Doing.DataSource = null;
                         lb_Doing.Items.Clear();
-                        lb_Done.DataSource = null;  // Limpa também outras listas
+                        lb_Done.DataSource = null;
                         lb_Done.Items.Clear();
                     }
                 }
@@ -134,6 +122,38 @@ namespace iTasks.views
             }
         }
 
+        private void UpdateListBoxWithColor(ListBox listBox, List<Tasks> tasks, int currentUserId)
+        {
+            listBox.DrawMode = DrawMode.OwnerDrawFixed;
+            listBox.Items.Clear();
+
+            foreach (var task in tasks)
+            {
+                listBox.Items.Add(task);
+            }
+
+            listBox.DisplayMember = "Description";
+
+            listBox.DrawItem -= ListBox_DrawItem;
+            listBox.DrawItem += ListBox_DrawItem;
+        }
+
+        private void ListBox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            var listBox = sender as ListBox;
+            var item = listBox.Items[e.Index] as Tasks;
+            var currentUser = sessionManager.CurrentUser as Programmer;
+            bool isMine = item?.IdProgrammer != null && currentUser != null && item.IdProgrammer.Id == currentUser.Id;
+
+            e.DrawBackground();
+            using (Brush brush = new SolidBrush(isMine ? Color.Green : Color.Red))
+            {
+                e.Graphics.DrawString(item.Description, e.Font, brush, e.Bounds);
+            }
+            e.DrawFocusRectangle();
+        }
 
         private void b_NewTask_Click(object sender, EventArgs e)
         {
@@ -160,12 +180,24 @@ namespace iTasks.views
             {
                 try
                 {
-                    var taskInDb = db.Tasks.Find(taskToUpdateStatus.Id);
+                    var taskInDb = db.Tasks
+                        .Include(t => t.IdProgrammer)
+                        .FirstOrDefault(t => t.Id == taskToUpdateStatus.Id);
 
                     if (taskInDb == null)
                     {
                         MessageBox.Show("Tarefa não encontrada na base de dados.");
                         return;
+                    }
+
+                    if (sessionManager.CurrentUser is Programmer prog)
+                    {
+                        if (taskInDb.IdProgrammer == null || taskInDb.IdProgrammer.Id != prog.Id)
+                        {
+                            MessageBox.Show("Não pode mover tarefas que não lhe estão atribuídas.");
+                            lb_ToDo.SelectedItem = null;
+                            return;
+                        }
                     }
 
                     taskInDb.CurrentStatus = CurrentStatus.Doing;
@@ -186,7 +218,7 @@ namespace iTasks.views
         {
             if (lb_Doing.SelectedItem == null)
             {
-                MessageBox.Show("Por favor, selecione uma tarefa na coluna 'To Do' para iniciar.");
+                MessageBox.Show("Por favor, selecione uma tarefa na coluna 'Doing' para finalizar.");
                 return;
             }
 
@@ -202,12 +234,24 @@ namespace iTasks.views
             {
                 try
                 {
-                    var taskInDb = db.Tasks.Find(taskToUpdateStatus.Id);
+                    var taskInDb = db.Tasks
+                        .Include(t => t.IdProgrammer)
+                        .FirstOrDefault(t => t.Id == taskToUpdateStatus.Id);
 
                     if (taskInDb == null)
                     {
                         MessageBox.Show("Tarefa não encontrada na base de dados.");
                         return;
+                    }
+
+                    if (sessionManager.CurrentUser is Programmer prog)
+                    {
+                        if (taskInDb.IdProgrammer == null || taskInDb.IdProgrammer.Id != prog.Id)
+                        {
+                            MessageBox.Show("Não pode mover tarefas que não lhe estão atribuídas.");
+                            lb_Doing.SelectedItem = null;
+                            return;
+                        }
                     }
 
                     taskInDb.CurrentStatus = CurrentStatus.Done;
@@ -255,7 +299,9 @@ namespace iTasks.views
             {
                 try
                 {
-                    var taskInDb = db.Tasks.Find(taskToRetrocede.Id);
+                    var taskInDb = db.Tasks
+                        .Include(t => t.IdProgrammer)
+                        .FirstOrDefault(t => t.Id == taskToRetrocede.Id);
 
                     if (taskInDb == null)
                     {
@@ -263,21 +309,36 @@ namespace iTasks.views
                         return;
                     }
 
+                    if (sessionManager.CurrentUser is Programmer prog)
+                    {
+                        if (taskInDb.IdProgrammer == null || taskInDb.IdProgrammer.Id != prog.Id)
+                        {
+                            MessageBox.Show("Não pode mover tarefas que não lhe estão atribuídas.");
+                            lb_Done.SelectedItem = null;
+                            return;
+                        }
+                    }
+
                     switch (taskInDb.CurrentStatus)
                     {
-                        case CurrentStatus.Done:
-                            taskInDb.CurrentStatus = CurrentStatus.Doing;
-                            taskInDb.ActualEndDate = null;
-                            break;
                         case CurrentStatus.Doing:
                             taskInDb.CurrentStatus = CurrentStatus.ToDo;
                             taskInDb.ActualStartDate = null;
+                            lb_ToDo.SelectedItem = null;
+                            lb_Doing.SelectedItem = null;
+                            lb_Done.SelectedItem = null;
                             break;
                         case CurrentStatus.ToDo:
                             MessageBox.Show("A tarefa já está no estado 'To Do' e não pode ser retrocedida mais.");
+                            lb_ToDo.SelectedItem = null;
+                            lb_Doing.SelectedItem = null;
+                            lb_Done.SelectedItem = null;
                             return;
                         default:
                             MessageBox.Show("Estado da tarefa não reconhecido para retrocesso.");
+                            lb_ToDo.SelectedItem = null;
+                            lb_Doing.SelectedItem = null;
+                            lb_Done.SelectedItem = null;
                             return;
                     }
 
@@ -290,6 +351,16 @@ namespace iTasks.views
                     MessageBox.Show("Erro ao retroceder tarefa");
                 }
             }
+        }
+
+        private void UpdateListBox(ListBox listBox, List<Tasks> tasks)
+        {
+            listBox.Items.Clear();
+            foreach (var task in tasks)
+            {
+                listBox.Items.Add(task);
+            }
+            listBox.DisplayMember = "Description";
         }
     }
 }
