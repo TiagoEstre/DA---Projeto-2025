@@ -53,6 +53,7 @@
             this.lb_ToDo.Name = "lb_ToDo";
             this.lb_ToDo.Size = new System.Drawing.Size(357, 516);
             this.lb_ToDo.TabIndex = 0;
+            this.lb_ToDo.DoubleClick += new System.EventHandler(this.lb_ToDo_DoubleClick);
             // 
             // lb_Doing
             // 
@@ -63,6 +64,7 @@
             this.lb_Doing.Name = "lb_Doing";
             this.lb_Doing.Size = new System.Drawing.Size(357, 516);
             this.lb_Doing.TabIndex = 1;
+            this.lb_Doing.DoubleClick += new System.EventHandler(this.lb_Doing_DoubleClick);
             // 
             // lb_Done
             // 
@@ -73,6 +75,7 @@
             this.lb_Done.Name = "lb_Done";
             this.lb_Done.Size = new System.Drawing.Size(357, 516);
             this.lb_Done.TabIndex = 2;
+            this.lb_Done.DoubleClick += new System.EventHandler(this.lb_Done_DoubleClick);
             // 
             // gb_ToDo
             // 

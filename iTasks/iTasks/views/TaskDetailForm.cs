@@ -13,28 +13,152 @@ namespace iTasks.views
     {
         private Tasks selectedTasks;
         private Maneger currentManeger;
+        private bool isReadOnlyMode;
 
-        public TaskDetailForm()
+        public TaskDetailForm(string Tasks)
         {
             InitializeComponent();
             ConfirmUser();
 
         }
-
-        private void ConfirmUser()
+        public TaskDetailForm(Tasks task, bool readOnly = false)
         {
-            // Verifica se o utilizador logado é um gestor
-            if (sessionManager.CurrentUser is Maneger maneger)
+            InitializeComponent();
+            this.selectedTasks = task;
+            this.isReadOnlyMode = readOnly;
+
+            if (sessionManager.CurrentUser is Maneger manager)
             {
-                currentManeger = maneger;
+                currentManeger = manager;
                 Value();
+                if (selectedTasks != null)
+                {
+                    LoadTaskDetails(selectedTasks);
+                    SetReadOnlyMode(isReadOnlyMode);
+                }
+                else
+                {
+                    SetupFormForCreation();
+                }
+            }
+            else if (sessionManager.CurrentUser is Programmer programmer)
+            {
+                if (selectedTasks != null)
+                {
+                    Value();
+                    LoadTaskDetails(selectedTasks);
+                    SetReadOnlyMode(true);
+                }
+                else
+                {
+                    MessageBox.Show("Programadores não podem criar tarefas.");
+                    this.Close();
+                }
             }
             else
             {
-                MessageBox.Show("Apenas gestores podem aceder a este formulário.");
+                MessageBox.Show("Tipo de utilizador não autorizado a aceder a este formulário.");
                 this.Close();
             }
         }
+
+        private void SetupFormForCreation()
+        {
+            Value();
+            tb_Id.Visible = false;
+            dtp_StartRealDate.Visible = false;
+            dtp_EndRealDate.Visible = false;
+            dtp_CreationDate.Visible = false;
+
+            
+            b_create.Visible = true;
+            b_Read.Visible = false;
+            b_Update.Visible = false;
+            b_Delete.Visible = false;
+            
+            ClearFormFields();
+        }
+
+
+        
+        private void LoadTaskDetails(Tasks task)
+        {
+            tb_Id.Text = task.Id.ToString();
+            tb_Description.Text = task.Description;
+            tb_Order.Text = task.ExecutionOrder.ToString();
+            tb_StoryPoints.Text = task.StoryPoints;
+
+            dtp_StartDate.Value = task.EstimatedStartDate;
+            dtp_EndDate.Value = task.ExpectedEndDate;
+            dtp_CreationDate.Value = task.CreationDate;
+
+            dtp_StartRealDate.Value = task.ActualStartDate ?? DateTime.Today;
+            dtp_EndRealDate.Value = task.ActualEndDate ?? DateTime.Today;
+
+            cb_CurrentStatus.SelectedItem = task.CurrentStatus;
+
+            if (task.idTaskType != null)
+                cb_TaskType.SelectedValue = task.idTaskType.Id;
+            else
+                cb_TaskType.SelectedIndex = -1;
+
+            if (task.IdProgrammer != null)
+                cb_Programmer.SelectedValue = task.IdProgrammer.Id;
+            else
+                cb_Programmer.SelectedIndex = -1;
+        }
+
+        private void SetReadOnlyMode(bool readOnly)
+        {
+            isReadOnlyMode = readOnly;
+
+            tb_Description.ReadOnly = readOnly;
+            tb_Order.ReadOnly = readOnly;
+            tb_StoryPoints.ReadOnly = readOnly;
+
+            dtp_StartDate.Enabled = !readOnly;
+            dtp_EndDate.Enabled = !readOnly;
+            dtp_CreationDate.Enabled = !readOnly;
+
+            dtp_StartRealDate.Enabled = !readOnly;
+            dtp_EndRealDate.Enabled = !readOnly;
+
+            cb_CurrentStatus.Enabled = !readOnly;
+            cb_TaskType.Enabled = !readOnly;
+            cb_Programmer.Enabled = !readOnly;
+
+            b_create.Visible = !readOnly && (sessionManager.CurrentUser is Maneger);
+            b_Read.Visible = true;
+            b_Update.Visible = !readOnly && (sessionManager.CurrentUser is Maneger);
+            b_Delete.Visible = !readOnly && (sessionManager.CurrentUser is Maneger);
+
+            if (readOnly)
+            {
+                b_create.Visible = false;
+                b_Read.Visible = false;
+                b_Update.Visible = false;
+                b_Delete.Visible = false;
+            }
+
+            tb_Id.ReadOnly = true;
+        }
+
+        private void ConfirmUser()
+        {
+            if (sessionManager.CurrentUser is Maneger maneger)
+            {
+                currentManeger = maneger;
+            }
+            else if (sessionManager.CurrentUser is Programmer)
+            {
+            }
+            else
+            {
+                MessageBox.Show("Apenas gestores e programadores podem aceder a este formulário.");
+                this.Close();
+            }
+        }
+
         private void Value()
         {
             cb_CurrentStatus.DataSource = Enum.GetValues(typeof(CurrentStatus)).Cast<CurrentStatus>().ToList();
@@ -43,6 +167,7 @@ namespace iTasks.views
             ListTaskType();
             ListProgrammer();
         }
+       
 
         private void ListProgrammer()
         {
@@ -50,11 +175,18 @@ namespace iTasks.views
             {
                 using (var db = new iTasksContext())
                 {
-                    // Apenas programadores do gestor atual
-                    var programadors = db.Users
-                        .OfType<Programmer>()
-                        .Where(p => p.idManeger.Id == currentManeger.Id)
-                        .ToList();
+                    List<Programmer> programadors;
+                    if (sessionManager.CurrentUser is Maneger manager)
+                    {
+                        programadors = db.Users
+                            .OfType<Programmer>()
+                            .Where(p => p.idManeger != null && p.idManeger.Id == manager.Id)
+                            .ToList();
+                    }
+                    else // Se for programador a consultar, pode mostrar todos os programadores ou apenas o próprio
+                    {
+                        programadors = db.Users.OfType<Programmer>().ToList(); // Ou filtre apenas pelo próprio
+                    }
 
                     cb_Programmer.DataSource = programadors;
                     cb_Programmer.DisplayMember = "Name";
@@ -100,6 +232,12 @@ namespace iTasks.views
             Programmer programmer = cb_Programmer.SelectedItem as Programmer;
 
             Maneger maneger = currentManeger;
+
+            if (isReadOnlyMode)
+            {
+                MessageBox.Show("Não pode criar tarefas no modo de visualização.");
+                return;
+            }
 
             using (var db = new iTasksContext())
             {
@@ -202,6 +340,12 @@ namespace iTasks.views
 
         private void b_Update_Click(object sender, EventArgs e)
         {
+            if (isReadOnlyMode)
+            {
+                MessageBox.Show("Não pode atualizar tarefas no modo de visualização.");
+                return;
+            }
+
             if (selectedTasks == null)
             {
                 MessageBox.Show("Nenhuma tarefa selecionada para edição. Por favor, procure uma tarefa primeiro.");
@@ -256,6 +400,12 @@ namespace iTasks.views
 
         private void b_Delete_Click(object sender, EventArgs e)
         {
+            if (isReadOnlyMode)
+            {
+                MessageBox.Show("Não pode apagar tarefas no modo de visualização.");
+                return;
+            }
+
             if (selectedTasks == null)
             {
                 MessageBox.Show("Nenhuma tarefa selecionada para apagar.");
@@ -266,6 +416,7 @@ namespace iTasks.views
             {
                 try
                 {
+
                     var taskToDelete = db.Tasks
                         .FirstOrDefault(t => t.Id == selectedTasks.Id && t.IdManeger.Id == currentManeger.Id);
 

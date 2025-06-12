@@ -16,6 +16,7 @@ namespace iTasks.views
     public partial class KanbanForm : Form
     {
         private readonly Action<Form> _trocarForm;
+        private Task selectedTask;
 
         public KanbanForm(Action<Form> trocarForm)
         {
@@ -155,7 +156,7 @@ namespace iTasks.views
 
         private void b_NewTask_Click(object sender, EventArgs e)
         {
-            _trocarForm(new TaskDetailForm());
+            _trocarForm(new TaskDetailForm(null));
         }
 
         private void b_ExecuteTask_Click(object sender, EventArgs e)
@@ -366,6 +367,57 @@ namespace iTasks.views
             foreach (var task in tasks.OrderBy(t => t.ExecutionOrder))
             {
                 listBox.Items.Add(task);
+            }
+        }
+
+        private void lb_ToDo_DoubleClick(object sender, EventArgs e)
+        {
+            ListBox clickedListBox = sender as ListBox;
+
+            if (clickedListBox != null && clickedListBox.SelectedItem != null)
+            {
+                Tasks selectedTask = clickedListBox.SelectedItem as Tasks;
+
+                if (selectedTask != null)
+                {
+                    bool isReadOnly = (sessionManager.CurrentUser is Programmer);
+
+                    _trocarForm(new TaskDetailForm(selectedTask, isReadOnly));
+                }
+            }
+        }
+
+        private void lb_Doing_DoubleClick(object sender, EventArgs e)
+        {
+            ListBox clickedListBox = sender as ListBox;
+
+            if (clickedListBox != null && clickedListBox.SelectedItem != null)
+            {
+                Tasks selectedTask = clickedListBox.SelectedItem as Tasks;
+
+                if (selectedTask != null)
+                {
+                    bool isReadOnly = (sessionManager.CurrentUser is Programmer);
+
+                    _trocarForm(new TaskDetailForm(selectedTask, isReadOnly));
+                }
+            }
+        }
+
+        private void lb_Done_DoubleClick(object sender, EventArgs e)
+        {
+            ListBox clickedListBox = sender as ListBox;
+
+            if (clickedListBox != null && clickedListBox.SelectedItem != null)
+            {
+                Tasks selectedTask = clickedListBox.SelectedItem as Tasks;
+
+                if (selectedTask != null)
+                {
+                    bool isReadOnly = (sessionManager.CurrentUser is Programmer);
+
+                    _trocarForm(new TaskDetailForm(selectedTask, isReadOnly));
+                }
             }
         }
     }
