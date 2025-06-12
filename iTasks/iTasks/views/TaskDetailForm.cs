@@ -183,9 +183,9 @@ namespace iTasks.views
                             .Where(p => p.idManeger != null && p.idManeger.Id == manager.Id)
                             .ToList();
                     }
-                    else // Se for programador a consultar, pode mostrar todos os programadores ou apenas o próprio
+                    else
                     {
-                        programadors = db.Users.OfType<Programmer>().ToList(); // Ou filtre apenas pelo próprio
+                        programadors = db.Users.OfType<Programmer>().ToList();
                     }
 
                     cb_Programmer.DataSource = programadors;
