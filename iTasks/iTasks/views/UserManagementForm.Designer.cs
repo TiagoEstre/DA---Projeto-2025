@@ -156,6 +156,7 @@
             // 
             // b_Create
             // 
+            this.b_Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.b_Create.AutoRoundedCorners = true;
             this.b_Create.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_Create.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -174,6 +175,7 @@
             // 
             // b_Search
             // 
+            this.b_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.b_Search.AutoRoundedCorners = true;
             this.b_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -192,6 +194,7 @@
             // 
             // b_Edit
             // 
+            this.b_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.b_Edit.AutoRoundedCorners = true;
             this.b_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -210,6 +213,7 @@
             // 
             // b_Delete
             // 
+            this.b_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Delete.AutoRoundedCorners = true;
             this.b_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -228,6 +232,9 @@
             // 
             // lb_Programmer
             // 
+            this.lb_Programmer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Programmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Programmer.FormattingEnabled = true;
             this.lb_Programmer.ItemHeight = 25;
@@ -400,6 +407,9 @@
             // 
             // lb_Manager
             // 
+            this.lb_Manager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Manager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Manager.FormattingEnabled = true;
             this.lb_Manager.ItemHeight = 25;
@@ -416,7 +426,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1307, 732);
+            this.ClientSize = new System.Drawing.Size(1307, 733);
             this.Controls.Add(this.p_Programmer);
             this.Controls.Add(this.p_Manager);
             this.Controls.Add(this.b_Delete);

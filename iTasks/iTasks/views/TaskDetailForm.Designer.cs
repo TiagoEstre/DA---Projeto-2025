@@ -45,10 +45,8 @@
             this.b_Update = new Guna.UI2.WinForms.Guna2Button();
             this.b_Read = new Guna.UI2.WinForms.Guna2Button();
             this.b_create = new Guna.UI2.WinForms.Guna2Button();
-            this.cb_Programmer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtp_EndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtp_StartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.cb_TaskType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tb_StoryPoints = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_Order = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_Description = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,6 +57,8 @@
             this.l_Programmer = new System.Windows.Forms.Label();
             this.l_TaskTipe = new System.Windows.Forms.Label();
             this.l_Description = new System.Windows.Forms.Label();
+            this.cb_TaskType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_Programmer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -107,6 +107,8 @@
             // 
             // tb_Id
             // 
+            this.tb_Id.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tb_Id.AutoRoundedCorners = true;
             this.tb_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Id.DefaultText = "ID";
@@ -129,6 +131,8 @@
             // 
             // dtp_StartRealDate
             // 
+            this.dtp_StartRealDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dtp_StartRealDate.AutoRoundedCorners = true;
             this.dtp_StartRealDate.BorderColor = System.Drawing.Color.Transparent;
             this.dtp_StartRealDate.Checked = true;
@@ -147,6 +151,8 @@
             // 
             // dtp_EndRealDate
             // 
+            this.dtp_EndRealDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dtp_EndRealDate.AutoRoundedCorners = true;
             this.dtp_EndRealDate.BorderColor = System.Drawing.Color.Transparent;
             this.dtp_EndRealDate.Checked = true;
@@ -187,7 +193,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 322);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(349, 410);
+            this.panel3.Size = new System.Drawing.Size(349, 411);
             this.panel3.TabIndex = 32;
             // 
             // cb_CurrentStatus
@@ -235,11 +241,14 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(349, 732);
+            this.panel4.Size = new System.Drawing.Size(349, 733);
             this.panel4.TabIndex = 32;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.b_Delete);
             this.panel2.Controls.Add(this.b_Update);
             this.panel2.Controls.Add(this.b_Read);
@@ -258,7 +267,6 @@
             this.panel2.Controls.Add(this.l_Programmer);
             this.panel2.Controls.Add(this.l_TaskTipe);
             this.panel2.Controls.Add(this.l_Description);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(349, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -267,6 +275,7 @@
             // 
             // b_Delete
             // 
+            this.b_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Delete.AutoRoundedCorners = true;
             this.b_Delete.BorderColor = System.Drawing.Color.White;
             this.b_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -279,13 +288,14 @@
             this.b_Delete.Location = new System.Drawing.Point(708, 535);
             this.b_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.b_Delete.Name = "b_Delete";
-            this.b_Delete.Size = new System.Drawing.Size(164, 44);
+            this.b_Delete.Size = new System.Drawing.Size(164, 43);
             this.b_Delete.TabIndex = 30;
             this.b_Delete.Text = "APAGAR";
             this.b_Delete.Click += new System.EventHandler(this.b_Delete_Click);
             // 
             // b_Update
             // 
+            this.b_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Update.AutoRoundedCorners = true;
             this.b_Update.BorderColor = System.Drawing.Color.White;
             this.b_Update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -305,6 +315,7 @@
             // 
             // b_Read
             // 
+            this.b_Read.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Read.AutoRoundedCorners = true;
             this.b_Read.BorderColor = System.Drawing.Color.White;
             this.b_Read.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -324,6 +335,7 @@
             // 
             // b_create
             // 
+            this.b_create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_create.AutoRoundedCorners = true;
             this.b_create.BorderColor = System.Drawing.Color.White;
             this.b_create.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -341,26 +353,9 @@
             this.b_create.Text = "CRIAR";
             this.b_create.Click += new System.EventHandler(this.b_create_Click);
             // 
-            // cb_Programmer
-            // 
-            this.cb_Programmer.AutoRoundedCorners = true;
-            this.cb_Programmer.BackColor = System.Drawing.Color.Transparent;
-            this.cb_Programmer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_Programmer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Programmer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_Programmer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_Programmer.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cb_Programmer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cb_Programmer.ItemHeight = 30;
-            this.cb_Programmer.Location = new System.Drawing.Point(496, 236);
-            this.cb_Programmer.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_Programmer.Name = "cb_Programmer";
-            this.cb_Programmer.Size = new System.Drawing.Size(375, 36);
-            this.cb_Programmer.TabIndex = 29;
-            this.cb_Programmer.TextOffset = new System.Drawing.Point(10, 0);
-            // 
             // dtp_EndDate
             // 
+            this.dtp_EndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_EndDate.AutoRoundedCorners = true;
             this.dtp_EndDate.BorderColor = System.Drawing.Color.Transparent;
             this.dtp_EndDate.Checked = true;
@@ -372,12 +367,13 @@
             this.dtp_EndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_EndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_EndDate.Name = "dtp_EndDate";
-            this.dtp_EndDate.Size = new System.Drawing.Size(376, 44);
+            this.dtp_EndDate.Size = new System.Drawing.Size(376, 43);
             this.dtp_EndDate.TabIndex = 29;
             this.dtp_EndDate.Value = new System.DateTime(2025, 5, 31, 16, 22, 43, 794);
             // 
             // dtp_StartDate
             // 
+            this.dtp_StartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_StartDate.AutoRoundedCorners = true;
             this.dtp_StartDate.BorderColor = System.Drawing.Color.Transparent;
             this.dtp_StartDate.Checked = true;
@@ -389,30 +385,13 @@
             this.dtp_StartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_StartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_StartDate.Name = "dtp_StartDate";
-            this.dtp_StartDate.Size = new System.Drawing.Size(376, 44);
+            this.dtp_StartDate.Size = new System.Drawing.Size(376, 43);
             this.dtp_StartDate.TabIndex = 29;
             this.dtp_StartDate.Value = new System.DateTime(2025, 5, 31, 16, 22, 43, 794);
             // 
-            // cb_TaskType
-            // 
-            this.cb_TaskType.AutoRoundedCorners = true;
-            this.cb_TaskType.BackColor = System.Drawing.Color.Transparent;
-            this.cb_TaskType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_TaskType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_TaskType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_TaskType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_TaskType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cb_TaskType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cb_TaskType.ItemHeight = 30;
-            this.cb_TaskType.Location = new System.Drawing.Point(92, 236);
-            this.cb_TaskType.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_TaskType.Name = "cb_TaskType";
-            this.cb_TaskType.Size = new System.Drawing.Size(375, 36);
-            this.cb_TaskType.TabIndex = 29;
-            this.cb_TaskType.TextOffset = new System.Drawing.Point(10, 0);
-            // 
             // tb_StoryPoints
             // 
+            this.tb_StoryPoints.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_StoryPoints.Animated = true;
             this.tb_StoryPoints.AutoRoundedCorners = true;
             this.tb_StoryPoints.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -429,12 +408,13 @@
             this.tb_StoryPoints.Name = "tb_StoryPoints";
             this.tb_StoryPoints.PlaceholderText = "";
             this.tb_StoryPoints.SelectedText = "";
-            this.tb_StoryPoints.Size = new System.Drawing.Size(376, 44);
+            this.tb_StoryPoints.Size = new System.Drawing.Size(376, 43);
             this.tb_StoryPoints.TabIndex = 28;
             this.tb_StoryPoints.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // tb_Order
             // 
+            this.tb_Order.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Order.Animated = true;
             this.tb_Order.AutoRoundedCorners = true;
             this.tb_Order.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -451,12 +431,13 @@
             this.tb_Order.Name = "tb_Order";
             this.tb_Order.PlaceholderText = "";
             this.tb_Order.SelectedText = "";
-            this.tb_Order.Size = new System.Drawing.Size(376, 44);
+            this.tb_Order.Size = new System.Drawing.Size(376, 43);
             this.tb_Order.TabIndex = 28;
             this.tb_Order.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // tb_Description
             // 
+            this.tb_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Description.Animated = true;
             this.tb_Description.AutoRoundedCorners = true;
             this.tb_Description.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -473,12 +454,13 @@
             this.tb_Description.Name = "tb_Description";
             this.tb_Description.PlaceholderText = "";
             this.tb_Description.SelectedText = "";
-            this.tb_Description.Size = new System.Drawing.Size(780, 44);
+            this.tb_Description.Size = new System.Drawing.Size(780, 43);
             this.tb_Description.TabIndex = 28;
             this.tb_Description.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // EndDate
             // 
+            this.EndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EndDate.AutoSize = true;
             this.EndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndDate.ForeColor = System.Drawing.Color.White;
@@ -490,6 +472,7 @@
             // 
             // l_StartDate
             // 
+            this.l_StartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_StartDate.AutoSize = true;
             this.l_StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_StartDate.ForeColor = System.Drawing.Color.White;
@@ -501,6 +484,7 @@
             // 
             // l_StoryPoints
             // 
+            this.l_StoryPoints.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_StoryPoints.AutoSize = true;
             this.l_StoryPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_StoryPoints.ForeColor = System.Drawing.Color.White;
@@ -512,6 +496,7 @@
             // 
             // l_Order
             // 
+            this.l_Order.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Order.AutoSize = true;
             this.l_Order.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_Order.ForeColor = System.Drawing.Color.White;
@@ -523,6 +508,7 @@
             // 
             // l_Programmer
             // 
+            this.l_Programmer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Programmer.AutoSize = true;
             this.l_Programmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_Programmer.ForeColor = System.Drawing.Color.White;
@@ -534,6 +520,7 @@
             // 
             // l_TaskTipe
             // 
+            this.l_TaskTipe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_TaskTipe.AutoSize = true;
             this.l_TaskTipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_TaskTipe.ForeColor = System.Drawing.Color.White;
@@ -545,6 +532,7 @@
             // 
             // l_Description
             // 
+            this.l_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Description.AutoSize = true;
             this.l_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_Description.ForeColor = System.Drawing.Color.White;
@@ -554,12 +542,50 @@
             this.l_Description.TabIndex = 10;
             this.l_Description.Text = "Descrição";
             // 
+            // cb_TaskType
+            // 
+            this.cb_TaskType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_TaskType.AutoRoundedCorners = true;
+            this.cb_TaskType.BackColor = System.Drawing.Color.Transparent;
+            this.cb_TaskType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_TaskType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_TaskType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_TaskType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_TaskType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_TaskType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_TaskType.ItemHeight = 30;
+            this.cb_TaskType.Location = new System.Drawing.Point(92, 236);
+            this.cb_TaskType.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_TaskType.Name = "cb_TaskType";
+            this.cb_TaskType.Size = new System.Drawing.Size(375, 36);
+            this.cb_TaskType.TabIndex = 29;
+            this.cb_TaskType.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // cb_Programmer
+            // 
+            this.cb_Programmer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_Programmer.AutoRoundedCorners = true;
+            this.cb_Programmer.BackColor = System.Drawing.Color.Transparent;
+            this.cb_Programmer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_Programmer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Programmer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_Programmer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_Programmer.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_Programmer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_Programmer.ItemHeight = 30;
+            this.cb_Programmer.Location = new System.Drawing.Point(496, 236);
+            this.cb_Programmer.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_Programmer.Name = "cb_Programmer";
+            this.cb_Programmer.Size = new System.Drawing.Size(375, 36);
+            this.cb_Programmer.TabIndex = 29;
+            this.cb_Programmer.TextOffset = new System.Drawing.Point(10, 0);
+            // 
             // TaskDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1307, 732);
+            this.ClientSize = new System.Drawing.Size(1307, 733);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -599,8 +625,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_CreationDate;
         private Guna.UI2.WinForms.Guna2ComboBox cb_CurrentStatus;
         private Guna.UI2.WinForms.Guna2TextBox tb_Description;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_TaskType;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_Programmer;
         private Guna.UI2.WinForms.Guna2TextBox tb_StoryPoints;
         private Guna.UI2.WinForms.Guna2TextBox tb_Order;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_EndDate;
@@ -609,5 +633,7 @@
         private Guna.UI2.WinForms.Guna2Button b_Delete;
         private Guna.UI2.WinForms.Guna2Button b_Update;
         private Guna.UI2.WinForms.Guna2Button b_Read;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_Programmer;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_TaskType;
     }
 }

@@ -150,6 +150,22 @@ namespace iTasks.views
             trocarForm(new CompletedTasksForm());
         }
 
-        
+        private void itb_logout_CheckedChanged(object sender, EventArgs e)
+        {
+            sessionManager.Logout();
+
+            LoginForm loginForm = new LoginForm();
+
+            Hide();
+            loginForm.FormClosed += Closed_FormClosed;
+            loginForm.ShowDialog();
+
+
+        }
+
+        private void Closed_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Close();
+        }
     }
 }

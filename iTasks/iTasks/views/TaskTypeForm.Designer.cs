@@ -42,6 +42,8 @@
             // 
             // lb_TaskTipe
             // 
+            this.lb_TaskTipe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_TaskTipe.FormattingEnabled = true;
             this.lb_TaskTipe.ItemHeight = 16;
             this.lb_TaskTipe.Location = new System.Drawing.Point(105, 66);
@@ -64,6 +66,7 @@
             // 
             // l_id
             // 
+            this.l_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_id.AutoSize = true;
             this.l_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_id.ForeColor = System.Drawing.Color.White;
@@ -75,10 +78,11 @@
             // 
             // l_Description
             // 
+            this.l_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Description.AutoSize = true;
             this.l_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_Description.ForeColor = System.Drawing.Color.White;
-            this.l_Description.Location = new System.Drawing.Point(1091, 154);
+            this.l_Description.Location = new System.Drawing.Point(1121, 157);
             this.l_Description.Name = "l_Description";
             this.l_Description.Size = new System.Drawing.Size(49, 18);
             this.l_Description.TabIndex = 4;
@@ -86,6 +90,7 @@
             // 
             // tb_Id
             // 
+            this.tb_Id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Id.AutoRoundedCorners = true;
             this.tb_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Id.DefaultText = "";
@@ -107,6 +112,7 @@
             // 
             // tb_Name
             // 
+            this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.AutoRoundedCorners = true;
             this.tb_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Name.DefaultText = "";
@@ -129,6 +135,7 @@
             // 
             // b_Create
             // 
+            this.b_Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Create.AutoRoundedCorners = true;
             this.b_Create.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_Create.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -147,6 +154,7 @@
             // 
             // b_read
             // 
+            this.b_read.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_read.AutoRoundedCorners = true;
             this.b_read.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_read.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -165,6 +173,7 @@
             // 
             // b_Update
             // 
+            this.b_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Update.AutoRoundedCorners = true;
             this.b_Update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_Update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -183,6 +192,7 @@
             // 
             // b_Delete
             // 
+            this.b_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Delete.AutoRoundedCorners = true;
             this.b_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -204,7 +214,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1307, 732);
+            this.ClientSize = new System.Drawing.Size(1307, 733);
             this.Controls.Add(this.b_Delete);
             this.Controls.Add(this.b_Update);
             this.Controls.Add(this.b_read);

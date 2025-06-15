@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v18\\DA---Projeto-2025\\iTasks\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|c:\\users\\tiago\\documents\\da - projeto 2025\\v18\\da---projeto-2025\\itasks\\itasks\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE1E1692-B7BC-4B5D-A0AF-21BC88DAE6FA}|iTasks\\iTasks.csproj|solutionrelative:itasks\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tasks.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v18\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Tasks.cs",
+              "RelativeDocumentMoniker": "iTasks\\models\\Tasks.cs",
+              "ToolTip": "C:\\Users\\tiago\\Documents\\DA - Projeto 2025\\v18\\DA---Projeto-2025\\iTasks\\iTasks\\models\\Tasks.cs",
+              "RelativeToolTip": "iTasks\\models\\Tasks.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBwAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T14:54:43.257Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

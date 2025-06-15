@@ -46,39 +46,53 @@
             // 
             // lb_ToDo
             // 
+            this.lb_ToDo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_ToDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ToDo.FormattingEnabled = true;
-            this.lb_ToDo.ItemHeight = 16;
+            this.lb_ToDo.ItemHeight = 25;
             this.lb_ToDo.Location = new System.Drawing.Point(25, 28);
             this.lb_ToDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_ToDo.Name = "lb_ToDo";
-            this.lb_ToDo.Size = new System.Drawing.Size(357, 516);
+            this.lb_ToDo.Size = new System.Drawing.Size(357, 504);
             this.lb_ToDo.TabIndex = 0;
             this.lb_ToDo.DoubleClick += new System.EventHandler(this.lb_ToDo_DoubleClick);
             // 
             // lb_Doing
             // 
+            this.lb_Doing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Doing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Doing.FormattingEnabled = true;
-            this.lb_Doing.ItemHeight = 16;
+            this.lb_Doing.ItemHeight = 25;
             this.lb_Doing.Location = new System.Drawing.Point(25, 28);
             this.lb_Doing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_Doing.Name = "lb_Doing";
-            this.lb_Doing.Size = new System.Drawing.Size(357, 516);
+            this.lb_Doing.Size = new System.Drawing.Size(357, 504);
             this.lb_Doing.TabIndex = 1;
             this.lb_Doing.DoubleClick += new System.EventHandler(this.lb_Doing_DoubleClick);
             // 
             // lb_Done
             // 
+            this.lb_Done.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Done.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Done.FormattingEnabled = true;
-            this.lb_Done.ItemHeight = 16;
+            this.lb_Done.ItemHeight = 25;
             this.lb_Done.Location = new System.Drawing.Point(25, 28);
             this.lb_Done.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_Done.Name = "lb_Done";
-            this.lb_Done.Size = new System.Drawing.Size(357, 516);
+            this.lb_Done.Size = new System.Drawing.Size(357, 504);
             this.lb_Done.TabIndex = 2;
             this.lb_Done.DoubleClick += new System.EventHandler(this.lb_Done_DoubleClick);
             // 
             // gb_ToDo
             // 
+            this.gb_ToDo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.gb_ToDo.Controls.Add(this.lb_ToDo);
             this.gb_ToDo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gb_ToDo.Location = new System.Drawing.Point(28, 74);
@@ -92,6 +106,9 @@
             // 
             // gb_Doing
             // 
+            this.gb_Doing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_Doing.Controls.Add(this.lb_Doing);
             this.gb_Doing.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gb_Doing.Location = new System.Drawing.Point(449, 74);
@@ -105,6 +122,8 @@
             // 
             // gb_Done
             // 
+            this.gb_Done.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_Done.Controls.Add(this.lb_Done);
             this.gb_Done.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gb_Done.Location = new System.Drawing.Point(869, 74);
@@ -118,6 +137,7 @@
             // 
             // b_seeCompletionForecast
             // 
+            this.b_seeCompletionForecast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_seeCompletionForecast.AutoRoundedCorners = true;
             this.b_seeCompletionForecast.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_seeCompletionForecast.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -135,6 +155,7 @@
             // 
             // b_NewTask
             // 
+            this.b_NewTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.b_NewTask.AutoRoundedCorners = true;
             this.b_NewTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_NewTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -153,6 +174,7 @@
             // 
             // b_FinishTask
             // 
+            this.b_FinishTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_FinishTask.AutoRoundedCorners = true;
             this.b_FinishTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_FinishTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -171,6 +193,7 @@
             // 
             // b_RestartTask
             // 
+            this.b_RestartTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_RestartTask.AutoRoundedCorners = true;
             this.b_RestartTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_RestartTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -192,6 +215,7 @@
             // 
             // b_ExecuteTask
             // 
+            this.b_ExecuteTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.b_ExecuteTask.AutoRoundedCorners = true;
             this.b_ExecuteTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_ExecuteTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

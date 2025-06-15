@@ -47,6 +47,7 @@
             this.pb_Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.p_Bar = new System.Windows.Forms.Panel();
+            this.itb_logout = new Guna.UI2.WinForms.Guna2ImageRadioButton();
             this.b_User = new Guna.UI2.WinForms.Guna2Button();
             this.cb_Minimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cb_Maximize = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -92,8 +93,9 @@
             this.p_Menu.Controls.Add(this.panelLogin);
             this.p_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.p_Menu.Location = new System.Drawing.Point(0, 0);
+            this.p_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.p_Menu.Name = "p_Menu";
-            this.p_Menu.Size = new System.Drawing.Size(220, 670);
+            this.p_Menu.Size = new System.Drawing.Size(293, 825);
             this.p_Menu.TabIndex = 0;
             // 
             // p_Tasks
@@ -101,9 +103,10 @@
             this.p_Tasks.Controls.Add(this.b_CompletedTasks);
             this.p_Tasks.Controls.Add(this.b_OngoingTasks);
             this.p_Tasks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p_Tasks.Location = new System.Drawing.Point(0, 384);
+            this.p_Tasks.Location = new System.Drawing.Point(0, 473);
+            this.p_Tasks.Margin = new System.Windows.Forms.Padding(4);
             this.p_Tasks.Name = "p_Tasks";
-            this.p_Tasks.Size = new System.Drawing.Size(220, 125);
+            this.p_Tasks.Size = new System.Drawing.Size(293, 154);
             this.p_Tasks.TabIndex = 8;
             this.p_Tasks.Visible = false;
             // 
@@ -120,9 +123,10 @@
             this.b_CompletedTasks.Image = global::iTasks.Properties.Resources.icons8_to_do_96__1_1;
             this.b_CompletedTasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_CompletedTasks.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_CompletedTasks.Location = new System.Drawing.Point(0, 60);
+            this.b_CompletedTasks.Location = new System.Drawing.Point(0, 74);
+            this.b_CompletedTasks.Margin = new System.Windows.Forms.Padding(4);
             this.b_CompletedTasks.Name = "b_CompletedTasks";
-            this.b_CompletedTasks.Size = new System.Drawing.Size(220, 60);
+            this.b_CompletedTasks.Size = new System.Drawing.Size(293, 74);
             this.b_CompletedTasks.TabIndex = 11;
             this.b_CompletedTasks.Text = "Tarefas Concluidas";
             this.b_CompletedTasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -143,8 +147,9 @@
             this.b_OngoingTasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_OngoingTasks.ImageOffset = new System.Drawing.Point(2, 0);
             this.b_OngoingTasks.Location = new System.Drawing.Point(0, 0);
+            this.b_OngoingTasks.Margin = new System.Windows.Forms.Padding(4);
             this.b_OngoingTasks.Name = "b_OngoingTasks";
-            this.b_OngoingTasks.Size = new System.Drawing.Size(220, 60);
+            this.b_OngoingTasks.Size = new System.Drawing.Size(293, 74);
             this.b_OngoingTasks.TabIndex = 10;
             this.b_OngoingTasks.Text = "Tarefas Em Curso";
             this.b_OngoingTasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -164,9 +169,10 @@
             this.b_Tasks.Image = global::iTasks.Properties.Resources.icons8_list_view_96;
             this.b_Tasks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_Tasks.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_Tasks.Location = new System.Drawing.Point(0, 324);
+            this.b_Tasks.Location = new System.Drawing.Point(0, 399);
+            this.b_Tasks.Margin = new System.Windows.Forms.Padding(4);
             this.b_Tasks.Name = "b_Tasks";
-            this.b_Tasks.Size = new System.Drawing.Size(220, 60);
+            this.b_Tasks.Size = new System.Drawing.Size(293, 74);
             this.b_Tasks.TabIndex = 7;
             this.b_Tasks.Text = "Tarefas";
             this.b_Tasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -178,9 +184,10 @@
             this.p_ManagerApp.Controls.Add(this.b_TaskType);
             this.p_ManagerApp.Controls.Add(this.b_Users);
             this.p_ManagerApp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p_ManagerApp.Location = new System.Drawing.Point(0, 200);
+            this.p_ManagerApp.Location = new System.Drawing.Point(0, 246);
+            this.p_ManagerApp.Margin = new System.Windows.Forms.Padding(4);
             this.p_ManagerApp.Name = "p_ManagerApp";
-            this.p_ManagerApp.Size = new System.Drawing.Size(220, 124);
+            this.p_ManagerApp.Size = new System.Drawing.Size(293, 153);
             this.p_ManagerApp.TabIndex = 6;
             this.p_ManagerApp.Visible = false;
             // 
@@ -197,9 +204,10 @@
             this.b_TaskType.Image = global::iTasks.Properties.Resources.icons8_queue_96;
             this.b_TaskType.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_TaskType.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_TaskType.Location = new System.Drawing.Point(0, 60);
+            this.b_TaskType.Location = new System.Drawing.Point(0, 74);
+            this.b_TaskType.Margin = new System.Windows.Forms.Padding(4);
             this.b_TaskType.Name = "b_TaskType";
-            this.b_TaskType.Size = new System.Drawing.Size(220, 60);
+            this.b_TaskType.Size = new System.Drawing.Size(293, 74);
             this.b_TaskType.TabIndex = 4;
             this.b_TaskType.Text = "Tipos de Tarefas";
             this.b_TaskType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -220,8 +228,9 @@
             this.b_Users.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_Users.ImageOffset = new System.Drawing.Point(2, 0);
             this.b_Users.Location = new System.Drawing.Point(0, 0);
+            this.b_Users.Margin = new System.Windows.Forms.Padding(4);
             this.b_Users.Name = "b_Users";
-            this.b_Users.Size = new System.Drawing.Size(220, 60);
+            this.b_Users.Size = new System.Drawing.Size(293, 74);
             this.b_Users.TabIndex = 2;
             this.b_Users.Text = "Utilizadores";
             this.b_Users.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -241,9 +250,10 @@
             this.b_ManagerApp.Image = global::iTasks.Properties.Resources.icons8_queue_96;
             this.b_ManagerApp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_ManagerApp.ImageOffset = new System.Drawing.Point(2, 0);
-            this.b_ManagerApp.Location = new System.Drawing.Point(0, 140);
+            this.b_ManagerApp.Location = new System.Drawing.Point(0, 172);
+            this.b_ManagerApp.Margin = new System.Windows.Forms.Padding(4);
             this.b_ManagerApp.Name = "b_ManagerApp";
-            this.b_ManagerApp.Size = new System.Drawing.Size(220, 60);
+            this.b_ManagerApp.Size = new System.Drawing.Size(293, 74);
             this.b_ManagerApp.TabIndex = 1;
             this.b_ManagerApp.Text = "Gestão da Aplicação";
             this.b_ManagerApp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -255,8 +265,9 @@
             this.panelLogin.Controls.Add(this.pb_Logo);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogin.Location = new System.Drawing.Point(0, 0);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(220, 140);
+            this.panelLogin.Size = new System.Drawing.Size(293, 172);
             this.panelLogin.TabIndex = 0;
             // 
             // pb_Logo
@@ -265,9 +276,10 @@
             this.pb_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_Logo.Image")));
             this.pb_Logo.ImageRotate = 0F;
             this.pb_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_Logo.InitialImage")));
-            this.pb_Logo.Location = new System.Drawing.Point(0, 32);
+            this.pb_Logo.Location = new System.Drawing.Point(0, 39);
+            this.pb_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.pb_Logo.Name = "pb_Logo";
-            this.pb_Logo.Size = new System.Drawing.Size(220, 75);
+            this.pb_Logo.Size = new System.Drawing.Size(293, 92);
             this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Logo.TabIndex = 0;
             this.pb_Logo.TabStop = false;
@@ -276,6 +288,7 @@
             // p_Bar
             // 
             this.p_Bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.p_Bar.Controls.Add(this.itb_logout);
             this.p_Bar.Controls.Add(this.b_User);
             this.p_Bar.Controls.Add(this.cb_Minimize);
             this.p_Bar.Controls.Add(this.cb_Maximize);
@@ -283,11 +296,27 @@
             this.p_Bar.Controls.Add(this.l_NameForm);
             this.p_Bar.Controls.Add(this.pb_CurrentChildForm);
             this.p_Bar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p_Bar.Location = new System.Drawing.Point(220, 0);
+            this.p_Bar.Location = new System.Drawing.Point(293, 0);
+            this.p_Bar.Margin = new System.Windows.Forms.Padding(4);
             this.p_Bar.Name = "p_Bar";
-            this.p_Bar.Size = new System.Drawing.Size(980, 75);
+            this.p_Bar.Size = new System.Drawing.Size(1307, 92);
             this.p_Bar.TabIndex = 1;
             this.p_Bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.p_Bar_MouseDown);
+            // 
+            // itb_logout
+            // 
+            this.itb_logout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.itb_logout.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.itb_logout.Image = global::iTasks.Properties.Resources.icons8_power_96__1_;
+            this.itb_logout.ImageOffset = new System.Drawing.Point(0, 0);
+            this.itb_logout.ImageRotate = 0F;
+            this.itb_logout.ImageSize = new System.Drawing.Size(32, 32);
+            this.itb_logout.Location = new System.Drawing.Point(1230, 39);
+            this.itb_logout.Name = "itb_logout";
+            this.itb_logout.Size = new System.Drawing.Size(50, 50);
+            this.itb_logout.TabIndex = 7;
+            this.itb_logout.CheckedChanged += new System.EventHandler(this.itb_logout_CheckedChanged);
             // 
             // b_User
             // 
@@ -295,7 +324,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.b_User.AutoRoundedCorners = true;
             this.b_User.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.b_User.BorderRadius = 19;
+            this.b_User.BorderRadius = 24;
             this.b_User.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.b_User.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.b_User.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -306,10 +335,10 @@
             this.b_User.Image = global::iTasks.Properties.Resources.icons8_user_961;
             this.b_User.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_User.ImageSize = new System.Drawing.Size(32, 32);
-            this.b_User.Location = new System.Drawing.Point(795, 28);
-            this.b_User.Margin = new System.Windows.Forms.Padding(2);
+            this.b_User.Location = new System.Drawing.Point(989, 36);
+            this.b_User.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b_User.Name = "b_User";
-            this.b_User.Size = new System.Drawing.Size(176, 41);
+            this.b_User.Size = new System.Drawing.Size(235, 50);
             this.b_User.TabIndex = 6;
             this.b_User.Text = "Nome do Utilizador";
             this.b_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -321,9 +350,10 @@
             this.cb_Minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.cb_Minimize.FillColor = System.Drawing.Color.Transparent;
             this.cb_Minimize.IconColor = System.Drawing.Color.White;
-            this.cb_Minimize.Location = new System.Drawing.Point(873, 3);
+            this.cb_Minimize.Location = new System.Drawing.Point(1164, 4);
+            this.cb_Minimize.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Minimize.Name = "cb_Minimize";
-            this.cb_Minimize.Size = new System.Drawing.Size(25, 25);
+            this.cb_Minimize.Size = new System.Drawing.Size(33, 31);
             this.cb_Minimize.TabIndex = 2;
             // 
             // cb_Maximize
@@ -332,9 +362,10 @@
             this.cb_Maximize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.cb_Maximize.FillColor = System.Drawing.Color.Transparent;
             this.cb_Maximize.IconColor = System.Drawing.Color.White;
-            this.cb_Maximize.Location = new System.Drawing.Point(908, 3);
+            this.cb_Maximize.Location = new System.Drawing.Point(1211, 4);
+            this.cb_Maximize.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Maximize.Name = "cb_Maximize";
-            this.cb_Maximize.Size = new System.Drawing.Size(25, 25);
+            this.cb_Maximize.Size = new System.Drawing.Size(33, 31);
             this.cb_Maximize.TabIndex = 2;
             // 
             // cb_close
@@ -342,9 +373,10 @@
             this.cb_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_close.FillColor = System.Drawing.Color.Transparent;
             this.cb_close.IconColor = System.Drawing.Color.White;
-            this.cb_close.Location = new System.Drawing.Point(943, 3);
+            this.cb_close.Location = new System.Drawing.Point(1257, 4);
+            this.cb_close.Margin = new System.Windows.Forms.Padding(4);
             this.cb_close.Name = "cb_close";
-            this.cb_close.Size = new System.Drawing.Size(25, 25);
+            this.cb_close.Size = new System.Drawing.Size(33, 31);
             this.cb_close.TabIndex = 2;
             // 
             // l_NameForm
@@ -352,7 +384,8 @@
             this.l_NameForm.AutoSize = true;
             this.l_NameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_NameForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.l_NameForm.Location = new System.Drawing.Point(60, 41);
+            this.l_NameForm.Location = new System.Drawing.Point(80, 50);
+            this.l_NameForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l_NameForm.Name = "l_NameForm";
             this.l_NameForm.Size = new System.Drawing.Size(53, 18);
             this.l_NameForm.TabIndex = 1;
@@ -362,9 +395,10 @@
             // 
             this.pb_CurrentChildForm.Image = global::iTasks.Properties.Resources.icons8_home_96__1_;
             this.pb_CurrentChildForm.ImageRotate = 0F;
-            this.pb_CurrentChildForm.Location = new System.Drawing.Point(15, 30);
+            this.pb_CurrentChildForm.Location = new System.Drawing.Point(20, 37);
+            this.pb_CurrentChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.pb_CurrentChildForm.Name = "pb_CurrentChildForm";
-            this.pb_CurrentChildForm.Size = new System.Drawing.Size(32, 32);
+            this.pb_CurrentChildForm.Size = new System.Drawing.Size(43, 39);
             this.pb_CurrentChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_CurrentChildForm.TabIndex = 0;
             this.pb_CurrentChildForm.TabStop = false;
@@ -373,22 +407,23 @@
             // 
             this.panelMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.panelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMessage.Location = new System.Drawing.Point(220, 75);
+            this.panelMessage.Location = new System.Drawing.Point(293, 92);
+            this.panelMessage.Margin = new System.Windows.Forms.Padding(4);
             this.panelMessage.Name = "panelMessage";
-            this.panelMessage.Size = new System.Drawing.Size(980, 595);
+            this.panelMessage.Size = new System.Drawing.Size(1307, 733);
             this.panelMessage.TabIndex = 2;
             // 
             // HomePageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 670);
+            this.ClientSize = new System.Drawing.Size(1600, 825);
             this.Controls.Add(this.panelMessage);
             this.Controls.Add(this.p_Bar);
             this.Controls.Add(this.p_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomePageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePageForm";
@@ -431,5 +466,6 @@
         private Guna.UI2.WinForms.Guna2Button b_CompletedTasks;
         private Guna.UI2.WinForms.Guna2Button b_OngoingTasks;
         private Guna.UI2.WinForms.Guna2Button b_Tasks;
+        private Guna.UI2.WinForms.Guna2ImageRadioButton itb_logout;
     }
 }

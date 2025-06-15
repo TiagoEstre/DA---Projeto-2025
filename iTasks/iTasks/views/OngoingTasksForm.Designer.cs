@@ -28,37 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lb_Doing = new System.Windows.Forms.ListBox();
+            this.dgv_Tasks = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Tasks)).BeginInit();
             this.SuspendLayout();
             // 
-            // lb_Doing
+            // dgv_Tasks
             // 
-            this.lb_Doing.Enabled = false;
-            this.lb_Doing.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Doing.FormattingEnabled = true;
-            this.lb_Doing.ItemHeight = 26;
-            this.lb_Doing.Location = new System.Drawing.Point(15, 23);
-            this.lb_Doing.Name = "lb_Doing";
-            this.lb_Doing.Size = new System.Drawing.Size(1266, 680);
-            this.lb_Doing.TabIndex = 1;
+            this.dgv_Tasks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Tasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Tasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Tasks.Location = new System.Drawing.Point(15, 23);
+            this.dgv_Tasks.Name = "dgv_Tasks";
+            this.dgv_Tasks.RowHeadersWidth = 51;
+            this.dgv_Tasks.RowTemplate.Height = 24;
+            this.dgv_Tasks.Size = new System.Drawing.Size(1266, 680);
+            this.dgv_Tasks.TabIndex = 2;
+            this.dgv_Tasks.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Tasks_CellFormatting);
             // 
             // OngoingTasksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1307, 732);
-            this.Controls.Add(this.lb_Doing);
+            this.ClientSize = new System.Drawing.Size(1307, 733);
+            this.Controls.Add(this.dgv_Tasks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OngoingTasksForm";
             this.Text = "ongoingtasksForm1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Tasks)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox lb_Doing;
+        private System.Windows.Forms.DataGridView dgv_Tasks;
     }
 }

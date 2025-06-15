@@ -21,12 +21,54 @@ namespace iTasks.views
             LoadCurrentUser();
             VerifyUsers();
         }
+        private void dgv_Tasks_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgv_Tasks.Columns[e.ColumnIndex].Name == "DurationInDays")
+            {
+                var row = dgv_Tasks.Rows[e.RowIndex];
+
+                if (row.DataBoundItem is TaskViewModel task)
+                {
+                    Color backColor;
+                    Color foreColor;
+
+                    if (task.DaysRemaining <= 7)
+                    {
+                        backColor = Color.Red;
+                        foreColor = Color.White;
+                    }
+                    else
+                    {
+                        backColor = Color.Green;
+                        foreColor = Color.Black;
+                    }
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        cell.Style.BackColor = backColor;
+                        cell.Style.ForeColor = foreColor;
+                    }
+                }
+
+
+
+            }
+        }
         private void LoadCurrentUser()
         {
             if (sessionManager.IsLoggedIn())
             {
                 var currentUser = sessionManager.CurrentUser;
             }
+        }
+
+        public class TaskViewModel
+        {
+            public string Description { get; set; }
+            public string ProgrammerName { get; set; }
+            public DateTime? ExpectedEndDate { get; set; }
+            public int DaysRemaining { get; set; }
+            public int DaysLate { get; set; }
         }
         private void VerifyUsers()
         {
@@ -37,7 +79,6 @@ namespace iTasks.views
             }
 
             var currentUser = sessionManager.CurrentUser;
-            List<Tasks> tasksToDisplay = new List<Tasks>();
 
             using (var db = new iTasksContext())
             {
@@ -45,56 +86,72 @@ namespace iTasks.views
                 {
                     if (currentUser is Programmer programmer)
                     {
-                        tasksToDisplay = db.Tasks
-                                           .Include(t => t.IdProgrammer)
-                                           .Include(t => t.idTaskType)
-                                           .Where(t => t.IdProgrammer.Id == programmer.Id)
-                                           .ToList();
+                        var tasks = db.Tasks
+                            .Include(t => t.IdProgrammer)
+                            .Where(t => t.IdProgrammer.Id == programmer.Id &&
+                                          (t.CurrentStatus == CurrentStatus.ToDo || t.CurrentStatus == CurrentStatus.Doing))
+                            .OrderBy(t => t.CurrentStatus)
+                            .ToList();
 
-                        var tasksDone = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Doing).ToList();
+                        var taskViewModels = tasks.Select(t =>
+                        {
+                            int daysRemaining = (t.ExpectedEndDate - DateTime.Today).Days;
 
-                        lb_Doing.DataSource = null;
-                        lb_Doing.Items.Clear();
-                        lb_Doing.DataSource = tasksDone;
-                        lb_Doing.DisplayMember = "Description";
+                            return new TaskViewModel
+                            {
+                                Description = t.Description,
+                                ProgrammerName = t.IdProgrammer.Name,
+                                ExpectedEndDate = t.ExpectedEndDate,
+                                DaysRemaining = daysRemaining >= 0 ? daysRemaining : 0,
+                                DaysLate = daysRemaining < 0 ? -daysRemaining : 0,
+                            };
+                        }).ToList();
+
+                        dgv_Tasks.DataSource = taskViewModels;
+                        dgv_Tasks.ClearSelection();
                     }
                     else if (currentUser is Maneger manager)
                     {
-                        var associatedProgrammers = db.Users
-                                                      .OfType<Programmer>()
-                                                      .Include(p => p.idManeger)
-                                                      .Where(p => p.idManeger != null && p.idManeger.Id == manager.Id)
-                                                      .ToList();
+                        var programmerIds = db.Users
+                            .OfType<Programmer>()
+                            .Where(p => p.idManeger != null && p.idManeger.Id == manager.Id)
+                            .Select(p => p.Id)
+                            .ToList();
 
-                        var programmerIds = associatedProgrammers.Select(p => p.Id).ToList();
+                        var tasks = db.Tasks
+                            .Include(t => t.IdProgrammer)
+                            .Where(t => programmerIds.Contains(t.IdProgrammer.Id) &&
+                                          t.CurrentStatus != CurrentStatus.Done)
+                            .ToList();
 
-                        tasksToDisplay = db.Tasks
-                                           .Include(t => t.IdProgrammer)
-                                           .Include(t => t.idTaskType)
-                                           .Where(t => programmerIds.Contains(t.IdProgrammer.Id))
-                                           .ToList();
+                        var taskViewModels = tasks.Select(t =>
+                        {
+                            int daysRemaining = (t.ExpectedEndDate - DateTime.Today).Days;
 
+                            return new TaskViewModel
+                            {
+                                Description = t.Description,
+                                ProgrammerName = t.IdProgrammer.Name,
+                                ExpectedEndDate = t.ExpectedEndDate,
+                                DaysRemaining = daysRemaining >= 0 ? daysRemaining : 0,
+                                DaysLate = daysRemaining < 0 ? -daysRemaining : 0,
+                            };
+                        }).ToList();
 
+                        dgv_Tasks.DataSource = taskViewModels;
+                        dgv_Tasks.ClearSelection();
 
-                        var tasksDone = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Doing).ToList();
-
-                        lb_Doing.DataSource = null;
-                        lb_Doing.Items.Clear();
-                        lb_Doing.DataSource = tasksDone;
-                        lb_Doing.DisplayMember = "Description";
-                        lb_Doing.ClearSelected();
                     }
                     else
                     {
                         MessageBox.Show("Tipo de utilizador não reconhecido ou sem permissões para visualizar tarefas.");
 
-                        lb_Doing.DataSource = null;
-                        lb_Doing.Items.Clear();
+                        dgv_Tasks.DataSource = null;
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar tarefas.");
+                    MessageBox.Show("Erro ao carregar tarefas." + ex.Message);
                 }
             }
         }

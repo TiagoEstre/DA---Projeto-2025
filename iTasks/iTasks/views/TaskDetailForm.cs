@@ -19,6 +19,7 @@ namespace iTasks.views
         {
             InitializeComponent();
             ConfirmUser();
+            Value();
 
         }
         public TaskDetailForm(Tasks task, bool readOnly = false)
@@ -31,6 +32,7 @@ namespace iTasks.views
             {
                 currentManeger = manager;
                 Value();
+                
                 if (selectedTasks != null)
                 {
                     LoadTaskDetails(selectedTasks);

@@ -70,10 +70,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202506101430129_iTasksContext.cs" />
-    <Compile Include="Migrations\202506101430129_iTasksContext.Designer.cs">
-      <DependentUpon>202506101430129_iTasksContext.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="models\CurrentStatus.cs" />
     <Compile Include="models\Department.cs" />
@@ -129,9 +125,6 @@
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202506101430129_iTasksContext.resx">
-      <DependentUpon>202506101430129_iTasksContext.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,6 +236,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-arrow-96 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-power-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-power-96 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

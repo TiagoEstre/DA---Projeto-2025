@@ -79,29 +79,69 @@ namespace iTasks.views
                     }
                     else if (currentUser is Maneger manager)
                     {
-                        var associatedProgrammers = db.Users
-                                                      .OfType<Programmer>()
-                                                      .Include(p => p.idManeger)
-                                                      .Where(p => p.idManeger != null && p.idManeger.Id == manager.Id)
-                                                      .ToList();
+                        var assocaciatedProgrammers = db.Users
+                            .OfType<Programmer>()
+                            .Include(p => p.idManeger)
+                            .Where(p => p.idManeger != null && p.idManeger.Id == manager.Id)
+                            .ToList();
 
-                        var programmerIds = associatedProgrammers.Select(p => p.Id).ToList();
+                        var programmerIds = assocaciatedProgrammers.Select(p => p.Id).ToList();
 
                         tasksToDisplay = db.Tasks
-                                           .Include(t => t.IdProgrammer)
-                                           .Include(t => t.idTaskType)
-                                           .Where(t => t.IdProgrammer != null && programmerIds.Contains(t.IdProgrammer.Id))
-                                           .ToList();
+                            .Include(t => t.IdProgrammer)
+                            .Include(t => t.idTaskType)
+                            .Where(t => t.IdProgrammer != null && programmerIds.Contains(t.IdProgrammer.Id))
+                            .ToList();
 
                         b_NewTask.Visible = true;
 
                         var tasksToDo = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.ToDo).ToList();
                         var tasksDoing = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Doing).ToList();
-                        var tasksDone = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Done).ToList();
+                        var tasksDone = tasksToDisplay
+                            .Where(t => t.CurrentStatus == CurrentStatus.Done &&
+                                        t.ActualStartDate != null &&
+                                        t.ActualEndDate != null)
+                            .ToList();
 
+                        // Calcular médias por StroryPoints
+                        var avgDurationsBySP = tasksDone
+                            .GroupBy(t => t.StoryPoints)
+                            .ToDictionary(
+                                g => g.Key,
+                                g => g.Average(t => (t.ActualEndDate.Value - t.ActualStartDate.Value).TotalHours)
+                            );
+
+                        // Atribuir estimativa individual e total
+                        double totalEstimatedHours = 0;
+
+                        foreach (var task in tasksToDo)
+                        {
+                            double estimated = 0;
+
+                            if (avgDurationsBySP.ContainsKey(task.StoryPoints))
+                            {
+                                estimated = avgDurationsBySP[task.StoryPoints];
+                            }
+                            else if (avgDurationsBySP.Any())
+                            {
+                                var closestSP = avgDurationsBySP.Keys
+                                    .OrderBy(sp => Math.Abs(sp - task.StoryPoints))
+                                    .First();
+                                estimated = avgDurationsBySP[closestSP];
+                            }
+
+                            task.Description += $" ( {estimated:F1} h estimado)";
+                            totalEstimatedHours += estimated;
+                        }
+
+                        // Atualiza as listBoxes com a descrições já alteradas
                         UpdateListBox(lb_ToDo, tasksToDo);
                         UpdateListBox(lb_Doing, tasksDoing);
                         UpdateListBox(lb_Done, tasksDone);
+
+                        // Mostrar total esstimado
+                        MessageBox.Show($"Tempo estimado total para concluir as tarefas 'ToDo' : {totalEstimatedHours:F1} horas",
+                            "Estimativa por StoryPoints", MessageBoxButtons.OK, MessageBoxIcon.Information );
                     }
                     else
                     {
