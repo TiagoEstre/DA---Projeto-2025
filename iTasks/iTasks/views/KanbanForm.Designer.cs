@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KanbanForm));
             this.lb_ToDo = new System.Windows.Forms.ListBox();
             this.lb_Doing = new System.Windows.Forms.ListBox();
             this.lb_Done = new System.Windows.Forms.ListBox();
@@ -37,6 +38,7 @@
             this.b_seeCompletionForecast = new Guna.UI2.WinForms.Guna2Button();
             this.b_NewTask = new Guna.UI2.WinForms.Guna2Button();
             this.b_FinishTask = new Guna.UI2.WinForms.Guna2Button();
+            this.b_ExportCSV = new Guna.UI2.WinForms.Guna2ImageRadioButton();
             this.b_RestartTask = new Guna.UI2.WinForms.Guna2Button();
             this.b_ExecuteTask = new Guna.UI2.WinForms.Guna2Button();
             this.gb_ToDo.SuspendLayout();
@@ -49,9 +51,9 @@
             this.lb_ToDo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_ToDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ToDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ToDo.FormattingEnabled = true;
-            this.lb_ToDo.ItemHeight = 25;
+            this.lb_ToDo.ItemHeight = 20;
             this.lb_ToDo.Location = new System.Drawing.Point(25, 28);
             this.lb_ToDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_ToDo.Name = "lb_ToDo";
@@ -64,9 +66,9 @@
             this.lb_Doing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_Doing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Doing.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Doing.FormattingEnabled = true;
-            this.lb_Doing.ItemHeight = 25;
+            this.lb_Doing.ItemHeight = 20;
             this.lb_Doing.Location = new System.Drawing.Point(25, 28);
             this.lb_Doing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_Doing.Name = "lb_Doing";
@@ -79,9 +81,9 @@
             this.lb_Done.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_Done.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Done.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Done.FormattingEnabled = true;
-            this.lb_Done.ItemHeight = 25;
+            this.lb_Done.ItemHeight = 20;
             this.lb_Done.Location = new System.Drawing.Point(25, 28);
             this.lb_Done.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_Done.Name = "lb_Done";
@@ -191,6 +193,20 @@
             this.b_FinishTask.Text = "TERMINAR TAREFA";
             this.b_FinishTask.Click += new System.EventHandler(this.b_FinishTask_Click);
             // 
+            // b_ExportCSV
+            // 
+            this.b_ExportCSV.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.b_ExportCSV.CheckedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.b_ExportCSV.Image = global::iTasks.Properties.Resources.icons8_print_96;
+            this.b_ExportCSV.ImageOffset = new System.Drawing.Point(0, 0);
+            this.b_ExportCSV.ImageRotate = 0F;
+            this.b_ExportCSV.ImageSize = new System.Drawing.Size(40, 40);
+            this.b_ExportCSV.Location = new System.Drawing.Point(28, 13);
+            this.b_ExportCSV.Name = "b_ExportCSV";
+            this.b_ExportCSV.Size = new System.Drawing.Size(58, 56);
+            this.b_ExportCSV.TabIndex = 12;
+            this.b_ExportCSV.CheckedChanged += new System.EventHandler(this.b_ExportCSV_CheckedChanged);
+            // 
             // b_RestartTask
             // 
             this.b_RestartTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -241,6 +257,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1307, 732);
+            this.Controls.Add(this.b_ExportCSV);
             this.Controls.Add(this.b_FinishTask);
             this.Controls.Add(this.b_RestartTask);
             this.Controls.Add(this.b_ExecuteTask);
@@ -273,5 +290,6 @@
         private Guna.UI2.WinForms.Guna2Button b_ExecuteTask;
         private Guna.UI2.WinForms.Guna2Button b_RestartTask;
         private Guna.UI2.WinForms.Guna2Button b_FinishTask;
+        private Guna.UI2.WinForms.Guna2ImageRadioButton b_ExportCSV;
     }
 }

@@ -88,7 +88,7 @@ namespace iTasks.views
             tb_Id.Text = task.Id.ToString();
             tb_Description.Text = task.Description;
             tb_Order.Text = task.ExecutionOrder.ToString();
-            tb_StoryPoints.Text = task.StoryPoints;
+            tb_StoryPoints.Text = task.StoryPoints.ToString();
 
             dtp_StartDate.Value = task.EstimatedStartDate;
             dtp_EndDate.Value = task.ExpectedEndDate;
@@ -225,7 +225,7 @@ namespace iTasks.views
         {
             string descricao = tb_Description.Text;
             int order = int.Parse(tb_Order.Text.Trim());
-            string storyPoint = tb_StoryPoints.Text;
+            int storyPoint = int.Parse(tb_StoryPoints.Text);
 
             DateTime startDate = dtp_StartDate.Value.Date;
             DateTime endDate = dtp_EndDate.Value.Date;
@@ -329,7 +329,7 @@ namespace iTasks.views
                         cb_Programmer.SelectedValue = tasks.IdProgrammer.Id;
 
                     tb_Order.Text = tasks.ExecutionOrder.ToString();
-                    tb_StoryPoints.Text = tasks.StoryPoints;
+                    tb_StoryPoints.Text = tasks.StoryPoints.ToString();
                     dtp_StartDate.Value = tasks.EstimatedStartDate;
                     dtp_EndDate.Value = tasks.ExpectedEndDate;
                 }
@@ -377,7 +377,7 @@ namespace iTasks.views
 
                     taskToUpdate.Description = tb_Description.Text;
                     taskToUpdate.ExecutionOrder = int.Parse(tb_Order.Text.Trim());
-                    taskToUpdate.StoryPoints = tb_StoryPoints.Text;
+                    taskToUpdate.StoryPoints = int.Parse(tb_StoryPoints.Text);
                     taskToUpdate.EstimatedStartDate = dtp_StartDate.Value.Date;
                     taskToUpdate.ExpectedEndDate = dtp_EndDate.Value.Date;
                     taskToUpdate.ActualStartDate = dtp_StartRealDate.Value.Date;

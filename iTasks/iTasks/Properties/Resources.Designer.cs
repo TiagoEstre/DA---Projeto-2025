@@ -173,6 +173,16 @@ namespace iTasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-print-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_queue_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-queue-96", resourceCulture);

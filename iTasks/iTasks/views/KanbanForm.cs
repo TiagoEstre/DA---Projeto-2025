@@ -127,7 +127,8 @@ namespace iTasks.views
                                 var closestSP = avgDurationsBySP.Keys
                                     .OrderBy(sp => Math.Abs(sp - task.StoryPoints))
                                     .First();
-                                estimated = avgDurationsBySP[closestSP];
+
+                                estimated = avgDurationsBySP[closestSP];   
                             }
 
                             task.Description += $" ( {estimated:F1} h estimado)";
@@ -139,9 +140,6 @@ namespace iTasks.views
                         UpdateListBox(lb_Doing, tasksDoing);
                         UpdateListBox(lb_Done, tasksDone);
 
-                        // Mostrar total esstimado
-                        MessageBox.Show($"Tempo estimado total para concluir as tarefas 'ToDo' : {totalEstimatedHours:F1} horas",
-                            "Estimativa por StoryPoints", MessageBoxButtons.OK, MessageBoxIcon.Information );
                     }
                     else
                     {
@@ -457,6 +455,80 @@ namespace iTasks.views
                     bool isReadOnly = (sessionManager.CurrentUser is Programmer);
 
                     _trocarForm(new TaskDetailForm(selectedTask, isReadOnly));
+                }
+            }
+        }
+        
+        private void b_ExportCSV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!(sessionManager.CurrentUser is Maneger maneger))
+            {
+                MessageBox.Show("Apenas gestores podem exportar tarefas.");
+                return;
+            }
+
+            using(var db = new iTasksContext())
+            {
+                try
+                {
+                    var associatedProgrammer = db.Users
+                        .OfType<Programmer>()
+                        .Include(p => p.idManeger)
+                        .Where(p => p.idManeger != null && p.idManeger.Id == maneger.Id)
+                        .ToList();
+
+                    var programmerIds = associatedProgrammer.Select(p => p.Id).ToList();
+
+                    var doneTasks = db.Tasks
+                        .Include(t => t.IdProgrammer)
+                        .Include(t => t.idTaskType)
+                        .Where(t => t.CurrentStatus == CurrentStatus.Done &&
+                                    t.IdProgrammer != null &&
+                                    programmerIds.Contains(t.IdProgrammer.Id))
+                        .ToList();
+
+                    if (!doneTasks.Any())
+                    {
+                        MessageBox.Show("Não há tarefas concluidas para exportar.");
+                        return;
+                    }
+
+                    SaveFileDialog saveFileDialog = new SaveFileDialog
+                    {
+                        Filter = "CVS files (*.csv)|*.csv",
+                        FileName = "TarefasConcluídas.csv"
+                    };
+
+
+                    var sb = new StringBuilder();
+                    sb.AppendLine("Programador;Descricao;DataPrevistaInicio;DataPrevista;TipoTarefa;DataRealInicio;DataRealFim");
+
+                    foreach (var task in doneTasks)
+                    {
+                        string line = string.Join(";",
+                                task.IdProgrammer?.Username ?? "N/A",
+                                task.Description,
+                                task.EstimatedStartDate.ToString("yyyy-MM-dd") ?? "",
+                                task.ExpectedEndDate.ToString("yyyy-MM-dd") ?? "",
+                                task.idTaskType?.Name ?? "",
+                                task.ActualStartDate?.ToString("yyyy-MM-dd HH:mm") ?? "",
+                                task.ActualEndDate?.ToString("yyyy-MM-dd HH:mm") ?? ""
+                            );
+
+                        sb.AppendLine(line);
+                    }
+
+                    if(saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        System.IO.File.WriteAllText(saveFileDialog.FileName, sb.ToString(), Encoding.UTF8);
+                        MessageBox.Show("Tarefas exportadas com sucesso.");
+                    }
+                    
+                    
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao exportar tarefas");
                 }
             }
         }

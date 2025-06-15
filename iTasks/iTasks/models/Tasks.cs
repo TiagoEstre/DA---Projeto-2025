@@ -22,7 +22,7 @@ namespace iTasks.models
         public DateTime ExpectedEndDate { get; set; }
         public TaskType idTaskType { get; set; }
 
-        public string StoryPoints { get; set; }
+        public int StoryPoints { get; set; }
         public DateTime? ActualStartDate { get; set; }
         public DateTime? ActualEndDate { get; set; }
         public DateTime CreationDate { get; set;} = DateTime.Now;
@@ -35,7 +35,7 @@ namespace iTasks.models
 
         public override string ToString()
         {
-            return $" Ordem: [{ ExecutionOrder   }]  Descrição: { Description }" ;
+            return $" [{ ExecutionOrder   }]  Descrição: { Description }" ;
         }
 
     }
