@@ -40,7 +40,7 @@ namespace iTasks.views
                     }
                     else
                     {
-                        backColor = Color.Green;
+                        backColor = Color.LightGreen;
                         foreColor = Color.Black;
                     }
 

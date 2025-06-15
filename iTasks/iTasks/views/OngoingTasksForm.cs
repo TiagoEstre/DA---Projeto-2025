@@ -23,35 +23,28 @@ namespace iTasks.views
         }
         private void dgv_Tasks_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dgv_Tasks.Columns[e.ColumnIndex].Name == "DurationInDays")
+            if (dgv_Tasks.Rows[e.RowIndex].DataBoundItem is TaskViewModel task)
             {
-                var row = dgv_Tasks.Rows[e.RowIndex];
+                Color backColor;
+                Color foreColor;
 
-                if (row.DataBoundItem is TaskViewModel task)
+                if (task.DaysRemaining <= 7)
                 {
-                    Color backColor;
-                    Color foreColor;
-
-                    if (task.DaysRemaining <= 7)
-                    {
-                        backColor = Color.Red;
-                        foreColor = Color.White;
-                    }
-                    else
-                    {
-                        backColor = Color.Green;
-                        foreColor = Color.Black;
-                    }
-
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        cell.Style.BackColor = backColor;
-                        cell.Style.ForeColor = foreColor;
-                    }
+                    backColor = Color.Red;
+                    foreColor = Color.White;
+                }
+                else
+                {
+                    backColor = Color.LightGreen;
+                    foreColor = Color.Black;
                 }
 
-
-
+                // Aplicar cores na linha toda
+                foreach (DataGridViewCell cell in dgv_Tasks.Rows[e.RowIndex].Cells)
+                {
+                    cell.Style.BackColor = backColor;
+                    cell.Style.ForeColor = foreColor;
+                }
             }
         }
         private void LoadCurrentUser()
@@ -95,20 +88,24 @@ namespace iTasks.views
 
                         var taskViewModels = tasks.Select(t =>
                         {
-                            int daysRemaining = (t.ExpectedEndDate - DateTime.Today).Days;
+                            int estimatedDurationDays = (t.ExpectedEndDate - t.EstimatedStartDate).Days;
+                            int daysElapsed = (DateTime.Today - (t.ActualStartDate ?? t.EstimatedStartDate)).Days;
+                            int daysRemaining = estimatedDurationDays - daysElapsed;
+                            if (daysRemaining < 0) daysRemaining = 0;
 
                             return new TaskViewModel
                             {
                                 Description = t.Description,
                                 ProgrammerName = t.IdProgrammer.Name,
                                 ExpectedEndDate = t.ExpectedEndDate,
-                                DaysRemaining = daysRemaining >= 0 ? daysRemaining : 0,
+                                DaysRemaining = daysRemaining,
                                 DaysLate = daysRemaining < 0 ? -daysRemaining : 0,
                             };
                         }).ToList();
 
                         dgv_Tasks.DataSource = taskViewModels;
                         dgv_Tasks.ClearSelection();
+
                     }
                     else if (currentUser is Maneger manager)
                     {
