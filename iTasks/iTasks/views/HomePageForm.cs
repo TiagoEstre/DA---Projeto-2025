@@ -10,6 +10,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace iTasks.views
@@ -102,6 +103,17 @@ namespace iTasks.views
         // Codigo dos Botoes do Menu
         private void pb_Logo_Click(object sender, EventArgs e)
         {
+            b_ManagerApp.ImageAlign = HorizontalAlignment.Left;
+            b_Users.ImageAlign = HorizontalAlignment.Left;
+            b_TaskType.ImageAlign = HorizontalAlignment.Left;
+
+            b_Tasks.ImageAlign = HorizontalAlignment.Left;
+            b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+            b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+
+            p_ManagerApp.Visible = false;
+            p_Tasks.Visible = false;
+
             l_NameForm.Text = "Menu";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_home_96__1_;
             trocarForm(new KanbanForm(trocarForm));
@@ -112,17 +124,65 @@ namespace iTasks.views
         {
             bool isVisible = p_ManagerApp.Visible;
 
+            if (b_ManagerApp.ImageAlign == HorizontalAlignment.Left)
+            {
+                b_ManagerApp.ImageAlign = HorizontalAlignment.Right;
+                b_Users.ImageAlign = HorizontalAlignment.Left;
+                b_TaskType.ImageAlign = HorizontalAlignment.Left;
+
+                b_Tasks.ImageAlign = HorizontalAlignment.Left;
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+
+            }
+            else
+            {
+                b_ManagerApp.ImageAlign = HorizontalAlignment.Left;
+                b_Users.ImageAlign = HorizontalAlignment.Left;
+                b_TaskType.ImageAlign = HorizontalAlignment.Left;
+
+                b_Tasks.ImageAlign = HorizontalAlignment.Left;
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+            }
+
             p_Tasks.Visible = false;
             p_ManagerApp.Visible = !isVisible;
         }
         private void b_Users_Click(object sender, EventArgs e)
         {
+            if (b_Users.ImageAlign == HorizontalAlignment.Left)
+            {
+                b_Users.ImageAlign = HorizontalAlignment.Right;
+                b_TaskType.ImageAlign = HorizontalAlignment.Left;
+
+            }
+            else
+            {
+                b_Users.ImageAlign = HorizontalAlignment.Left;
+                b_TaskType.ImageAlign = HorizontalAlignment.Left;
+            }
+
+
             l_NameForm.Text = "Utilizadores";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
             trocarForm(new UserManagementForm());
         }
         private void b_TaskType_Click(object sender, EventArgs e)
         {
+            if (b_TaskType.ImageAlign == HorizontalAlignment.Left)
+            {
+                b_Users.ImageAlign = HorizontalAlignment.Left;
+                b_TaskType.ImageAlign = HorizontalAlignment.Right;
+
+            }
+            else
+            {
+                b_Users.ImageAlign = HorizontalAlignment.Left;
+                b_TaskType.ImageAlign = HorizontalAlignment.Left;
+            }
+
+
             l_NameForm.Text = "Tipo de Tarefas";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;
             trocarForm(new TaskTypeForm(trocarForm));
@@ -133,11 +193,47 @@ namespace iTasks.views
         {
             bool isVisible = p_Tasks.Visible;
 
+            if (b_Tasks.ImageAlign == HorizontalAlignment.Left)
+            {
+                b_ManagerApp.ImageAlign = HorizontalAlignment.Left;
+                b_Users.ImageAlign = HorizontalAlignment.Left;
+                b_TaskType.ImageAlign = HorizontalAlignment.Left;
+
+                b_Tasks.ImageAlign = HorizontalAlignment.Right;
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+
+            }
+            else
+            {
+                b_ManagerApp.ImageAlign = HorizontalAlignment.Left;
+                b_Users.ImageAlign = HorizontalAlignment.Left;
+                b_TaskType.ImageAlign = HorizontalAlignment.Left;
+
+                b_Tasks.ImageAlign = HorizontalAlignment.Left;
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+            }
+
+
             p_ManagerApp.Visible = false;
             p_Tasks.Visible = !isVisible;
         }
         private void b_OngoingTasks_Click(object sender, EventArgs e)
         {
+            if (b_ManagerApp.ImageAlign == HorizontalAlignment.Left)
+            {
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Right;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+
+            }
+            else
+            {
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+            }
+
+
             l_NameForm.Text = "Tarefas Em Curso";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_tasks_96__1_;
             trocarForm(new OngoingTasksForm());
@@ -145,6 +241,19 @@ namespace iTasks.views
         }
         private void b_CompletedTasks_Click(object sender, EventArgs e)
         {
+            if (b_ManagerApp.ImageAlign == HorizontalAlignment.Left)
+            {
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Right;
+
+            }
+            else
+            {
+                b_OngoingTasks.ImageAlign = HorizontalAlignment.Left;
+                b_CompletedTasks.ImageAlign = HorizontalAlignment.Left;
+            }
+
+
             l_NameForm.Text = "Tarefas Concluidas";
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_to_do_96;
             trocarForm(new CompletedTasksForm());

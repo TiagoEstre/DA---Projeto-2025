@@ -154,6 +154,7 @@
             this.b_seeCompletionForecast.Size = new System.Drawing.Size(303, 44);
             this.b_seeCompletionForecast.TabIndex = 11;
             this.b_seeCompletionForecast.Text = "VER PREVISÃO DE CONCLUSÃO";
+            this.b_seeCompletionForecast.Click += new System.EventHandler(this.b_seeCompletionForecast_Click);
             // 
             // b_NewTask
             // 

@@ -57,6 +57,7 @@ namespace iTasks.views
                                            .ToList();
 
                         b_NewTask.Visible = false;
+                        b_ExportCSV.Visible = false;
 
                         var tasksToDo = tasksToDisplay
                             .Where(t => t.CurrentStatus == CurrentStatus.ToDo)
@@ -94,6 +95,7 @@ namespace iTasks.views
                             .ToList();
 
                         b_NewTask.Visible = true;
+                        b_ExportCSV.Visible = true;
 
                         var tasksToDo = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.ToDo).ToList();
                         var tasksDoing = tasksToDisplay.Where(t => t.CurrentStatus == CurrentStatus.Doing).ToList();
@@ -530,6 +532,52 @@ namespace iTasks.views
                 {
                     MessageBox.Show("Erro ao exportar tarefas");
                 }
+            }
+        }
+
+        private void b_seeCompletionForecast_Click(object sender, EventArgs e)
+        {
+            using (var db = new iTasksContext())
+            {
+                var tasksDone = db.Tasks
+                    .Where(t => t.CurrentStatus == CurrentStatus.Done &&
+                                t.ActualStartDate != null &&
+                                t.ActualEndDate != null)
+                    .ToList();
+
+                var tasksToDo = db.Tasks
+                    .Where(t => t.CurrentStatus == CurrentStatus.ToDo)
+                    .ToList();
+
+                var avgDurationsBySP = tasksDone
+                    .GroupBy(t => t.StoryPoints)
+                    .ToDictionary(
+                        g => g.Key,
+                        g => g.Average(t => (t.ActualEndDate.Value - t.ActualStartDate.Value).TotalHours)
+                    );
+
+                double totalEstimatedHours = 0;
+
+                foreach (var task in tasksToDo)
+                {
+                    double estimated = 0;
+                    if (avgDurationsBySP.ContainsKey(task.StoryPoints))
+                    {
+                        estimated = avgDurationsBySP[task.StoryPoints];
+                    }
+                    else if (avgDurationsBySP.Any())
+                    {
+                        var closestSP = avgDurationsBySP.Keys
+                            .OrderBy(sp => Math.Abs(sp - task.StoryPoints))
+                            .First();
+
+                        estimated = avgDurationsBySP[closestSP];
+                    }
+
+                    totalEstimatedHours += estimated;
+                }
+
+                MessageBox.Show($"Tempo estimado para conclusão de todas as tarefas pendentes: {totalEstimatedHours:F1} horas.");
             }
         }
     }
