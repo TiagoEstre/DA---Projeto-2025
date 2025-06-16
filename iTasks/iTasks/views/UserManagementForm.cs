@@ -47,13 +47,16 @@ namespace iTasks.views
 
         // Funcao para procurar os gestor na bd e colocalos na ComboBox
         private void ListGestor()
-        {
+        { 
             try
             {
+                // vai chamar a dase de bados e mete-a na variavel db
                 using (var db = new iTasksContext())
                 {
+                    // vai a base de dados e procura só os utilizador que forem Gestores
                     var gestor = db.Users.OfType<Maneger>().ToList();
 
+                    // Colocar os Nomes do Gestores na ComboList e guardar o id do Gestor
                     cb_Maneger.DataSource = gestor;
                     cb_Maneger.DisplayMember = "Name";
                     cb_Maneger.ValueMember = "Id";
@@ -62,6 +65,7 @@ namespace iTasks.views
             }
             catch
             {
+                // se ouver algum erro com o codigo em cima ele aparece na listBox com esta mensagem
                 cb_Maneger.Text = "Erro ao carregar Gestor!";
             }
 
@@ -71,158 +75,223 @@ namespace iTasks.views
         // Funcoes para as CheckBox
         private void cb_Programmer_CheckedChanged(object sender, EventArgs e)
         {
+            // if confirma que checkBox dos programadores está selecionada ou não
             if (cb_SelecProgrammer.Checked)
             {
+                // se tiver
+                // ele tira a seleção da checkBox dos Getores
                 cb_SelecManeger.Checked = false;
+                // tira a visibilidade do painel dos gestores
                 p_Manager.Visible = false;
 
+                // mete visibilidade do painel dos programdadores
                 p_Programmer.Visible = true;
 
+                // mete visibilidade na listBox dos programadores
                 lb_Programmer.Visible = true;
             }
+            // se for diverente do if
             else
             {
+                // tira a visibilidade do painel dos programadores
                 p_Programmer.Visible = false;
 
+                // tira a visibilidade da listBox dos programadores
                 lb_Programmer.Visible = false;
             }
         }
         private void cb_Manager_CheckedChanged(object sender, EventArgs e)
         {
+            // if confirma que checkBox dos gestores está selecionada ou não
             if (cb_SelecManeger.Checked)
             {
+                // se tiver
+                // ele tira a seleção da checkBox dos programadores
                 cb_SelecProgrammer.Checked = false;
+                // tira a visibilidade do painel dos programadores
                 p_Programmer.Visible = false;
 
+                // mete visibilidade do painel dos gestores
                 p_Manager.Visible = true;
 
+                // mete visibilidade na listBox dos gestores
                 lb_Manager.Visible = true;
             }
+            // se for diverente do if
             else
             {
+                // tira a visibilidade do painel dos gestores
                 p_Manager.Visible = false;
 
+                // tira a visibilidade da listBox dos gestores
                 lb_Manager.Visible = false;
             }
         }
 
 
         // Funcoes para apanhar o texto e rescrever nas TextBox
+        // Função ativa quando entrar na textBox para inserir texto
         private void tb_Name_Enter(object sender, EventArgs e)
         {
+            // Vai defenir que o texto da textBox é "Nome" 
             tb_Name.Text = "Nome";
 
+            // Verifica se o texto da textBox for "Nome"
             if (tb_Name.Text == "Nome")
             {
+                // Se tiver "Nome" ele mete no Texto ""
                 tb_Name.Text = "";
 
+                // E converte cor do texto para Preto
                 tb_Name.ForeColor = Color.Black;
             }
         }
+        // Função ativa quando sair da textBox
         private void tb_Name_Leave(object sender, EventArgs e)
         {
+            // Verifica se o texto da textBox for ""
             if (tb_Name.Text == "")
             {
+                // Se tiver "" ele mete no Texto "Nome"
                 tb_Name.Text = "Nome";
 
+                // E converte a cor do texto para "Cinzento"
                 tb_Name.ForeColor = Color.Silver;
             }
         }
 
+
+        // Função ativa quando entrar na textBox para inserir texto
         private void tb_Username_Enter(object sender, EventArgs e)
         {
+            // Vai defenir que o texto da textBox é "Utilizador" 
             tb_Username.Text = "Utilizador";
 
+            // Verifica se o texto da textBox for "Utilizador"
             if (tb_Username.Text == "Utilizador")
             {
+                // Se tiver "Utilizador" ele mete no Texto ""
                 tb_Username.Text = "";
 
+                // E converte cor do texto para Preto
                 tb_Username.ForeColor = Color.Black;
             }
         }
+        // Função ativa quando sair da textBox
         private void tb_Username_Leave(object sender, EventArgs e)
         {
+            // Verifica se o texto da textBox for ""
             if (tb_Username.Text == "")
             {
+                // Se tiver "" ele mete no Texto "Utilizador"
                 tb_Username.Text = "Utilizador";
 
+                // E converte a cor do texto para "Cinzento"
                 tb_Username.ForeColor = Color.Silver;
             }
         }
 
+
+        // Função ativa quando entrar na textBox para inserir texto
         private void tb_Password_Enter(object sender, EventArgs e)
         {
+            // Vai defenir que o texto da textBox é "Senha" 
             tb_Password.Text = "Senha";
 
+            // Verifica se o texto da textBox for "Senha"
             if (tb_Password.Text == "Senha")
             {
+                // Se tiver "Senha" ele mete no Texto ""
                 tb_Password.Text = "";
 
+                // E converte o UserSystemPassword de false para true
                 tb_Password.UseSystemPasswordChar = true;
 
+                // E converte cor do texto para Preto
                 tb_Password.ForeColor = Color.Black;
             }
         }
+        // Função ativa quando sair da textBox
         private void tb_Password_Leave(object sender, EventArgs e)
         {
+            // Verifica se o texto da textBox for ""
             if (tb_Password.Text == "")
             {
+                // Se tiver "" ele mete no Texto "Senha"
                 tb_Password.Text = "Senha";
 
+                // E converte o UserSystemPassword de true para false
                 tb_Password.UseSystemPasswordChar = false;
 
+                // E converte a cor do texto para "Cinzento"
                 tb_Password.ForeColor = Color.Silver;
             }
         }
 
 
-        // Funções
+        /* ------------ Funções do CRUD ------------*/
 
         // Função para Salvar novo Usuário
         // Função para inserir o programador na base de dados
         private void SaveProgrammer()
         {
+            // Vai buscar o texto das textBox e mete-lo em variaveis
             string name = tb_Name.Text;
             string username = tb_Username.Text;
             string password = tb_Password.Text;
 
+            // Vai confirmar se nas textBox estiverem com a escrita pradão em mete "" 
             if (name == "Nome") name = "";
             if (username == "Utilizador") username = "";
             if (password == "Senha") password = "";
 
+            // Vai confirmar se todas as os dados estão a prenchidos
             if (string.IsNullOrEmpty(name) ||
                string.IsNullOrEmpty(username) ||
                string.IsNullOrEmpty(password) ||
                cb_ExperienceLevel.SelectedIndex == -1 ||
                cb_Maneger.SelectedIndex == -1)
             {
+                // Se não tiverem
+                // Mostra uma Messagem a disser "Por favor, preencha todos os campos obrigatorios"
                 MessageBox.Show("Por favor, preencha todos os campos obrigatorios.");
                 return;
             }
 
+            // Mete o dado da comboBox dentro de uma variaval
             ExperienceLevel experienceLevelSelec = (ExperienceLevel)cb_ExperienceLevel.SelectedItem;
             Maneger manegerSelec = cb_Maneger.SelectedItem as Maneger;
 
+            // Confirma que é selecionado um gestor na comboBox
             if (manegerSelec == null)
             {
+                // Se não tiver nenhum gestor selecionado
+                // Mostra uma Messagem a disser "Por favor, selecione um gestor responsável."
                 MessageBox.Show("Por favor, selecione um gestor responsável.");
                 return;
             }
 
+            // mete a base de dados na variavel db
             using (var db = new iTasksContext())
             {
                 try
                 {
+                    // Verifica que manegerSelec já existe na base de dados e não queria outro utilizador igual
                     db.Users.Attach(manegerSelec);
 
+                    // Vai buscar o Utilizador com o mesmo "Username" da textBox
                     var nameUsers = db.Users.Any(n => n.Username == username);
-
+                    // Verifica se a varivel nameUsers tem um utilizador valido ou null
+                    // se for null salta este if
                     if (nameUsers)
                     {
+                        // Se for valido
+                        // Mostra uma Messagem a dizer "Já existe um usuário na base de dados."
                         MessageBox.Show("Já existe um usuário na base de dados.");
                         return;
                     }
 
+                    // Preenche um novo utilizador perante a class Programmer e mete na variavel
                     var newProgrammer = new Programmer()
                     {
                         Name = name,
@@ -232,47 +301,66 @@ namespace iTasks.views
                         idManeger = manegerSelec
                     };
 
+                    // Adiciona o novo utilizador a db Users
                     db.Users.Add(newProgrammer);
+                    // Salva a base de dados
                     db.SaveChanges();
 
+                    // Se conseguir criar o novo utlizador
+                    // Mostra uma messagem a dizer "Programador criado com sucesso!"
                     MessageBox.Show("Programador criado com sucesso!");
                 }
                 catch
                 {
+                    // se der algo erro no codigo aterior 
+                    // Mostra uma messagem a dizer "Erro ao criar Programador!"
                     MessageBox.Show("Erro ao criar Programador!");
                 }
             }
         }
+
         // Função para inserir o gestor na base de dados
         private void SaveManager()
         {
+            // Vai buscar o texto das textBox e mete-lo em variaveis
             string name = tb_Name.Text;
             string username = tb_Username.Text;
             string password = tb_Password.Text;
 
+            // Vai confirmar se nas textBox estiverem com a escrita pradão em mete "" 
             if (name == "Nome") name = "";
             if (username == "Utilizador") username = "";
             if (password == "Senha") password = "";
 
+            // Vai confirmar se todas as os dados estão a prenchidos
             if (string.IsNullOrEmpty(name) ||
                string.IsNullOrEmpty(username) ||
                string.IsNullOrEmpty(password) ||
                cb_Department.SelectedIndex == -1)
             {
+                // Se não tiverem
+                // Mostra uma Messagem a disser "Por favor, preencha todos os campos obrigatorios"
                 MessageBox.Show("Por favor, preencha todos os campos obrigatorios.");
                 return;
             }
 
+            // Mete o dado da comboBox dentro de uma variaval
             Department departmentSelec = (Department)cb_Department.SelectedItem;
             string ManegerUsers = ts_ManegerUsername.Checked ? "True" : "False";
 
+            // mete a base de dados na variavel db
             using (var db = new iTasksContext())
             {
                 try
                 {
+                    // Verifica que manegerSelec já existe na base de dados e não queria outro utilizador igual
                     var nameUsers = db.Users.Any(n => n.Username == username);
+                    // Verifica se a varivel nameUsers tem um utilizador valido ou null
+                    // se for null salta este if
                     if (nameUsers)
                     {
+                        // Se for valido
+                        // Mostra uma Messagem a dizer "Já existe um usuário na base de dados."
                         MessageBox.Show("Já existe um usuário na base de dados.");
                         return;
                     }

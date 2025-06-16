@@ -15,11 +15,24 @@ namespace iTasks.views
 {
     public partial class OngoingTasksForm : Form
     {
+        private List<TaskViewModel> allTasks = new List<TaskViewModel>();
         public OngoingTasksForm()
         {
             InitializeComponent();
             LoadCurrentUser();
             VerifyUsers();
+        }
+        private void tb_filterProgrammer_TextChanged(object sender, EventArgs e)
+        {
+            string filterText = tb_filterProgrammer.Text.Trim().ToLower();
+
+
+            var filtered = allTasks
+                .Where(t => t.ProgrammerName.ToLower().Contains(filterText))
+                .ToList();
+
+            dgv_Tasks.DataSource = filtered;
+            dgv_Tasks.ClearSelection();
         }
         private void dgv_Tasks_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -79,6 +92,12 @@ namespace iTasks.views
                 {
                     if (currentUser is Programmer programmer)
                     {
+                        tb_filterProgrammer.Visible = false;
+                        cb_FilterProjeto.Visible = false;
+                        dgv_Tasks.Location = new Point(15, 23);
+                        dgv_Tasks.Size = new Size(1266, 680);
+                        dgv_Tasks.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+
                         var tasks = db.Tasks
                             .Include(t => t.IdProgrammer)
                             .Where(t => t.IdProgrammer.Id == programmer.Id &&
@@ -135,6 +154,7 @@ namespace iTasks.views
                             };
                         }).ToList();
 
+                        allTasks = taskViewModels;
                         dgv_Tasks.DataSource = taskViewModels;
                         dgv_Tasks.ClearSelection();
 
