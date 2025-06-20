@@ -63,6 +63,16 @@ namespace iTasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fundo_Login_iTasks {
+            get {
+                object obj = ResourceManager.GetObject("Fundo_Login_iTasks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_arrow_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-arrow-96", resourceCulture);
@@ -306,6 +316,36 @@ namespace iTasks.Properties {
         internal static System.Drawing.Bitmap icons8_user_961 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-961", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Black {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_iTasks_Black {
+            get {
+                object obj = ResourceManager.GetObject("Logo_iTasks_Black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
