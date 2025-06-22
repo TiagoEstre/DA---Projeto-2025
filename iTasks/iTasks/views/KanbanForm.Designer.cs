@@ -35,12 +35,14 @@
             this.gb_ToDo = new System.Windows.Forms.GroupBox();
             this.gb_Doing = new System.Windows.Forms.GroupBox();
             this.gb_Done = new System.Windows.Forms.GroupBox();
-            this.b_seeCompletionForecast = new Guna.UI2.WinForms.Guna2Button();
+            this.b_SeeCompletionForecast = new Guna.UI2.WinForms.Guna2Button();
             this.b_NewTask = new Guna.UI2.WinForms.Guna2Button();
             this.b_FinishTask = new Guna.UI2.WinForms.Guna2Button();
             this.b_ExportCSV = new Guna.UI2.WinForms.Guna2ImageRadioButton();
             this.b_RestartTask = new Guna.UI2.WinForms.Guna2Button();
             this.b_ExecuteTask = new Guna.UI2.WinForms.Guna2Button();
+            this.cb_TypeTasks = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.gb_ToDo.SuspendLayout();
             this.gb_Doing.SuspendLayout();
             this.gb_Done.SuspendLayout();
@@ -137,24 +139,24 @@
             this.gb_Done.TabStop = false;
             this.gb_Done.Text = "Done";
             // 
-            // b_seeCompletionForecast
+            // b_SeeCompletionForecast
             // 
-            this.b_seeCompletionForecast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.b_seeCompletionForecast.AutoRoundedCorners = true;
-            this.b_seeCompletionForecast.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.b_seeCompletionForecast.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.b_seeCompletionForecast.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.b_seeCompletionForecast.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.b_seeCompletionForecast.FillColor = System.Drawing.Color.LightGray;
-            this.b_seeCompletionForecast.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.b_seeCompletionForecast.ForeColor = System.Drawing.Color.Black;
-            this.b_seeCompletionForecast.Location = new System.Drawing.Point(976, 15);
-            this.b_seeCompletionForecast.Margin = new System.Windows.Forms.Padding(4);
-            this.b_seeCompletionForecast.Name = "b_seeCompletionForecast";
-            this.b_seeCompletionForecast.Size = new System.Drawing.Size(303, 44);
-            this.b_seeCompletionForecast.TabIndex = 11;
-            this.b_seeCompletionForecast.Text = "VER PREVISÃO DE CONCLUSÃO";
-            this.b_seeCompletionForecast.Click += new System.EventHandler(this.b_seeCompletionForecast_Click);
+            this.b_SeeCompletionForecast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_SeeCompletionForecast.AutoRoundedCorners = true;
+            this.b_SeeCompletionForecast.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.b_SeeCompletionForecast.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.b_SeeCompletionForecast.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.b_SeeCompletionForecast.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.b_SeeCompletionForecast.FillColor = System.Drawing.Color.LightGray;
+            this.b_SeeCompletionForecast.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.b_SeeCompletionForecast.ForeColor = System.Drawing.Color.Black;
+            this.b_SeeCompletionForecast.Location = new System.Drawing.Point(976, 15);
+            this.b_SeeCompletionForecast.Margin = new System.Windows.Forms.Padding(4);
+            this.b_SeeCompletionForecast.Name = "b_SeeCompletionForecast";
+            this.b_SeeCompletionForecast.Size = new System.Drawing.Size(303, 44);
+            this.b_SeeCompletionForecast.TabIndex = 11;
+            this.b_SeeCompletionForecast.Text = "VER PREVISÃO DE CONCLUSÃO";
+            this.b_SeeCompletionForecast.Click += new System.EventHandler(this.b_SeeCompletionForecast_Click);
             // 
             // b_NewTask
             // 
@@ -202,7 +204,7 @@
             this.b_ExportCSV.ImageOffset = new System.Drawing.Point(0, 0);
             this.b_ExportCSV.ImageRotate = 0F;
             this.b_ExportCSV.ImageSize = new System.Drawing.Size(40, 40);
-            this.b_ExportCSV.Location = new System.Drawing.Point(28, 13);
+            this.b_ExportCSV.Location = new System.Drawing.Point(53, 3);
             this.b_ExportCSV.Name = "b_ExportCSV";
             this.b_ExportCSV.Size = new System.Drawing.Size(58, 56);
             this.b_ExportCSV.TabIndex = 12;
@@ -252,18 +254,45 @@
             this.b_ExecuteTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.b_ExecuteTask.Click += new System.EventHandler(this.b_ExecuteTask_Click);
             // 
+            // cb_TypeTasks
+            // 
+            this.cb_TypeTasks.AutoRoundedCorners = true;
+            this.cb_TypeTasks.BackColor = System.Drawing.Color.Transparent;
+            this.cb_TypeTasks.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_TypeTasks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_TypeTasks.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_TypeTasks.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_TypeTasks.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_TypeTasks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_TypeTasks.ItemHeight = 30;
+            this.cb_TypeTasks.Location = new System.Drawing.Point(128, 15);
+            this.cb_TypeTasks.Name = "cb_TypeTasks";
+            this.cb_TypeTasks.Size = new System.Drawing.Size(282, 36);
+            this.cb_TypeTasks.TabIndex = 13;
+            this.cb_TypeTasks.TextOffset = new System.Drawing.Point(10, 0);
+            this.cb_TypeTasks.SelectedIndexChanged += new System.EventHandler(this.cb_TypeTasks_SelectedIndexChanged);
+            // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
             // KanbanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1307, 732);
+            this.Controls.Add(this.cb_TypeTasks);
             this.Controls.Add(this.b_ExportCSV);
             this.Controls.Add(this.b_FinishTask);
             this.Controls.Add(this.b_RestartTask);
             this.Controls.Add(this.b_ExecuteTask);
             this.Controls.Add(this.b_NewTask);
-            this.Controls.Add(this.b_seeCompletionForecast);
+            this.Controls.Add(this.b_SeeCompletionForecast);
             this.Controls.Add(this.gb_Done);
             this.Controls.Add(this.gb_Doing);
             this.Controls.Add(this.gb_ToDo);
@@ -286,11 +315,13 @@
         private System.Windows.Forms.GroupBox gb_ToDo;
         private System.Windows.Forms.GroupBox gb_Doing;
         private System.Windows.Forms.GroupBox gb_Done;
-        private Guna.UI2.WinForms.Guna2Button b_seeCompletionForecast;
+        private Guna.UI2.WinForms.Guna2Button b_SeeCompletionForecast;
         private Guna.UI2.WinForms.Guna2Button b_NewTask;
         private Guna.UI2.WinForms.Guna2Button b_ExecuteTask;
         private Guna.UI2.WinForms.Guna2Button b_RestartTask;
         private Guna.UI2.WinForms.Guna2Button b_FinishTask;
         private Guna.UI2.WinForms.Guna2ImageRadioButton b_ExportCSV;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_TypeTasks;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }
