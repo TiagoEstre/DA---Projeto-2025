@@ -54,7 +54,7 @@
             this.cb_close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.l_NameForm = new System.Windows.Forms.Label();
             this.pb_CurrentChildForm = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panelMessage = new Guna.UI2.WinForms.Guna2Panel();
+            this.p_Message = new Guna.UI2.WinForms.Guna2Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.p_Menu.SuspendLayout();
             this.p_Tasks.SuspendLayout();
@@ -405,13 +405,13 @@
             // 
             // panelMessage
             // 
-            this.panelMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.panelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMessage.Location = new System.Drawing.Point(293, 92);
-            this.panelMessage.Margin = new System.Windows.Forms.Padding(4);
-            this.panelMessage.Name = "panelMessage";
-            this.panelMessage.Size = new System.Drawing.Size(1307, 733);
-            this.panelMessage.TabIndex = 2;
+            this.p_Message.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.p_Message.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p_Message.Location = new System.Drawing.Point(293, 92);
+            this.p_Message.Margin = new System.Windows.Forms.Padding(4);
+            this.p_Message.Name = "panelMessage";
+            this.p_Message.Size = new System.Drawing.Size(1307, 733);
+            this.p_Message.TabIndex = 2;
             // 
             // HomePageForm
             // 
@@ -419,7 +419,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1600, 825);
-            this.Controls.Add(this.panelMessage);
+            this.Controls.Add(this.p_Message);
             this.Controls.Add(this.p_Bar);
             this.Controls.Add(this.p_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -452,7 +452,7 @@
         private System.Windows.Forms.Panel p_Bar;
         private Guna.UI2.WinForms.Guna2PictureBox pb_CurrentChildForm;
         private System.Windows.Forms.Label l_NameForm;
-        private Guna.UI2.WinForms.Guna2Panel panelMessage;
+        private Guna.UI2.WinForms.Guna2Panel p_Message;
         private Guna.UI2.WinForms.Guna2ControlBox cb_close;
         private Guna.UI2.WinForms.Guna2ControlBox cb_Minimize;
         private Guna.UI2.WinForms.Guna2ControlBox cb_Maximize;
