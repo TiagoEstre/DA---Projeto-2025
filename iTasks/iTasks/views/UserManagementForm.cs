@@ -151,7 +151,9 @@ namespace iTasks.views
             }
             else
             {
+                clearText() ;
                 SearchProgrammerAndManagers();
+                p_Programmer.Visible = false;
             }
         }
         private void cb_Manager_CheckedChanged(object sender, EventArgs e)
@@ -176,7 +178,9 @@ namespace iTasks.views
             }
             else
             {
+                clearText() ;
                 SearchProgrammerAndManagers();
+                p_Manager.Visible = false;
             }
         }
 
