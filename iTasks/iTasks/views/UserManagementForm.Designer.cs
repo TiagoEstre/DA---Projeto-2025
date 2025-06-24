@@ -37,7 +37,6 @@
             this.b_Search = new Guna.UI2.WinForms.Guna2Button();
             this.b_Edit = new Guna.UI2.WinForms.Guna2Button();
             this.b_Delete = new Guna.UI2.WinForms.Guna2Button();
-            this.lb_Programmer = new System.Windows.Forms.ListBox();
             this.tb_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.l_ManegerUsername = new System.Windows.Forms.Label();
             this.l_Department = new System.Windows.Forms.Label();
@@ -49,7 +48,7 @@
             this.cb_Maneger = new Guna.UI2.WinForms.Guna2ComboBox();
             this.p_Manager = new System.Windows.Forms.Panel();
             this.ts_ManegerUsername = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.lb_Manager = new System.Windows.Forms.ListBox();
+            this.lb_Users = new System.Windows.Forms.ListBox();
             this.p_Programmer.SuspendLayout();
             this.p_Manager.SuspendLayout();
             this.SuspendLayout();
@@ -59,10 +58,10 @@
             this.cb_SelecProgrammer.AutoSize = true;
             this.cb_SelecProgrammer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_SelecProgrammer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cb_SelecProgrammer.Location = new System.Drawing.Point(244, 98);
-            this.cb_SelecProgrammer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_SelecProgrammer.Location = new System.Drawing.Point(183, 80);
+            this.cb_SelecProgrammer.Margin = new System.Windows.Forms.Padding(2);
             this.cb_SelecProgrammer.Name = "cb_SelecProgrammer";
-            this.cb_SelecProgrammer.Size = new System.Drawing.Size(128, 24);
+            this.cb_SelecProgrammer.Size = new System.Drawing.Size(110, 21);
             this.cb_SelecProgrammer.TabIndex = 1;
             this.cb_SelecProgrammer.Text = "Programador";
             this.cb_SelecProgrammer.UseVisualStyleBackColor = true;
@@ -73,10 +72,10 @@
             this.cb_SelecManeger.AutoSize = true;
             this.cb_SelecManeger.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_SelecManeger.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cb_SelecManeger.Location = new System.Drawing.Point(465, 98);
-            this.cb_SelecManeger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_SelecManeger.Location = new System.Drawing.Point(349, 80);
+            this.cb_SelecManeger.Margin = new System.Windows.Forms.Padding(2);
             this.cb_SelecManeger.Name = "cb_SelecManeger";
-            this.cb_SelecManeger.Size = new System.Drawing.Size(82, 24);
+            this.cb_SelecManeger.Size = new System.Drawing.Size(70, 21);
             this.cb_SelecManeger.TabIndex = 2;
             this.cb_SelecManeger.Text = "Gestor";
             this.cb_SelecManeger.UseVisualStyleBackColor = true;
@@ -95,14 +94,15 @@
             this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Name.ForeColor = System.Drawing.Color.Silver;
             this.tb_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Name.Location = new System.Drawing.Point(80, 161);
-            this.tb_Name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Name.Location = new System.Drawing.Point(60, 131);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.PlaceholderText = "";
             this.tb_Name.SelectedText = "";
-            this.tb_Name.Size = new System.Drawing.Size(485, 44);
+            this.tb_Name.Size = new System.Drawing.Size(364, 36);
             this.tb_Name.TabIndex = 3;
             this.tb_Name.TextOffset = new System.Drawing.Point(10, 0);
+            this.tb_Name.TextChanged += new System.EventHandler(this.tb_Name_TextChanged);
             this.tb_Name.Enter += new System.EventHandler(this.tb_Name_Enter);
             this.tb_Name.Leave += new System.EventHandler(this.tb_Name_Leave);
             // 
@@ -119,14 +119,15 @@
             this.tb_Username.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Username.ForeColor = System.Drawing.Color.Silver;
             this.tb_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Username.Location = new System.Drawing.Point(80, 241);
-            this.tb_Username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Username.Location = new System.Drawing.Point(60, 196);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.PlaceholderText = "";
             this.tb_Username.SelectedText = "";
-            this.tb_Username.Size = new System.Drawing.Size(485, 44);
+            this.tb_Username.Size = new System.Drawing.Size(364, 36);
             this.tb_Username.TabIndex = 4;
             this.tb_Username.TextOffset = new System.Drawing.Point(10, 0);
+            this.tb_Username.TextChanged += new System.EventHandler(this.tb_Username_TextChanged);
             this.tb_Username.Enter += new System.EventHandler(this.tb_Username_Enter);
             this.tb_Username.Leave += new System.EventHandler(this.tb_Username_Leave);
             // 
@@ -143,14 +144,15 @@
             this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Password.ForeColor = System.Drawing.Color.Silver;
             this.tb_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Password.Location = new System.Drawing.Point(80, 321);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Password.Location = new System.Drawing.Point(60, 261);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PlaceholderText = "";
             this.tb_Password.SelectedText = "";
-            this.tb_Password.Size = new System.Drawing.Size(485, 44);
+            this.tb_Password.Size = new System.Drawing.Size(364, 36);
             this.tb_Password.TabIndex = 5;
             this.tb_Password.TextOffset = new System.Drawing.Point(10, 0);
+            this.tb_Password.TextChanged += new System.EventHandler(this.tb_Password_TextChanged);
             this.tb_Password.Enter += new System.EventHandler(this.tb_Password_Enter);
             this.tb_Password.Leave += new System.EventHandler(this.tb_Password_Leave);
             // 
@@ -165,10 +167,9 @@
             this.b_Create.FillColor = System.Drawing.Color.LightGray;
             this.b_Create.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Create.ForeColor = System.Drawing.Color.Black;
-            this.b_Create.Location = new System.Drawing.Point(80, 597);
-            this.b_Create.Margin = new System.Windows.Forms.Padding(4);
+            this.b_Create.Location = new System.Drawing.Point(60, 485);
             this.b_Create.Name = "b_Create";
-            this.b_Create.Size = new System.Drawing.Size(159, 44);
+            this.b_Create.Size = new System.Drawing.Size(119, 36);
             this.b_Create.TabIndex = 25;
             this.b_Create.Text = "Criar";
             this.b_Create.Click += new System.EventHandler(this.b_Create_Click);
@@ -184,10 +185,9 @@
             this.b_Search.FillColor = System.Drawing.Color.LightGray;
             this.b_Search.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Search.ForeColor = System.Drawing.Color.Black;
-            this.b_Search.Location = new System.Drawing.Point(407, 597);
-            this.b_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.b_Search.Location = new System.Drawing.Point(305, 485);
             this.b_Search.Name = "b_Search";
-            this.b_Search.Size = new System.Drawing.Size(159, 44);
+            this.b_Search.Size = new System.Drawing.Size(119, 36);
             this.b_Search.TabIndex = 25;
             this.b_Search.Text = "Consultar";
             this.b_Search.Click += new System.EventHandler(this.b_Search_Click);
@@ -203,10 +203,9 @@
             this.b_Edit.FillColor = System.Drawing.Color.LightGray;
             this.b_Edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Edit.ForeColor = System.Drawing.Color.Black;
-            this.b_Edit.Location = new System.Drawing.Point(711, 597);
-            this.b_Edit.Margin = new System.Windows.Forms.Padding(4);
+            this.b_Edit.Location = new System.Drawing.Point(533, 485);
             this.b_Edit.Name = "b_Edit";
-            this.b_Edit.Size = new System.Drawing.Size(159, 44);
+            this.b_Edit.Size = new System.Drawing.Size(119, 36);
             this.b_Edit.TabIndex = 25;
             this.b_Edit.Text = "Editar";
             this.b_Edit.Click += new System.EventHandler(this.b_Edit_Click);
@@ -222,29 +221,12 @@
             this.b_Delete.FillColor = System.Drawing.Color.LightGray;
             this.b_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.b_Delete.ForeColor = System.Drawing.Color.Black;
-            this.b_Delete.Location = new System.Drawing.Point(1037, 597);
-            this.b_Delete.Margin = new System.Windows.Forms.Padding(4);
+            this.b_Delete.Location = new System.Drawing.Point(778, 485);
             this.b_Delete.Name = "b_Delete";
-            this.b_Delete.Size = new System.Drawing.Size(159, 44);
+            this.b_Delete.Size = new System.Drawing.Size(119, 36);
             this.b_Delete.TabIndex = 25;
             this.b_Delete.Text = "Apagar";
             this.b_Delete.Click += new System.EventHandler(this.b_Delete_Click);
-            // 
-            // lb_Programmer
-            // 
-            this.lb_Programmer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_Programmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Programmer.FormattingEnabled = true;
-            this.lb_Programmer.ItemHeight = 25;
-            this.lb_Programmer.Location = new System.Drawing.Point(711, 87);
-            this.lb_Programmer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lb_Programmer.Name = "lb_Programmer";
-            this.lb_Programmer.Size = new System.Drawing.Size(484, 404);
-            this.lb_Programmer.TabIndex = 21;
-            this.lb_Programmer.Visible = false;
-            this.lb_Programmer.SelectedIndexChanged += new System.EventHandler(this.lb_Programmer_SelectedIndexChanged);
             // 
             // tb_Id
             // 
@@ -260,12 +242,12 @@
             this.tb_Id.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Id.ForeColor = System.Drawing.Color.Silver;
             this.tb_Id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Id.Location = new System.Drawing.Point(80, 87);
-            this.tb_Id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Id.Location = new System.Drawing.Point(60, 71);
+            this.tb_Id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Id.Name = "tb_Id";
             this.tb_Id.PlaceholderText = "";
             this.tb_Id.SelectedText = "";
-            this.tb_Id.Size = new System.Drawing.Size(107, 44);
+            this.tb_Id.Size = new System.Drawing.Size(80, 36);
             this.tb_Id.TabIndex = 0;
             this.tb_Id.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -273,9 +255,10 @@
             // 
             this.l_ManegerUsername.AutoSize = true;
             this.l_ManegerUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.l_ManegerUsername.Location = new System.Drawing.Point(75, 139);
+            this.l_ManegerUsername.Location = new System.Drawing.Point(56, 113);
+            this.l_ManegerUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.l_ManegerUsername.Name = "l_ManegerUsername";
-            this.l_ManegerUsername.Size = new System.Drawing.Size(145, 16);
+            this.l_ManegerUsername.Size = new System.Drawing.Size(119, 13);
             this.l_ManegerUsername.TabIndex = 13;
             this.l_ManegerUsername.Text = "GERE UTILIZADORES";
             // 
@@ -283,9 +266,10 @@
             // 
             this.l_Department.AutoSize = true;
             this.l_Department.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.l_Department.Location = new System.Drawing.Point(8, 15);
+            this.l_Department.Location = new System.Drawing.Point(6, 12);
+            this.l_Department.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.l_Department.Name = "l_Department";
-            this.l_Department.Size = new System.Drawing.Size(93, 16);
+            this.l_Department.Size = new System.Drawing.Size(74, 13);
             this.l_Department.TabIndex = 13;
             this.l_Department.Text = "Departamento";
             // 
@@ -300,10 +284,9 @@
             this.cb_Department.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_Department.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_Department.ItemHeight = 30;
-            this.cb_Department.Location = new System.Drawing.Point(0, 38);
-            this.cb_Department.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_Department.Location = new System.Drawing.Point(0, 31);
             this.cb_Department.Name = "cb_Department";
-            this.cb_Department.Size = new System.Drawing.Size(484, 36);
+            this.cb_Department.Size = new System.Drawing.Size(364, 36);
             this.cb_Department.TabIndex = 8;
             this.cb_Department.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -313,10 +296,9 @@
             this.p_Programmer.Controls.Add(this.l_ExperienceLevel);
             this.p_Programmer.Controls.Add(this.l_Manager);
             this.p_Programmer.Controls.Add(this.cb_Maneger);
-            this.p_Programmer.Location = new System.Drawing.Point(80, 366);
-            this.p_Programmer.Margin = new System.Windows.Forms.Padding(4);
+            this.p_Programmer.Location = new System.Drawing.Point(60, 297);
             this.p_Programmer.Name = "p_Programmer";
-            this.p_Programmer.Size = new System.Drawing.Size(485, 186);
+            this.p_Programmer.Size = new System.Drawing.Size(364, 151);
             this.p_Programmer.TabIndex = 26;
             this.p_Programmer.Visible = false;
             // 
@@ -331,10 +313,9 @@
             this.cb_ExperienceLevel.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_ExperienceLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_ExperienceLevel.ItemHeight = 30;
-            this.cb_ExperienceLevel.Location = new System.Drawing.Point(0, 38);
-            this.cb_ExperienceLevel.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_ExperienceLevel.Location = new System.Drawing.Point(0, 31);
             this.cb_ExperienceLevel.Name = "cb_ExperienceLevel";
-            this.cb_ExperienceLevel.Size = new System.Drawing.Size(484, 36);
+            this.cb_ExperienceLevel.Size = new System.Drawing.Size(364, 36);
             this.cb_ExperienceLevel.TabIndex = 6;
             this.cb_ExperienceLevel.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -342,9 +323,10 @@
             // 
             this.l_ExperienceLevel.AutoSize = true;
             this.l_ExperienceLevel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.l_ExperienceLevel.Location = new System.Drawing.Point(5, 15);
+            this.l_ExperienceLevel.Location = new System.Drawing.Point(4, 12);
+            this.l_ExperienceLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.l_ExperienceLevel.Name = "l_ExperienceLevel";
-            this.l_ExperienceLevel.Size = new System.Drawing.Size(131, 16);
+            this.l_ExperienceLevel.Size = new System.Drawing.Size(106, 13);
             this.l_ExperienceLevel.TabIndex = 9;
             this.l_ExperienceLevel.Text = "Nível de Experiencia";
             // 
@@ -352,9 +334,10 @@
             // 
             this.l_Manager.AutoSize = true;
             this.l_Manager.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.l_Manager.Location = new System.Drawing.Point(5, 101);
+            this.l_Manager.Location = new System.Drawing.Point(4, 82);
+            this.l_Manager.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.l_Manager.Name = "l_Manager";
-            this.l_Manager.Size = new System.Drawing.Size(47, 16);
+            this.l_Manager.Size = new System.Drawing.Size(38, 13);
             this.l_Manager.TabIndex = 10;
             this.l_Manager.Text = "Gestor";
             // 
@@ -369,10 +352,9 @@
             this.cb_Maneger.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_Maneger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_Maneger.ItemHeight = 30;
-            this.cb_Maneger.Location = new System.Drawing.Point(0, 124);
-            this.cb_Maneger.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_Maneger.Location = new System.Drawing.Point(0, 101);
             this.cb_Maneger.Name = "cb_Maneger";
-            this.cb_Maneger.Size = new System.Drawing.Size(484, 36);
+            this.cb_Maneger.Size = new System.Drawing.Size(364, 36);
             this.cb_Maneger.TabIndex = 7;
             this.cb_Maneger.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -382,10 +364,9 @@
             this.p_Manager.Controls.Add(this.l_Department);
             this.p_Manager.Controls.Add(this.l_ManegerUsername);
             this.p_Manager.Controls.Add(this.ts_ManegerUsername);
-            this.p_Manager.Location = new System.Drawing.Point(80, 366);
-            this.p_Manager.Margin = new System.Windows.Forms.Padding(4);
+            this.p_Manager.Location = new System.Drawing.Point(60, 297);
             this.p_Manager.Name = "p_Manager";
-            this.p_Manager.Size = new System.Drawing.Size(485, 186);
+            this.p_Manager.Size = new System.Drawing.Size(364, 151);
             this.p_Manager.TabIndex = 26;
             this.p_Manager.Visible = false;
             // 
@@ -395,38 +376,36 @@
             this.ts_ManegerUsername.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ts_ManegerUsername.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.ts_ManegerUsername.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.ts_ManegerUsername.Location = new System.Drawing.Point(12, 134);
-            this.ts_ManegerUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.ts_ManegerUsername.Location = new System.Drawing.Point(9, 109);
             this.ts_ManegerUsername.Name = "ts_ManegerUsername";
-            this.ts_ManegerUsername.Size = new System.Drawing.Size(47, 25);
+            this.ts_ManegerUsername.Size = new System.Drawing.Size(35, 20);
             this.ts_ManegerUsername.TabIndex = 9;
             this.ts_ManegerUsername.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ts_ManegerUsername.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ts_ManegerUsername.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.ts_ManegerUsername.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
-            // lb_Manager
+            // lb_Users
             // 
-            this.lb_Manager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lb_Users.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_Manager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Manager.FormattingEnabled = true;
-            this.lb_Manager.ItemHeight = 25;
-            this.lb_Manager.Location = new System.Drawing.Point(711, 87);
-            this.lb_Manager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lb_Manager.Name = "lb_Manager";
-            this.lb_Manager.Size = new System.Drawing.Size(484, 404);
-            this.lb_Manager.TabIndex = 21;
-            this.lb_Manager.Visible = false;
-            this.lb_Manager.SelectedIndexChanged += new System.EventHandler(this.lb_Manager_SelectedIndexChanged);
+            this.lb_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Users.FormattingEnabled = true;
+            this.lb_Users.ItemHeight = 20;
+            this.lb_Users.Location = new System.Drawing.Point(533, 71);
+            this.lb_Users.Margin = new System.Windows.Forms.Padding(2);
+            this.lb_Users.Name = "lb_Users";
+            this.lb_Users.Size = new System.Drawing.Size(364, 324);
+            this.lb_Users.TabIndex = 21;
+            this.lb_Users.SelectedIndexChanged += new System.EventHandler(this.lb_Users_SelectedIndexChanged);
             // 
             // UserManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1307, 733);
+            this.ClientSize = new System.Drawing.Size(980, 596);
             this.Controls.Add(this.p_Programmer);
             this.Controls.Add(this.p_Manager);
             this.Controls.Add(this.b_Delete);
@@ -437,12 +416,10 @@
             this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.tb_Id);
             this.Controls.Add(this.tb_Name);
-            this.Controls.Add(this.lb_Programmer);
-            this.Controls.Add(this.lb_Manager);
+            this.Controls.Add(this.lb_Users);
             this.Controls.Add(this.cb_SelecManeger);
             this.Controls.Add(this.cb_SelecProgrammer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserManagementForm";
             this.Text = "usermanagementForm1";
             this.p_Programmer.ResumeLayout(false);
@@ -464,7 +441,6 @@
         private Guna.UI2.WinForms.Guna2Button b_Search;
         private Guna.UI2.WinForms.Guna2Button b_Edit;
         private Guna.UI2.WinForms.Guna2Button b_Delete;
-        private System.Windows.Forms.ListBox lb_Programmer;
         private Guna.UI2.WinForms.Guna2TextBox tb_Id;
         private System.Windows.Forms.Label l_ManegerUsername;
         private System.Windows.Forms.Label l_Department;
@@ -476,6 +452,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cb_Maneger;
         private System.Windows.Forms.Panel p_Manager;
         private Guna.UI2.WinForms.Guna2ToggleSwitch ts_ManegerUsername;
-        private System.Windows.Forms.ListBox lb_Manager;
+        private System.Windows.Forms.ListBox lb_Users;
     }
 }
