@@ -22,8 +22,8 @@ namespace iTasks.views
 {
     public partial class UserManagementForm : Form
     {
-        private Maneger SelectedManeger;
-        private Programmer SelectedProgrammer;
+        private Maneger SelectedManeger;        // Gestor atualmente selecionada
+        private Programmer SelectedProgrammer;  // Programador atualmente selecionada
         public UserManagementForm()
         {
             InitializeComponent();
@@ -32,43 +32,52 @@ namespace iTasks.views
             EnumValues();
         }
 
+        /* ---------- Funções de Inicialização  ---------- */
+        // Método privado para verificar permissões do utilizador atual
         private void VerifyUsers()
         {
-            // Verifica se o utilizador atual está definido na sessão
+            // Verifica se o utilizador atual está definido no SessionManager
             if (sessionManager.CurrentUser == null)
             {
+                // Mostra uma mensagem de erro se não houver utilizador na sessão
                 MessageBox.Show("Erro: Utilizador atual não definido no SessionManager.");
-                return; // Interrompe a execução do metedo
+                return; // Encerra a execução do método
             }
 
+            // Obtém o utilizador atual da sessão
             var currentUser = sessionManager.CurrentUser;
 
+            // Verifica se o utilizador é um objeto do tipo 'Maneger'
             if (currentUser is Maneger maneger)
             {
+                // Verifica se a propriedade 'GenerateUser' está definida como "false" (ignorando maiúsculas/minúsculas)
                 if (string.Equals(maneger.GenerateUser, "false", StringComparison.OrdinalIgnoreCase))
                 {
+                    // Oculta os botões de criação, pesquisa, edição e eliminação
                     b_Create.Visible = false;
                     b_Search.Visible = false;
                     b_Edit.Visible = false;
                     b_Delete.Visible = false;
 
+                    // Desativa os campos de entrada de texto
                     tb_Name.Enabled = false;
                     tb_Username.Enabled = false;
                     tb_Password.Enabled = false;
 
+                    // Desativa os campos de seleção de nível de experiência e departamento
                     cb_ExperienceLevel.Enabled = false;
                     cb_Department.Enabled = false;
 
+                    // Desativa o campo com o nome de utilizador do gestor
                     ts_ManegerUsername.Enabled = false;
                 }
             }
         }
-
         // funcao para inserir os dados nas comboBox
         private void EnumValues()
         {
             // Inserir dados na ComboBox do Livel de Experiencia
-            Enum.GetValues(typeof(ExperienceLevel));
+            //Enum.GetValues(typeof(ExperienceLevel));
             cb_ExperienceLevel.DataSource = Enum.GetValues(typeof(ExperienceLevel)).Cast<ExperienceLevel>().ToList();
             cb_ExperienceLevel.SelectedIndex = -1;
 
@@ -76,11 +85,10 @@ namespace iTasks.views
             ListGestor();
 
             // Inserir dados na ComboBox do Departamento
-            Enum.GetValues(typeof(Department));
+            //Enum.GetValues(typeof(Department));
             cb_Department.DataSource = Enum.GetValues(typeof(Department)).Cast<Department>().ToList();
             cb_Department.SelectedIndex = -1;
         }
-
         // Funcao para procurar os gestor na bd e colocalos na ComboBox
         private void ListGestor()
         { 
@@ -89,7 +97,7 @@ namespace iTasks.views
                 // vai chamar a dase de bados e mete-a na variavel db
                 using (var db = new iTasksContext())
                 {
-                    // vai a base de dados e procura só os utilizador que forem Gestores
+                    // Vai a base de dados e procura só os utilizador que forem Gestores
                     var gestor = db.Users.OfType<Maneger>().ToList();
 
                     // Colocar os Nomes do Gestores na ComboList e guardar o id do Gestor
@@ -107,7 +115,7 @@ namespace iTasks.views
 
         }
 
-
+        /* --------- Funções do Layout ---------- */
         // Funcoes para as CheckBox
         private void clearText()
         {
@@ -285,8 +293,8 @@ namespace iTasks.views
         }
 
 
-        /* ------------ Funções do CRUD ------------*/
-
+        /* --------- Funções do CRUD ---------- */
+        /* --------- Salvar ---------- */
         // Função para Salvar novo Usuário
         private string HashPasswordSHA256(string password)
         {
@@ -460,14 +468,18 @@ namespace iTasks.views
             if (cb_SelecProgrammer.Checked)
             {
                 SaveProgrammer();
+
+                clearText();
             }
             else if (cb_SelecManeger.Checked)
             {
                 SaveManager();
+
+                clearText();
             }
         }
 
-
+        /* --------- Procurar ---------- */
         // Função para Procurar Usuário
         private void tb_Name_TextChanged(object sender, EventArgs e)
         {
@@ -655,6 +667,7 @@ namespace iTasks.views
         }
 
 
+        /* --------- Editar ---------- */
         // Eventos para ao selecioar o nome na listBox ele prenche os campos todos
         private void lb_Users_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -718,9 +731,6 @@ namespace iTasks.views
                 MessageBox.Show("Tipo de utilizador não reconhecido.");
             }
         }
-
-
-        // Botão Editar
         private bool passwordAlterada = false;
         private void tb_Password_TextChanged(object sender, EventArgs e)
         {
@@ -729,6 +739,7 @@ namespace iTasks.views
                 passwordAlterada = true;
             }
         }
+        // Botão Editar
         private void b_Edit_Click(object sender, EventArgs e)
         {
             string name = tb_Name.Text;
@@ -811,8 +822,7 @@ namespace iTasks.views
             MessageBox.Show("Dados do cliente atualizados com sucesso.");
         }
 
-
-        // Botão Eliminar
+        /* --------- Eliminar ---------- */
         private void ClearFormFields()
         {
             tb_Id.Text = "";
@@ -830,6 +840,7 @@ namespace iTasks.views
             SelectedManeger = null;
             SelectedProgrammer = null;
         }
+        // Botão Eliminar
         private void b_Delete_Click(object sender, EventArgs e)
         {
             if (SelectedProgrammer != null)
