@@ -23,6 +23,29 @@ namespace iTasks.views
             DateToUpdate();
 
         }
+        private void ConfirmUser()
+        {
+            if (sessionManager.CurrentUser is Maneger maneger)
+            {
+                currentManeger = maneger;
+            }
+            else if (sessionManager.CurrentUser is Programmer)
+            {
+            }
+            else
+            {
+                MessageBox.Show("Apenas gestores e programadores podem aceder a este formulário.");
+                this.Close();
+            }
+        }
+        private void Value()
+        {
+            cb_CurrentStatus.DataSource = Enum.GetValues(typeof(CurrentStatus)).Cast<CurrentStatus>().ToList();
+            cb_CurrentStatus.SelectedIndex = -1;
+
+            ListTaskType();
+            ListProgrammer();
+        }
         private void DateToUpdate()
         {
             dtp_CreationDate.Value = DateTime.Now;
@@ -32,6 +55,7 @@ namespace iTasks.views
             dtp_EndRealDate.Value = DateTime.Now;
         }
         
+
         public TaskDetailForm(Tasks task, bool readOnly = false)
         {
             InitializeComponent();
@@ -73,7 +97,6 @@ namespace iTasks.views
                 this.Close();
             }
         }
-
         private void SetupFormForCreation()
         {
             Value();
@@ -90,9 +113,6 @@ namespace iTasks.views
             
             ClearFormFields();
         }
-
-
-        
         private void LoadTaskDetails(Tasks task)
         {
             tb_Id.Text = task.Id.ToString();
@@ -119,7 +139,6 @@ namespace iTasks.views
             else
                 cb_Programmer.SelectedIndex = -1;
         }
-
         private void SetReadOnlyMode(bool readOnly)
         {
             isReadOnlyMode = readOnly;
@@ -155,31 +174,6 @@ namespace iTasks.views
             tb_Id.ReadOnly = true;
         }
 
-        private void ConfirmUser()
-        {
-            if (sessionManager.CurrentUser is Maneger maneger)
-            {
-                currentManeger = maneger;
-            }
-            else if (sessionManager.CurrentUser is Programmer)
-            {
-            }
-            else
-            {
-                MessageBox.Show("Apenas gestores e programadores podem aceder a este formulário.");
-                this.Close();
-            }
-        }
-
-        private void Value()
-        {
-            cb_CurrentStatus.DataSource = Enum.GetValues(typeof(CurrentStatus)).Cast<CurrentStatus>().ToList();
-            cb_CurrentStatus.SelectedIndex = -1;
-
-            ListTaskType();
-            ListProgrammer();
-        }
-       
 
         private void ListProgrammer()
         {
@@ -211,7 +205,6 @@ namespace iTasks.views
                 cb_Programmer.Text = "Erro ao carregar Programadores!";
             }
         }
-
         private void ListTaskType()
         {
             try
@@ -229,6 +222,31 @@ namespace iTasks.views
             {
                 cb_TaskType.Text = "Erro ao carregar Tipo de Tarefas!";
             }
+        }
+
+
+        private void ClearFormFields()
+        {
+            tb_Id.Text = "ID";
+            tb_Description.Clear();
+            tb_Order.Clear();
+            tb_StoryPoints.Clear();
+            dtp_StartDate.Value = DateTime.Today;
+            dtp_EndDate.Value = DateTime.Today;
+            dtp_StartRealDate.Value = DateTime.Today;
+            dtp_EndRealDate.Value = DateTime.Today;
+            dtp_CreationDate.Value = DateTime.Today;
+
+            cb_CurrentStatus.SelectedIndex = -1;
+            cb_CurrentStatus.Text = "";
+
+            cb_TaskType.DataSource = null;
+            cb_TaskType.Items.Clear();
+            ListTaskType();
+
+            cb_Programmer.DataSource = null;
+            cb_Programmer.Items.Clear();
+            ListProgrammer();
         }
 
         private void b_create_Click(object sender, EventArgs e)
@@ -289,6 +307,8 @@ namespace iTasks.views
                     selectedTasks = newTasks;
 
                     MessageBox.Show("Nova tarefa criada com sucesso!");
+
+                    ClearFormFields();
                 }
                 catch
                 {
@@ -372,8 +392,6 @@ namespace iTasks.views
                 try
                 {
                     var taskToUpdate = db.Tasks
-                        .Include(t => t.idTaskType)
-                        .Include(t => t.IdProgrammer)
                         .FirstOrDefault(t => t.Id == selectedTasks.Id && t.IdManeger.Id == currentManeger.Id);
 
                     if (taskToUpdate == null)
@@ -382,8 +400,7 @@ namespace iTasks.views
                         return;
                     }
 
-                    db.Users.Attach(programmer);
-                    db.TaskTypes.Attach(taskType);
+
 
                     taskToUpdate.Description = tb_Description.Text;
                     taskToUpdate.ExecutionOrder = int.Parse(tb_Order.Text.Trim());
@@ -397,9 +414,14 @@ namespace iTasks.views
                     taskToUpdate.idTaskType = taskType;
                     taskToUpdate.IdProgrammer = programmer;
 
+                    db.Users.Attach(programmer);
+                    db.TaskTypes.Attach(taskType);
+                    
+                    selectedTasks = taskToUpdate;
+
+                    db.Entry(selectedTasks).State = EntityState.Modified;
                     db.SaveChanges();
 
-                    selectedTasks = taskToUpdate;
 
                     MessageBox.Show("Tarefa atualizada com sucesso!");
                 }
@@ -452,28 +474,9 @@ namespace iTasks.views
             }
         }
 
-        private void ClearFormFields()
-        {
-            tb_Id.Text = "ID";
-            tb_Description.Clear();
-            tb_Order.Clear();
-            tb_StoryPoints.Clear();
-            dtp_StartDate.Value = DateTime.Today;
-            dtp_EndDate.Value = DateTime.Today;
-            dtp_StartRealDate.Value = DateTime.Today;
-            dtp_EndRealDate.Value = DateTime.Today;
-            dtp_CreationDate.Value = DateTime.Today;
+        
 
-            cb_CurrentStatus.SelectedIndex = -1;
-            cb_CurrentStatus.Text = "";
+       
 
-            cb_TaskType.DataSource = null;
-            cb_TaskType.Items.Clear();
-            ListTaskType();
-
-            cb_Programmer.DataSource = null;
-            cb_Programmer.Items.Clear();
-            ListProgrammer();
-        }
     }
 }

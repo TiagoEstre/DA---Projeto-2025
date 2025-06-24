@@ -99,12 +99,14 @@ namespace iTasks.views
 
                         var taskViewModels = tasksDone.Select(t => new TaskViewModel
                         {
+                            ProgrammerName = programmer.Name,
                             Description = t.Description,
                             ActualStartDate = t.ActualStartDate,
                             ActualEndDate = t.ActualEndDate,
                             DurationInDays = t.ActualStartDate.HasValue && t.ActualEndDate.HasValue
                                 ? (int?)(t.ActualEndDate.Value - t.ActualStartDate.Value).TotalDays
-                                : null
+                                : null,
+                            ExpectedDurationInDays = (int?)(t.EstimatedStartDate - t.ExpectedEndDate).TotalDays
                         }).ToList();
 
                         dgv_Done.DataSource = taskViewModels;
