@@ -742,7 +742,7 @@ namespace iTasks.views
                 SelectedProgrammer.Name = name;
                 SelectedProgrammer.Username = username;
                 if (passwordAlterada && !string.IsNullOrWhiteSpace(password))
-                    SelectedManeger.Password = HashPasswordSHA256(password);
+                    SelectedProgrammer.Password = HashPasswordSHA256(password);
                 SelectedProgrammer.ExperienceLevel = experienceLevelSelec;
                 SelectedProgrammer.idManeger = manegerSelec;
 
