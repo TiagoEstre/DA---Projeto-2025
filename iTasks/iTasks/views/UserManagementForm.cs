@@ -115,6 +115,7 @@ namespace iTasks.views
 
         }
 
+
         /* --------- Funções do Layout ---------- */
         // Funcoes para as CheckBox
         private void clearText()

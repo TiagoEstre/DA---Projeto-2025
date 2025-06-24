@@ -20,8 +20,18 @@ namespace iTasks.views
             InitializeComponent();
             ConfirmUser();
             Value();
+            DateToUpdate();
 
         }
+        private void DateToUpdate()
+        {
+            dtp_CreationDate.Value = DateTime.Now;
+            dtp_StartDate.Value = DateTime.Now;
+            dtp_EndDate.Value = DateTime.Now;
+            dtp_StartRealDate.Value = DateTime.Now;
+            dtp_EndRealDate.Value = DateTime.Now;
+        }
+        
         public TaskDetailForm(Tasks task, bool readOnly = false)
         {
             InitializeComponent();
