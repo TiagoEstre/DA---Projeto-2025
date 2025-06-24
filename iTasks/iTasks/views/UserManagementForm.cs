@@ -16,6 +16,7 @@ using System.Data.Entity;
 using System.Diagnostics.Eventing.Reader;
 using System.Security.Cryptography;
 using System.Runtime.CompilerServices;
+using iTasks.controller;
 
 namespace iTasks.views
 {
@@ -26,10 +27,42 @@ namespace iTasks.views
         public UserManagementForm()
         {
             InitializeComponent();
+            VerifyUsers();
             SearchProgrammerAndManagers();
             EnumValues();
         }
 
+        private void VerifyUsers()
+        {
+            // Verifica se o utilizador atual está definido na sessão
+            if (sessionManager.CurrentUser == null)
+            {
+                MessageBox.Show("Erro: Utilizador atual não definido no SessionManager.");
+                return; // Interrompe a execução do metedo
+            }
+
+            var currentUser = sessionManager.CurrentUser;
+
+            if (currentUser is Maneger maneger)
+            {
+                if (string.Equals(maneger.GenerateUser, "false", StringComparison.OrdinalIgnoreCase))
+                {
+                    b_Create.Visible = false;
+                    b_Search.Visible = false;
+                    b_Edit.Visible = false;
+                    b_Delete.Visible = false;
+
+                    tb_Name.Enabled = false;
+                    tb_Username.Enabled = false;
+                    tb_Password.Enabled = false;
+
+                    cb_ExperienceLevel.Enabled = false;
+                    cb_Department.Enabled = false;
+
+                    ts_ManegerUsername.Enabled = false;
+                }
+            }
+        }
 
         // funcao para inserir os dados nas comboBox
         private void EnumValues()
@@ -113,6 +146,12 @@ namespace iTasks.views
 
                 // mete visibilidade do painel dos programdadores
                 p_Programmer.Visible = true;
+                
+                SearchProgrammerAndManagers();
+            }
+            else
+            {
+                SearchProgrammerAndManagers();
             }
         }
         private void cb_Manager_CheckedChanged(object sender, EventArgs e)
@@ -132,6 +171,12 @@ namespace iTasks.views
 
                 // mete visibilidade do painel dos gestores
                 p_Manager.Visible = true;
+
+                SearchProgrammerAndManagers();
+            }
+            else
+            {
+                SearchProgrammerAndManagers();
             }
         }
 
