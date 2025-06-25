@@ -233,7 +233,7 @@ namespace iTasks.views
             
             l_NameForm.Text = "Tipo de Tarefas";                                        // Atualiza o nome do formulario exibido no cabeçalho
             pb_CurrentChildForm.Image = iTasks.Properties.Resources.icons8_queue_96;    // Atualiza o icone no cabeçalho
-            trocarForm(new TaskTypeForm(trocarForm));                                   // Substitui o formulario principal pelo formulario de tipo de tarefas
+            trocarForm(new TaskTypeForm());                                             // Substitui o formulario principal pelo formulario de tipo de tarefas
         }
 
 
