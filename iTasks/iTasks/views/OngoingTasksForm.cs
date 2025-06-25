@@ -24,6 +24,8 @@ namespace iTasks.views
             Value();
         }
 
+
+        /* ---------- Funções de Inicialização  ---------- */
         // Método para carregar os dados do usuário atualmente logado
         private void LoadCurrentUser()
         {
@@ -179,6 +181,7 @@ namespace iTasks.views
         }
 
 
+        /* ---------- Funções da Grelha  ---------- */
         // Classe que representa a visualização de uma tarefa, com dados para exibição na interface
         public class TaskViewModel
         {
@@ -197,8 +200,6 @@ namespace iTasks.views
             // Número de dias que a tarefa está atrasada (0 se não estiver atrasada)
             public int DaysLate { get; set; }
         }
-
-
         // Evento disparado quando o índice selecionado no ComboBox de filtro de tipos de tarefas é alterado
         private void cb_FilterTypeTasks_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -240,7 +241,7 @@ namespace iTasks.views
                         var query = db.Tasks
                             .Include(t => t.IdProgrammer)   // Inclui dados do programador na query
                             .Include(t => t.idTaskType)     // Inclui dados do tipo da tarefa na query
-                            .Where(t => programmerIds.Contains(t.IdProgrammer.Id));
+                            .Where(t => programmerIds.Contains(t.IdProgrammer.Id) && t.CurrentStatus == CurrentStatus.ToDo || t.CurrentStatus == CurrentStatus.Doing);
 
                         // Se o filtro não for "Todos as Tarefas" (id -1), filtra pelo tipo selecionado
                         if (tasksId != -1)
@@ -303,7 +304,6 @@ namespace iTasks.views
                 MessageBox.Show("Erro ao filtrar tarefas.\n" + ex.Message);
             }
         }
-
         // Evento disparado quando o texto do campo de filtro de programador/tarefa é alterado
         private void tb_filterProgrammer_TextChanged(object sender, EventArgs e)
         {
